@@ -1,0 +1,70 @@
+/* ========================================
+   TYPOGRAPHY — Foottfall Website
+   ======================================== */
+
+/* ---- Heading defaults ---- */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: inherit;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ---- Hero title treatment ---- */
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-hero);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  line-height: 1;
+}
+
+.hero-title__main {
+  display: block;
+  font-weight: 700;
+}
+
+.hero-title__sub {
+  display: block;
+  font-weight: 400;
+  font-size: var(--fs-hero-sub);
+  letter-spacing: 0.35em;
+  margin-top: var(--space-xs);
+}
+
+/* ---- Utility classes ---- */
+.text-serif {
+  font-family: var(--font-serif);
+}
+
+.text-sans {
+  font-family: var(--font-sans);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
