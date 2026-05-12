@@ -1,0 +1,214 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Footfall Website_Design_Final.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1920 px x 4320.0288 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+PANTONE 172 C (Lab)
+R=0 G=67 B=55 (RGB)
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:
+Termina (Adobe Fonts)
+Termina (Adobe Fonts)
+Termina (Adobe Fonts)
+Termina (Adobe Fonts)
+
+-----------------------------------------------------------------------------
+Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/OneDrive_1_15-04-2026/ATMOSFIRE 01.jpeg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 44466K, 4721 by 3215 pixels
+Dimensions: 1208.95 by 823.295 points 
+Resolution: 281.163 by 281.163 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Rahul Ahuja & Hriday Ahuja/2.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 147576K, 5648 by 6689 pixels
+Dimensions: 815.196 by 965.447 points 
+Resolution: 498.845 by 498.845 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/Absolute_Barbecues_India_id_qpml3fI_0.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 625K, 400 by 400 pixels
+Dimensions: 83.034 by 83.034 points 
+Resolution: 346.844 by 346.844 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 87.064 by 87.064 points 
+Resolution: 2067.443 by 2067.443 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/kevin-schmid-8m2Sjvf7LRs-unsplash.psd
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 57587K, 5430 by 3620 pixels
+Dimensions: 1921.34 by 1280.893 points 
+Resolution: 203.483 by 203.483 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 63.915 by 63.915 points 
+Resolution: 2816.241 by 2816.241 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 87.064 by 87.064 points 
+Resolution: 2067.443 by 2067.443 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 87.064 by 87.064 points 
+Resolution: 2067.443 by 2067.443 pixels per inch
+
+
+/Users/design12/Desktop/Jayaraj/Jayaraj/FOOTTFALL/Website Content + Look and feel/Updated file_Web/Links/f8b135b9-cb68-4267-942d-9dd05391e48e.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 24414K, 2500 by 2500 pixels
+Dimensions: 87.064 by 87.064 points 
+Resolution: 2067.443 by 2067.443 pixels per inch
