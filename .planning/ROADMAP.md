@@ -92,7 +92,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 1/1 | Complete ✅ | 2026-05-13 |
-| 2. Hero & Nav | 0/1 | Not started | - |
+| 2. Hero & Nav | 1/1 | Planned ✓ | - |
 | 3. Narrative | 0/1 | Not started | - |
 | 4. Services | 0/1 | Not started | - |
 | 5. Story | 0/1 | Not started | - |
