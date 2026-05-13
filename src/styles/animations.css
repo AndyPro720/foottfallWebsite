@@ -1,20 +1,91 @@
-@keyframes fadeInUp {
+@keyframes fadeInSoft {
   from {
     opacity: 0;
-    transform: translateY(24px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeRise {
   from {
     opacity: 0;
+    transform: translate3d(0, 1.2rem, 0);
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-1.25rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeSlideLeftAnchored {
+  from {
+    opacity: 0;
+    transform: translate3d(-1.25rem, var(--meta-anchor-y, 0), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, var(--meta-anchor-y, 0), 0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translate3d(1.25rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes softScaleIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.8rem, 0) scale(0.988);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes heroMediaSettle {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pinPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0.16rem 0.32rem rgba(0, 0, 0, 0.26),
+      0 0 0 0 rgba(0, 79, 63, 0),
+      inset 0 -0.08rem 0.12rem rgba(80, 0, 0, 0.35);
+  }
+  48% {
+    box-shadow:
+      0 0.16rem 0.32rem rgba(0, 0, 0, 0.22),
+      0 0 0 0.28rem rgba(0, 79, 63, 0.09),
+      inset 0 -0.08rem 0.12rem rgba(80, 0, 0, 0.35);
   }
 }
 
@@ -30,22 +101,249 @@
 }
 
 .reveal {
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0;
+  transform: translate3d(0, 1.15rem, 0);
+  transition:
+    opacity 860ms cubic-bezier(0.19, 1, 0.22, 1),
+    transform 860ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
 }
 
-.reveal--visible {
+.reveal--hero-media {
+  transform: scale(1.02);
+  transform-origin: center;
+}
+
+.reveal--hero-panel {
+  transform: translate3d(0, 0.9rem, 0) scale(0.988);
+}
+
+.reveal--hero-title {
+  transform: translate3d(-1.25rem, 0, 0);
+}
+
+.reveal--hero-copy {
+  transform: translate3d(0, 1.2rem, 0);
+}
+
+.journey__label.reveal,
+.method__title.reveal {
+  transform: translate3d(-0.95rem, 0, 0);
+}
+
+.journey__metric.reveal,
+.connect-card--founders.reveal {
+  transform: translate3d(1rem, 0, 0);
+}
+
+.connect-card--about.reveal {
+  transform: translate3d(-1rem, 0, 0);
+}
+
+.connect__cta-wrap.reveal {
+  transform: translate3d(0, 0.65rem, 0) scale(0.992);
+}
+
+.reveal--visible,
+.reveal--hero-media.reveal--visible,
+.reveal--hero-panel.reveal--visible,
+.reveal--hero-title.reveal--visible,
+.reveal--hero-copy.reveal--visible,
+.journey__label.reveal--visible,
+.method__title.reveal--visible,
+.journey__metric.reveal--visible,
+.connect-card--about.reveal--visible,
+.connect-card--founders.reveal--visible,
+.connect__cta-wrap.reveal--visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0) scale(1);
+  will-change: auto;
+}
+
+.reveal--hero-panel.reveal--visible {
+  transition-duration: 980ms;
+}
+
+.reveal--hero-media.reveal--visible {
+  transition-duration: 1400ms;
+}
+
+.journey__surface.reveal--visible .cities__column {
+  animation: fadeRise 760ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.journey__surface.reveal--visible .cities__column:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.journey__surface.reveal--visible .cities__column:nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.journey__surface.reveal--visible .cities__column:nth-child(4) {
+  animation-delay: 260ms;
+}
+
+.journey__surface.reveal--visible .cities__column:nth-child(5) {
+  animation-delay: 340ms;
+}
+
+.journey__metric.reveal--visible .journey__pin-dot {
+  animation: pinPulse 3s ease-in-out 900ms infinite;
+}
+
+.journey__surface--categories.reveal--visible .category-card {
+  animation: softScaleIn 740ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(3) {
+  animation-delay: 150ms;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(4) {
+  animation-delay: 220ms;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(5) {
+  animation-delay: 290ms;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(6) {
+  animation-delay: 360ms;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(7) {
+  animation-delay: 430ms;
+}
+
+.journey__surface--categories.reveal--visible .category-card:nth-child(8) {
+  animation-delay: 500ms;
+}
+
+.method__banner.reveal--visible .method__tag {
+  animation: softScaleIn 720ms cubic-bezier(0.19, 1, 0.22, 1) 180ms backwards;
+}
+
+.method__stage-row.reveal--visible .method__stage-chip {
+  animation: fadeSlideLeft 700ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.method__stage-row.reveal--visible .method__stage-chip:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.method__stage-row.reveal--visible .method__stage-chip:nth-child(3) {
+  animation-delay: 150ms;
+}
+
+.method__stage-row.reveal--visible .method__stage-chip:nth-child(4) {
+  animation-delay: 220ms;
+}
+
+.method__stage-row.reveal--visible .method__stage-chip:nth-child(5) {
+  animation-delay: 290ms;
+}
+
+.method__cards.reveal--visible .method-card--large {
+  animation: fadeSlideLeft 820ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.method__cards.reveal--visible .method-card--compact {
+  animation: fadeSlideRight 820ms cubic-bezier(0.19, 1, 0.22, 1) 140ms backwards;
+}
+
+.method__cards.reveal--visible .method-card__definition {
+  animation: fadeRise 700ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.method__cards.reveal--visible .method-card__definition:nth-child(1) {
+  animation-delay: 220ms;
+}
+
+.method__cards.reveal--visible .method-card__definition:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.method__cards.reveal--visible .method-card__definition:nth-child(3) {
+  animation-delay: 380ms;
+}
+
+.connect-card--about.reveal--visible .connect-card__shade {
+  animation: fadeInSoft 760ms ease-out backwards;
+}
+
+.connect-card--about.reveal--visible .connect-card__content > * {
+  animation: fadeRise 760ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.connect-card--about.reveal--visible .connect-card__content > *:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.connect-card--about.reveal--visible .connect-card__content > *:nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.connect-card--founders.reveal--visible .connect-card__founder-meta {
+  animation: fadeSlideLeftAnchored 780ms cubic-bezier(0.19, 1, 0.22, 1) 100ms backwards;
+}
+
+.connect-card--founders.reveal--visible .connect-card__director-meta {
+  animation: fadeSlideRight 780ms cubic-bezier(0.19, 1, 0.22, 1) 180ms backwards;
+}
+
+.connect-card--founders.reveal--visible .connect-card__note {
+  animation: fadeRise 780ms cubic-bezier(0.19, 1, 0.22, 1) 280ms backwards;
+}
+
+.brands.reveal--visible .brands__title {
+  animation: fadeSlideLeft 760ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.brands.reveal--visible .brands__logo {
+  animation: softScaleIn 700ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
+.brands.reveal--visible .brands__logo:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.brands.reveal--visible .brands__logo:nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.connect__cta-wrap.reveal--visible .connect__cta {
+  animation: softScaleIn 780ms cubic-bezier(0.19, 1, 0.22, 1) 160ms backwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__panel,
-  .hero__title-wrap,
-  .hero__copy,
+  .page-section--hero .hero__media,
+  .page-section--hero .hero__panel,
+  .page-section--hero .hero__title-wrap,
+  .page-section--hero .hero__copy > *,
   .reveal,
   .reveal--visible,
+  .journey__surface.reveal--visible .cities__column,
+  .journey__metric.reveal--visible .journey__pin-dot,
+  .journey__surface--categories.reveal--visible .category-card,
+  .method__banner.reveal--visible .method__tag,
+  .method__stage-row.reveal--visible .method__stage-chip,
+  .method__cards.reveal--visible .method-card--large,
+  .method__cards.reveal--visible .method-card--compact,
+  .method__cards.reveal--visible .method-card__definition,
+  .connect-card--about.reveal--visible .connect-card__shade,
+  .connect-card--about.reveal--visible .connect-card__content > *,
+  .connect-card--founders.reveal--visible .connect-card__founder-meta,
+  .connect-card--founders.reveal--visible .connect-card__director-meta,
+  .connect-card--founders.reveal--visible .connect-card__note,
+  .brands.reveal--visible .brands__title,
+  .brands.reveal--visible .brands__logo,
+  .connect__cta-wrap.reveal--visible .connect__cta,
   .connect__cta::after {
     animation: none !important;
     transition: none !important;

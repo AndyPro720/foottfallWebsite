@@ -1,5 +1,10 @@
 export function initScrollProgress() {
   const shell = document.querySelector('.site-shell');
+
+  if (document.querySelector('.scroll-progress')) {
+    return;
+  }
+
   const progress = document.createElement('div');
   const bar = document.createElement('span');
 
