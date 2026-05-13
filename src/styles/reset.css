@@ -1,39 +1,57 @@
-/* ========================================
-   CSS RESET — Modern, Minimal
-   ======================================== */
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  scroll-behavior: auto;
+  scroll-padding-top: var(--nav-height);
+  scrollbar-width: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  font-family: var(--font-sans);
-  font-weight: 400;
+  min-width: 320px;
   color: var(--color-text-dark);
-  background-color: var(--color-bg-white);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg-page);
   overflow-x: hidden;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+/* On desktop, .site-shell is the scroll container; prevent double scrollbars */
+@media (min-width: 901px) {
+  body {
+    overflow: hidden;
+    height: 100svh;
+  }
 }
 
-input, button, textarea, select {
-  font: inherit;
-  color: inherit;
+@media (max-width: 900px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -41,35 +59,32 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-  line-height: 1.2;
+button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1;
 }
 
 p {
-  overflow-wrap: break-word;
+  line-height: 1.45;
 }
 
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-/* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-  }
-
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+strong {
+  font-weight: 700;
 }

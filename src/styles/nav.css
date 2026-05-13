@@ -1,176 +1,152 @@
-/* ========================================
-   NAVIGATION — Sticky Dark Green Bar
-   ======================================== */
-
 .nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0 0 auto;
   height: var(--nav-height);
   background: var(--color-primary);
   z-index: 1000;
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base),
+    backdrop-filter var(--transition-base);
+}
+
+.nav--scrolled {
+  background: rgba(0, 79, 63, 0.94);
   box-shadow: var(--shadow-nav);
-  transition: background var(--transition-base);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .nav__inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
+  width: min(100%, calc(var(--hero-content-max) + (var(--page-padding-wide) * 2)));
   height: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(2.25rem, 2.85vw, 3.05rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--section-padding-x);
+  gap: 1.25rem;
 }
 
-/* ---- Logo ---- */
 .nav__logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: opacity var(--transition-fast);
-}
-
-.nav__logo:hover {
-  opacity: 0.85;
+  flex-shrink: 0;
 }
 
 .nav__logo-mark {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-text-light);
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: clamp(1.18rem, 1.28vw, 1.52rem);
+  height: auto;
 }
 
-/* ---- Nav Links ---- */
 .nav__links {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: clamp(1.9rem, 2.8vw, 3.9rem);
+  margin-left: auto;
 }
 
 .nav__link {
-  font-family: var(--font-sans);
-  font-size: var(--fs-nav);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.7rem, 0.68vw, 0.82rem);
   font-weight: 500;
-  color: var(--color-text-light);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  position: relative;
-  padding: 0.25rem 0;
-  transition: opacity var(--transition-fast);
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+  white-space: nowrap;
 }
 
-.nav__link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: var(--color-text-light);
-  transition: width var(--transition-base);
+.nav__link:hover,
+.nav__link.active {
+  color: var(--color-text-light);
 }
 
-.nav__link:hover::after,
-.nav__link--active::after {
-  width: 100%;
-}
-
-.nav__link:hover {
-  opacity: 0.9;
-}
-
-.nav__link--active {
-  opacity: 1;
-  font-weight: 600;
-}
-
-/* ---- CTA Link ---- */
 .nav__link--cta {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-base);
-}
-
-.nav__link--cta::after {
-  display: none;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .nav__link--cta:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.8);
-  opacity: 1;
+  color: var(--color-text-light);
 }
 
-/* ---- Hamburger ---- */
 .nav__hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 1001;
+  justify-content: center;
+  gap: 0.48rem;
+  width: 2.25rem;
+  height: 1.9rem;
+  flex-shrink: 0;
 }
 
 .nav__hamburger-line {
-  display: block;
-  width: 24px;
-  height: 2px;
+  width: 100%;
+  height: 1px;
   background: var(--color-text-light);
-  border-radius: 2px;
-  transition: all var(--transition-base);
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  transform-origin: center;
 }
 
-/* ---- Hamburger Open State ---- */
-.nav__hamburger[aria-expanded="true"] .nav__hamburger-line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.nav__hamburger.is-active .nav__hamburger-line:nth-child(1) {
+  transform: translateY(0.56rem) rotate(45deg);
 }
 
-.nav__hamburger[aria-expanded="true"] .nav__hamburger-line:nth-child(2) {
+.nav__hamburger.is-active .nav__hamburger-line:nth-child(2) {
   opacity: 0;
 }
 
-.nav__hamburger[aria-expanded="true"] .nav__hamburger-line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.nav__hamburger.is-active .nav__hamburger-line:nth-child(3) {
+  transform: translateY(-0.56rem) rotate(-45deg);
 }
 
-/* ---- Mobile Responsive ---- */
-@media (max-width: 768px) {
-  .nav__hamburger {
-    display: flex;
+@media (max-width: 1024px) {
+  .nav__inner {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    padding-inline: 1.25rem;
   }
 
   .nav__links {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: min(320px, 80vw);
-    height: 100vh;
+    inset: var(--nav-height) 0 auto;
     flex-direction: column;
-    justify-content: center;
-    gap: var(--space-lg);
-    background: var(--color-primary-dark);
-    padding: var(--space-xl) var(--space-lg);
-    transform: translateX(100%);
-    transition: transform var(--transition-slow);
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.5rem var(--page-padding-wide) 2rem;
+    background: rgba(0, 79, 63, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    transform: translateY(-130%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+    box-shadow: var(--shadow-nav);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
   }
 
-  .nav__links--open {
-    transform: translateX(0);
+  .nav__links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav__link {
     font-size: 1rem;
+  }
+
+  .nav__hamburger {
+    display: inline-flex;
+    position: fixed;
+    top: calc(var(--nav-height) / 2);
+    right: 1.25rem;
+    margin-left: auto;
+    transform: translateY(-50%);
+    background:
+      linear-gradient(var(--color-text-light), var(--color-text-light)) left 18% / 100% 1px no-repeat,
+      linear-gradient(var(--color-text-light), var(--color-text-light)) left 50% / 100% 1px no-repeat,
+      linear-gradient(var(--color-text-light), var(--color-text-light)) left 82% / 100% 1px no-repeat;
+  }
+
+  .nav__hamburger-line {
+    opacity: 0;
   }
 }

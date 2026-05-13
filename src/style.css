@@ -1,10 +1,7 @@
-/* ========================================
-   MAIN STYLESHEET — Foottfall Website
-   Import order matters: tokens → reset → type → layout → components
-   ======================================== */
-
+/* Main CSS entry point */
 @import './styles/variables.css';
 @import './styles/reset.css';
 @import './styles/typography.css';
-@import './styles/layout.css';
 @import './styles/nav.css';
+@import './styles/layout.css';
+@import './styles/animations.css';

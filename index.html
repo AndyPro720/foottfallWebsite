@@ -3,343 +3,510 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Foottfall is a trade area strategist and location leasing company for hospitality-forward brands across India and the Middle East. We close the right lease — not just the first available space." />
-    <meta name="keywords" content="Foottfall, commercial leasing, trade area intelligence, retail location strategy, India, Middle East" />
+    <meta
+      name="description"
+      content="Foottfall is a trade area strategist and location leasing company for hospitality-forward brands across India and the Middle East."
+    />
+    <meta
+      name="keywords"
+      content="Foottfall, commercial leasing, trade area intelligence, retail location strategy, India, Middle East"
+    />
     <meta name="author" content="Foottfall" />
-    <meta property="og:title" content="Foottfall — Where Your Brand Belongs" />
-    <meta property="og:description" content="Trade area intelligence and location leasing for hospitality-forward brands across India and the Middle East." />
+    <meta property="og:title" content="Foottfall - Where Your Brand Belongs" />
+    <meta
+      property="og:description"
+      content="Trade area intelligence and location leasing for hospitality-forward brands."
+    />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="style" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preload" as="image" href="/assets/landingImage.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/Transparent%20BG%20Logo/Foottfall%20Logo(White)-Transparent%20BG.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-    <title>Foottfall — Where Your Brand Belongs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Foottfall - Where Your Brand Belongs</title>
   </head>
   <body>
-
-    <!-- Navigation -->
     <nav id="main-nav" class="nav" aria-label="Main navigation">
       <div class="nav__inner">
         <a href="#hero" class="nav__logo" aria-label="Foottfall Home">
-          <span class="nav__logo-mark">F</span>
+          <img
+            src="/assets/Emblem/SVG/Asset%203.svg"
+            alt=""
+            class="nav__logo-mark"
+            aria-hidden="true"
+          />
         </a>
-        <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#cities" class="nav__link" data-trigger-intelligence>Intelligence</a></li>
+          <li><a href="#cities" class="nav__link" data-section="cities">Cities &amp; Categories</a></li>
+          <li><a href="#about" class="nav__link" data-section="about">About &amp; Connect</a></li>
+          <li><a href="#position-asset" class="nav__link nav__link--cta">Position Your Asset</a></li>
+        </ul>
+
+        <button
+          class="nav__hamburger"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
           <span class="nav__hamburger-line"></span>
           <span class="nav__hamburger-line"></span>
           <span class="nav__hamburger-line"></span>
         </button>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="#trade-areas" class="nav__link" data-section="trade-areas">Intelligence</a></li>
-          <li><a href="#cities" class="nav__link" data-section="cities">Cities & Categories</a></li>
-          <li><a href="#about" class="nav__link" data-section="about">About & Connect</a></li>
-          <li><a href="#brands-footer" class="nav__link nav__link--cta" data-section="brands-footer">Position Your Asset</a></li>
-        </ul>
       </div>
     </nav>
 
-    <!-- Main Content — Scroll Snap Container -->
-    <main id="app">
+    <main id="app" class="site-shell">
+      <section id="hero" class="page-section page-section--hero" data-nav-section>
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="content-shell hero__inner">
+          <div class="hero__panel">
+            <div class="hero__title-wrap">
+              <h1 class="hero__title" aria-label="Foottfall Leasing">
+                <img
+                  src="/assets/Transparent%20BG%20Logo/Foottfall%20Logo(White)-Transparent%20BG.png"
+                  alt=""
+                  class="hero__logo"
+                  aria-hidden="true"
+                />
+              </h1>
+            </div>
 
-      <!-- Section 1: Hero / Landing -->
-      <section id="hero" class="snap-section section--hero">
-        <div class="hero__bg"></div>
-        <div class="hero__overlay"></div>
-        <div class="section-content hero__content">
-          <div class="hero__text">
-            <h1 class="hero-title">
-              <span class="hero-title__main">Foottfall</span>
-              <span class="hero-title__sub">Leasing</span>
-            </h1>
-          </div>
-          <div class="hero__tagline-card">
-            <p class="hero__tagline-eyebrow">Where Your</p>
-            <h2 class="hero__tagline-heading">Brand Belongs.</h2>
-            <p class="hero__tagline-body">
-              Expansion is not a search for space.<br/>
-              It is a decision about relevance.
-            </p>
-            <p class="hero__tagline-desc">
-              <strong>Foottfall</strong> is a trade area strategist and location leasing
-              company for hospitality-forward brands across India
-              and the Middle East — built on 20+ years of industry
-              expertise and a 98% location success rate.
-            </p>
-            <p class="hero__tagline-desc">
-              We structure and close leases through trade area
-              intelligence — not just listings.
-            </p>
-            <a href="#trade-areas" class="btn btn--outline hero__cta">Explore Intelligence</a>
+            <div class="hero__copy">
+              <p class="hero__eyebrow">Where Your</p>
+              <h2 class="hero__copy-title">Brand Belongs.</h2>
+              <p class="hero__summary">
+                Expansion is not a search for space.<br />
+                It is a decision about relevance.
+              </p>
+              <p class="hero__body">
+                <strong>Foottfall</strong> is a trade area strategist and location leasing company
+                for hospitality-forward brands across India and the Middle East - built on 20+
+                years of industry expertise and a 98% location success rate.
+              </p>
+              <p class="hero__body">
+                We structure and close leases through trade area intelligence - not just listings.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Cities & Regional Bases -->
-      <section id="cities" class="snap-section section--cream">
-        <div class="section-content cities__content">
-          <div class="cities__header">
-            <span class="cities__badge">Cities & Regional Bases</span>
-          </div>
-          <div class="cities__grid">
-            <div class="cities__column">
-              <h3 class="cities__category-title">World Cities</h3>
-              <ul class="cities__list">
-                <li>Dubai</li>
-                <li>Abu Dhabi</li>
-                <li>Riyadh</li>
-                <li>Doha</li>
-              </ul>
-            </div>
-            <div class="cities__column">
-              <h3 class="cities__category-title">Metro Cities</h3>
-              <ul class="cities__list">
-                <li>Mumbai</li>
-                <li>Delhi NCR</li>
-                <li>Kolkata</li>
-                <li>Bengaluru</li>
-                <li>Hyderabad</li>
-              </ul>
-            </div>
-            <div class="cities__column">
-              <h3 class="cities__category-title">Emerging Metro Cities</h3>
-              <ul class="cities__list">
-                <li>Jaipur</li>
-                <li>Ahmedabad</li>
-                <li>Pune</li>
-                <li>Guwahati</li>
-              </ul>
-            </div>
-            <div class="cities__column">
-              <h3 class="cities__category-title">Opportunity Cities — India</h3>
-              <ul class="cities__list cities__list--double">
-                <li>Ludhiana</li>
-                <li>Cochin</li>
-                <li>Chandigarh</li>
-                <li>Vijayawada</li>
-                <li>Surat</li>
-                <li>Vizag</li>
-                <li>Indore</li>
-                <li>Goa</li>
-                <li>Bhopal</li>
-                <li>Raipur</li>
-                <li>Coimbatore</li>
-              </ul>
-            </div>
-            <div class="cities__column">
-              <h3 class="cities__category-title">Opportunity Cities — Middle East</h3>
-              <ul class="cities__list">
-                <li>Muscat</li>
-                <li>Jeddah</li>
-                <li>Sharjah</li>
-                <li>Bahrain</li>
-                <li>Ras Al</li>
-                <li>Khaimah</li>
-              </ul>
-            </div>
-          </div>
-          <p class="cities__footnote">New cities keep getting added to the above regularly.</p>
-        </div>
-      </section>
+      <section id="cities" class="page-section page-section--journey" data-nav-section>
+        <div class="content-shell">
+          <div class="journey__stack">
+            <header class="journey__label reveal">
+              <span>Cities</span>
+            </header>
 
-      <!-- Section 3: Trade Area Intelligence -->
-      <section id="trade-areas" class="snap-section section--white">
-        <div class="section-content trade-areas__content">
-          <div class="trade-areas__stat-card">
-            <span class="trade-areas__pin"></span>
-            <p class="trade-areas__headline">
-              We've mapped <strong>140+ trade areas</strong> across India and the Middle East.
+            <article class="journey__surface reveal">
+              <div class="cities__grid">
+                <div class="cities__column">
+                  <h2 class="cities__title">World<br />Cities</h2>
+                  <ul class="cities__list">
+                    <li>Dubai</li>
+                    <li>Abu Dhabi</li>
+                    <li>Riyadh</li>
+                    <li>Doha</li>
+                  </ul>
+                </div>
+
+                <div class="cities__column">
+                  <h2 class="cities__title">Metro<br />Cities</h2>
+                  <ul class="cities__list">
+                    <li>Mumbai</li>
+                    <li>Delhi NCR</li>
+                    <li>Kolkata</li>
+                    <li>Bengaluru</li>
+                    <li>Hyderabad</li>
+                  </ul>
+                </div>
+
+                <div class="cities__column">
+                  <h2 class="cities__title">Emerging<br />Metro Cities</h2>
+                  <ul class="cities__list">
+                    <li>Jaipur</li>
+                    <li>Ahmedabad</li>
+                    <li>Pune</li>
+                    <li>Guwahati</li>
+                  </ul>
+                </div>
+
+                <div class="cities__column">
+                  <h2 class="cities__title">Opportunity<br />Cities - India</h2>
+                  <div class="cities__list cities__list--dual">
+                    <ul>
+                      <li>Ludhiana</li>
+                      <li>Chandigarh</li>
+                      <li>Surat</li>
+                      <li>Indore</li>
+                      <li>Bhopal</li>
+                      <li>Raipur</li>
+                      <li>Coimbatore</li>
+                    </ul>
+                    <ul>
+                      <li>Cochin</li>
+                      <li>Vijayawada</li>
+                      <li>Vizag</li>
+                      <li>Goa</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="cities__column">
+                  <h2 class="cities__title">Opportunity<br />Cities - Middle East</h2>
+                  <ul class="cities__list">
+                    <li>Muscat</li>
+                    <li>Jeddah</li>
+                    <li>Sharjah</li>
+                    <li>Bahrain</li>
+                    <li>Ras Al</li>
+                    <li>Khaimah</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p class="cities__footnote">New cities keep getting added to the above regularly.</p>
+            </article>
+
+            <article id="intelligence" class="journey__metric reveal" data-nav-section>
+              <div class="journey__pin" aria-hidden="true">
+                <span class="journey__pin-dot"></span>
+                <span class="journey__pin-line"></span>
+              </div>
+              <div class="journey__metric-copy">
+                <h2 class="journey__metric-title">
+                  We&apos;ve mapped <strong>140+ trade areas</strong> across India and the Middle East.
+                </h2>
+                <p class="journey__metric-subtitle">Continuously mapped. Always growing.</p>
+              </div>
+            </article>
+
+            <article class="journey__surface journey__surface--categories reveal">
+              <div class="categories__grid">
+                <article class="category-card category-card--popover" tabindex="0">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 45h38M25 45c1-12 7-20 15-20s14 8 15 20M40 20v5M36 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M28 51h24l-5 8H33l-5-8zM22 59h12M50 59h8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <path d="M20 39c2-1 4-2 6-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Restaurants &amp;<br />Food Brands</h3>
+                  <div class="category-card__popover">
+                    <ul>
+                      <li>QSR</li>
+                      <li>Casual Dining</li>
+                      <li>Fast Casual</li>
+                      <li>Premium Dining</li>
+                      <li>Chef-Driven &amp; Experience-Based Restaurants</li>
+                      <li>Cafes &amp; Dessert Concepts</li>
+                      <li>Restobars - Bars &amp; Lounges</li>
+                      <li>Nightlife</li>
+                    </ul>
+                    <ul>
+                      <li>Transit &amp; Travel F&amp;B</li>
+                      <li>Cloud Kitchens</li>
+                      <li>Drive-Thru / Drive-In Formats</li>
+                      <li>Food Halls</li>
+                      <li>Pop-Ups</li>
+                      <li>Amphitheatre &amp; Event-Linked F&amp;B</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="category-card category-card--popover category-card--popover-right" tabindex="0">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 28l34-6 2 10-34 6-2-10zM25 28l5 8M35 26l5 8M45 24l5 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <rect x="22" y="38" width="38" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+                      <path d="M33 60v5M49 60v5M31 65h20M48 43l7 6-7 6v-12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <path d="M24 46h14M24 52h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Entertainment-<br />Led Hospitality</h3>
+                  <div class="category-card__popover">
+                    <ul>
+                      <li>Night Clubs &amp; Live Entertainment Venues</li>
+                      <li>Family Entertainment + F&amp;B Hybrids</li>
+                      <li>Event-Linked Entertainment Floors</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="category-card">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M40 57V36M40 36c-8 0-13-6-14-14 8 1 14 5 14 14zM40 36c8 0 13-6 14-14-8 1-14 5-14 14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <path d="M28 57c2-7 6-11 12-11s10 4 12 11M23 44c3 2 5 4 6 8M57 44c-3 2-5 4-6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M25 24l-3-3M55 24l3-3M40 17v-5M31 18l-2-4M49 18l2-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Wellness &amp;<br />Grooming</h3>
+                </article>
+
+                <article class="category-card">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M40 32c2-6 13-7 14 2 1 8-9 14-14 19-5-5-15-11-14-19 1-9 12-8 14-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <path d="M23 52v-9M57 52v-9M18 47h10M52 47h10M30 47h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Fitness &amp;<br />Lifestyle</h3>
+                </article>
+
+                <article class="category-card">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 39c0-5 4-9 9-9h20c5 0 9 4 9 9v8c0 5-4 9-9 9H30c-5 0-9-4-9-9v-8z" stroke="currentColor" stroke-width="2"/>
+                      <path d="M31 38v10M26 43h10M48 39h.1M54 47h.1M16 43h5M59 43h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M35 30l-3-6M45 30l3-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Gaming &amp;<br />Social Play</h3>
+                </article>
+
+                <article class="category-card">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 55V43c0-5 4-9 9-9h10c5 0 9 4 9 9v12M30 55h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M40 26v16M32 34h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                      <path d="M23 46l-7-7c-2-2-5 1-3 4l11 17h11M57 46l7-7c2-2 5 1 3 4L56 60H45" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Modern<br />Healthcare</h3>
+                </article>
+
+                <article class="category-card">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="40" cy="24" r="7" stroke="currentColor" stroke-width="2"/>
+                      <path d="M27 50c0-8 5-14 13-14s13 6 13 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <rect x="25" y="48" width="30" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                      <path d="M34 62h12M40 54h.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">Flexible<br />Workspaces</h3>
+                </article>
+
+                <article class="category-card">
+                  <div class="category-card__icon">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 36l20-11 20 11v25H20V36z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <path d="M27 48h26v13H27V48zM30 44h8M42 44h8M31 53h18" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      <path d="M44 35l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <h3 class="category-card__label">New Age<br />Hotels</h3>
+                </article>
+              </div>
+            </article>
+
+            <button class="journey__action reveal" type="button" aria-describedby="journey-action-note">
+              Find Where You Belong
+            </button>
+            <p id="journey-action-note" class="journey__action-note" role="status" aria-live="polite">
+              Foottfall Intelligence is coming soon.
             </p>
-            <p class="trade-areas__sub">Continuously mapped. Always growing.</p>
           </div>
-
-          <div class="categories__grid">
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 8c-4 0-8 2-8 6v4h-4v8h24v-8h-4v-4c0-4-4-6-8-6zm-2 10v-4c0-1.5 1-3 2-3s2 1.5 2 3v4h-4zm-14 10l-4 28h40l-4-28H16z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-              </div>
-              <p class="category-card__label">Restaurants &<br/>Food Brands</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M20 20V12h24v8M28 36h8" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="2"/></svg>
-              </div>
-              <p class="category-card__label">Entertainment-<br/>Led Hospitality</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 12c-8 0-16 8-16 16 0 6 4 12 8 16l8 10 8-10c4-4 8-10 8-16 0-8-8-16-16-16z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M28 28c0-4 8-4 8 0s-8 8-8 8 8-4 8-8z" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <p class="category-card__label">Wellness &<br/>Grooming</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="24" r="8" stroke="currentColor" stroke-width="2"/><path d="M20 52c0-8 5-14 12-14s12 6 12 14" stroke="currentColor" stroke-width="2"/><path d="M28 20l4-4 4 4M24 28h16" stroke="currentColor" stroke-width="2"/></svg>
-              </div>
-              <p class="category-card__label">Fitness &<br/>Lifestyle</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="22" width="32" height="20" rx="8" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="32" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="38" cy="32" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 32h4M48 32h4M30 28h4" stroke="currentColor" stroke-width="2"/></svg>
-              </div>
-              <p class="category-card__label">Gaming &<br/>Social Play</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 16v8M24 20l8-4 8 4" stroke="currentColor" stroke-width="2"/><rect x="20" y="28" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M32 28v20M28 34h8M28 40h8" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <p class="category-card__label">Modern<br/>Healthcare</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="20" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 28h36M22 28v20M42 28v20" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="38" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <p class="category-card__label">Flexible<br/>Workspaces</p>
-            </div>
-            <div class="category-card">
-              <div class="category-card__icon">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="24" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 32h32M24 24v-6h16v6" stroke="currentColor" stroke-width="2"/><rect x="28" y="36" width="8" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <p class="category-card__label">New Age<br/>Hotels</p>
-            </div>
-          </div>
-
-          <a href="#cities" class="btn btn--outline trade-areas__cta">Find Where You Belong</a>
         </div>
       </section>
 
-      <!-- Section 4: How We Work -->
-      <section id="how-we-work" class="snap-section section--cream">
-        <div class="section-content how-we-work__content">
-          <div class="how-we-work__banner">
-            <span class="how-we-work__banner-tag">Planning your next location?</span>
-            <h2 class="how-we-work__banner-heading">
-              Is your brand looking to expand?<br/>
+      <section id="process" class="page-section page-section--method" data-nav-section>
+        <div class="content-shell">
+          <article class="method__banner reveal">
+            <span class="method__tag">Planning your next location?</span>
+            <h2 class="method__banner-title">
+              Is your brand looking to expand?<br />
               We close the right lease, <strong>not just the first available space.</strong>
             </h2>
-            <p class="how-we-work__banner-body">
-              We begin with the brand.<br/>
-              Its consumer. Its format. Logic. Its economic model. Its ambition.<br/>
+            <p class="method__banner-copy">
+              We begin with the brand.<br />
+              Its consumer. Its format logic. Its economic model. Its ambition.<br />
               Then we use our trade area intelligence to define where you belong.
             </p>
-          </div>
+          </article>
 
-          <h2 class="how-we-work__title">How We Work</h2>
+          <h2 class="method__title reveal">How We Work</h2>
 
-          <div class="how-we-work__stages">
-            <div class="how-we-work__stage">
-              <h3 class="how-we-work__stage-name">Stage One:<br/><strong>City Plotting</strong></h3>
-              <div class="how-we-work__stage-tags">
-                <span class="tag">World Cities</span>
-                <span class="tag">Metro Cities</span>
-                <span class="tag">Emerging Metro Cities</span>
-                <span class="tag">Opportunity Cities — India</span>
-                <span class="tag">Opportunity Cities — Middle East</span>
-              </div>
+          <article class="method__stage-row reveal">
+            <div class="method__stage-label">
+              <strong>Stage One:</strong><br />
+              City plotting
             </div>
-            <div class="how-we-work__stage">
-              <h3 class="how-we-work__stage-name">Stage Two:<br/><strong>Expansion Framework</strong></h3>
-              <div class="how-we-work__stage-detail">
-                <div>
-                  <h4>CBD</h4>
-                  <p class="how-we-work__district-title">Central Business District</p>
-                  <p class="how-we-work__district-desc">Core commercial zones. High visibility, established footfall, premium positioning.</p>
+
+            <div class="method__stage-tags">
+              <span class="method__stage-chip">World Cities</span>
+              <span class="method__stage-chip">Metro Cities</span>
+              <span class="method__stage-chip">Emerging Metro Cities</span>
+              <span class="method__stage-chip">Opportunity Cities - India</span>
+              <span class="method__stage-chip">Opportunity Cities - Middle East</span>
+            </div>
+          </article>
+
+          <div class="method__cards reveal">
+            <article class="method-card method-card--large">
+              <div class="method-card__intro">
+                <div class="method-card__icon">
+                  <img src="/stage-two-icon.svg" alt="" aria-hidden="true" />
                 </div>
-                <div>
-                  <h4>PBD</h4>
-                  <p class="how-we-work__district-title">Peripheral Business District</p>
-                  <p class="how-we-work__district-desc">Emerging zones outside the center. Growing catchment, better unit economics.</p>
+                <h3 class="method-card__title"><strong>Stage Two:</strong><br />Expansion Framework</h3>
+                <p class="method-card__copy">
+                  We build a location-led expansion strategy with a trade area opportunity matrix -
+                  showing you which CBDs, PBDs, or TBDs match your format, and why. We factor in
+                  demographics, commercial fabric, brandscape, and catchment glorifiers
+                  (nightlife clusters, malls).
+                </p>
+              </div>
+
+              <div class="method-card__definitions">
+                <div class="method-card__definition">
+                  <p class="method-card__definition-key">CBD</p>
+                  <h4>Central Business District</h4>
+                  <p>Core commercial zones. High visibility, established footfall, premium positioning.</p>
                 </div>
-                <div>
-                  <h4>TBD</h4>
-                  <p class="how-we-work__district-title">Tertiary Business District</p>
-                  <p class="how-we-work__district-desc">Outer commercial pockets. Local catchment, format-dependent viability.</p>
+
+                <div class="method-card__definition">
+                  <p class="method-card__definition-key">PBD</p>
+                  <h4>Peripheral Business District</h4>
+                  <p>Emerging zones outside the center. Growing catchment, better unit economics.</p>
+                </div>
+
+                <div class="method-card__definition">
+                  <p class="method-card__definition-key">TBD</p>
+                  <h4>Tertiary Business District</h4>
+                  <p>Outer commercial pockets. Local catchment, format-dependent viability.</p>
                 </div>
               </div>
-              <p class="how-we-work__dcb-note">Every trade area is evaluated using our <strong>DCB Framework: Demographics · Commercial · Brandscape</strong></p>
-            </div>
-            <div class="how-we-work__stage">
-              <h3 class="how-we-work__stage-name">Stage Three:<br/><strong>Stock Matching & Execution</strong></h3>
-              <p class="how-we-work__stage-body">
-                We identify available properties or source suitable stock within the agreed trade areas. Then we close the lease. Where relevant, we review underperforming locations to assess relocation or deal restructuring opportunities.
+
+              <p class="method-card__note">
+                Every trade area is evaluated using our <strong>DCB framework: Demographics &middot; Commercial Fabric &middot; Brandscape</strong>
               </p>
-            </div>
+            </article>
+
+            <article class="method-card method-card--compact">
+              <div class="method-card__icon method-card__icon--compact">
+                <img src="/stage-three-icon.png" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="method-card__title"><strong>Stage Three:</strong><br />Stock Matching<br />&amp; Execution</h3>
+              <p class="method-card__copy">
+                We identify available properties or source suitable stock within the agreed trade
+                areas. Then we close the lease. Where relevant, we review underperforming locations
+                to assess relocation or deal restructuring opportunities.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Section 5: About & Founder -->
-      <section id="about" class="snap-section section--green">
-        <div class="section-content about__content">
-          <div class="about__grid">
-            <div class="about__company">
-              <h2 class="about__heading">About Foottfall</h2>
-              <p class="about__text">
-                We are a retail real estate leasing and advisory firm engaged in
-                connecting brands and spaces through thoughtful location strategy.
-                We work with hospitality-led and experience-driven brands to
-                identify sites that offer the right mix of footfall and long-term
-                potential. At the same time, we collaborate with landlords and
-                developers to align their assets with brands that contribute
-                meaningfully to value and engagement.
-              </p>
-              <p class="about__text">
-                Our approach brings together trade area insight, market
-                understanding, and execution, with the objective of creating
-                outcomes that are well-matched, considered, and built for continuity.
-              </p>
-            </div>
-            <div class="about__founder">
-              <div class="about__founder-image"></div>
-              <h3 class="about__founder-name">Rahul Ahuja</h3>
-              <p class="about__founder-title">Founder</p>
-            </div>
-            <div class="about__team-member">
-              <div class="about__team-image"></div>
-              <h3 class="about__team-name">Name</h3>
-              <p class="about__team-title">Director</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="about" class="page-section page-section--connect" data-nav-section>
+        <div class="content-shell content-shell--connect">
+          <div class="connect__top-grid">
+            <article class="connect-card connect-card--about reveal">
+              <div class="connect-card__shade"></div>
+              <div class="connect-card__content">
+                <h2 class="connect-card__title">About Foottfall</h2>
+                <p class="connect-card__copy">
+                  We are a retail real estate leasing and advisory firm engaged in connecting brands
+                  and spaces through thoughtful location strategy. We work with hospitality-led and
+                  experience-driven brands to identify sites that offer the right mix of footfall and
+                  long-term potential.
+                </p>
+                <p class="connect-card__copy">
+                  At the same time, we collaborate with landlords and developers to align their assets
+                  with brands that contribute meaningfully to value and engagement. Our approach brings
+                  together trade-area insight, market understanding, and execution, with the objective
+                  of creating outcomes that are well-matched, considered, and built for continuity.
+                </p>
+              </div>
+            </article>
 
-      <!-- Section 6: Brands Showcase & Footer -->
-      <section id="brands-footer" class="snap-section section--white">
-        <div class="section-content brands-footer__content">
-          <div class="brands__section">
-            <h2 class="brands__title">Brands Showcase</h2>
-            <div class="brands__logos">
-              <div class="brand-logo"><span>Absolute Barbecue</span></div>
-              <div class="brand-logo brand-logo--placeholder"><span>Logo</span></div>
-              <div class="brand-logo"><span>Nando's</span></div>
-              <div class="brand-logo brand-logo--placeholder"><span>Logo</span></div>
-              <div class="brand-logo brand-logo--placeholder"><span>Logo</span></div>
-              <div class="brand-logo brand-logo--placeholder"><span>Logo</span></div>
-              <div class="brand-logo brand-logo--placeholder"><span>Logo</span></div>
-            </div>
+            <article class="connect-card connect-card--founders reveal">
+              <div class="connect-card__founder-meta">
+                <h3>Rahul<br />Ahuja</h3>
+                <p>Founder</p>
+              </div>
+              <div class="connect-card__director-meta">
+                <h3>Hriday<br />Ahuja</h3>
+                <p>Director</p>
+              </div>
+              <aside class="connect-card__note">
+                Expansion decisions deserve on-<br />
+                ground judgment, landlord<br />
+                context, and market timing - not<br />
+                just a list of available spaces.
+              </aside>
+            </article>
           </div>
 
-          <a href="#brands-footer" class="btn btn--primary brands__cta">Position Your Asset</a>
+          <section class="brands reveal" aria-labelledby="brands-title">
+            <h2 id="brands-title" class="brands__title">Brands<br />Showcase</h2>
 
-          <footer class="footer">
-            <div class="footer__inner">
-              <div class="footer__brand">
-                <span class="footer__logo">Foottfall</span>
+            <div class="brands__track-wrap">
+              <button class="brands__arrow" type="button" aria-label="Previous brands">&lsaquo;</button>
+
+              <div class="brands__track">
+                <img
+                  src="/brand-barbeque-nation.png"
+                  alt="Barbeque Nation"
+                  class="brands__logo brands__logo--barbeque"
+                />
+                <img
+                  src="/brand-nandos.png"
+                  alt="Nando's"
+                  class="brands__logo brands__logo--nandos"
+                />
+                <img
+                  src="/assets/Absolute_Barbecues_India_id_qpml3fI_0.png"
+                  alt="Absolute Barbecues"
+                  class="brands__logo brands__logo--absolute"
+                />
               </div>
-              <div class="footer__links">
-                <span>📍 Location & Leasing Strategist</span>
-                <a href="#">Dubai</a>
-                <a href="#">Mumbai</a>
-                <a href="#">Pune</a>
-                <a href="#">Kolkata</a>
-                <a href="#">New Delhi</a>
-              </div>
-              <div class="footer__contact">
-                <span>Contact: <a href="mailto:business@foottfall.com">business@foottfall.com</a></span>
-              </div>
+
+              <button class="brands__arrow" type="button" aria-label="Next brands">&rsaquo;</button>
             </div>
-          </footer>
-        </div>
-      </section>
+          </section>
 
+          <div id="position-asset" class="connect__cta-wrap reveal">
+            <a href="mailto:business@foottfall.com" class="connect__cta">Position Your Asset</a>
+          </div>
+        </div>
+
+        <footer id="footer" class="site-footer">
+          <div class="content-shell site-footer__inner">
+            <a href="#hero" class="site-footer__brand" aria-label="Foottfall Home">
+              <img
+                src="/assets/Transparent%20BG%20Logo/Foottfall%20Logo(White)-Transparent%20BG.png"
+                alt="Foottfall"
+              />
+            </a>
+
+            <div class="site-footer__meta">
+              <span class="site-footer__role">Location &amp; Leasing Strategist</span>
+              <span>Dubai</span>
+              <span>Mumbai</span>
+              <span>Pune</span>
+              <span>Kolkata</span>
+              <span>New Delhi</span>
+            </div>
+
+            <a class="site-footer__contact" href="mailto:business@foottfall.com">
+              Contact: business@foottfall.com
+            </a>
+          </div>
+        </footer>
+      </section>
     </main>
 
     <script type="module" src="/src/main.js"></script>
