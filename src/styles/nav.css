@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0 0 auto;
   height: var(--nav-height);
-  background: var(--color-primary);
+  background: var(--color-hero-bg);
   z-index: 1000;
   transition:
     background var(--transition-base),
@@ -11,7 +11,7 @@
 }
 
 .nav--scrolled {
-  background: rgba(0, 79, 63, 0.94);
+  background: rgba(0, 45, 36, 0.94);
   box-shadow: var(--shadow-nav);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -112,7 +112,7 @@
     align-items: flex-start;
     gap: 0.75rem;
     padding: 1.5rem var(--page-padding-wide) 2rem;
-    background: rgba(0, 79, 63, 0.96);
+    background: rgba(0, 45, 36, 0.96);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     transform: translateY(-130%);
     opacity: 0;

@@ -75,7 +75,7 @@
 .hero__panel {
   width: 100%;
   min-height: clamp(18.75rem, 23vw, 22rem);
-  background: rgba(0, 61, 50, 0.88);
+  background: rgba(0, 45, 36, 0.95);
   border-radius: clamp(1.1rem, 1.55vw, 1.75rem);
   padding: clamp(1.9rem, 2.95vw, 2.8rem) clamp(4rem, 6.45vw, 7.7rem);
   display: grid;
