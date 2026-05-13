@@ -8,9 +8,11 @@ export function initNav() {
     return;
   }
 
-  // Use the .site-shell as scroll container on desktop (it has overflow-y: auto)
   const getScrollContainer = () =>
     window.innerWidth >= 901 && shell ? shell : window;
+
+  const prefersReducedMotion = () =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const closeMenu = () => {
     links.classList.remove('is-open');
@@ -33,7 +35,7 @@ export function initNav() {
 
       if (target) {
         target.scrollIntoView({
-          behavior: window.innerWidth >= 901 ? 'auto' : 'smooth',
+          behavior: prefersReducedMotion() ? 'auto' : 'smooth',
           block: 'start',
         });
       }
