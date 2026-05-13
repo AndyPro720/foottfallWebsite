@@ -13,6 +13,13 @@ dist-ssr
 *.local
 .agent/
 
+# Raw design/source assets are too large for normal Git hosting.
+*.psd
+*.ai
+*.pdf
+*.DS_Store
+assets/Footfall Website_Design*.jpg
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
