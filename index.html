@@ -114,69 +114,95 @@
 
             <article class="journey__surface reveal">
               <div class="cities__grid">
-                <div class="cities__column">
-                  <h2 class="cities__title">World<br />Cities</h2>
-                  <ul class="cities__list">
-                    <li>Dubai</li>
-                    <li>Abu Dhabi</li>
-                    <li>Riyadh</li>
-                    <li>Doha</li>
-                  </ul>
-                </div>
-
-                <div class="cities__column">
-                  <h2 class="cities__title">Metro<br />Cities</h2>
-                  <ul class="cities__list">
-                    <li>Mumbai</li>
-                    <li>Delhi NCR</li>
-                    <li>Kolkata</li>
-                    <li>Bengaluru</li>
-                    <li>Hyderabad</li>
-                  </ul>
-                </div>
-
-                <div class="cities__column">
-                  <h2 class="cities__title">Emerging<br />Metro Cities</h2>
-                  <ul class="cities__list">
-                    <li>Jaipur</li>
-                    <li>Ahmedabad</li>
-                    <li>Pune</li>
-                    <li>Guwahati</li>
-                  </ul>
-                </div>
-
-                <div class="cities__column">
-                  <h2 class="cities__title">Opportunity<br />Cities - India</h2>
-                  <div class="cities__list cities__list--dual">
-                    <ul>
-                      <li>Ludhiana</li>
-                      <li>Chandigarh</li>
-                      <li>Surat</li>
-                      <li>Indore</li>
-                      <li>Bhopal</li>
-                      <li>Raipur</li>
-                      <li>Coimbatore</li>
-                    </ul>
-                    <ul>
-                      <li>Cochin</li>
-                      <li>Vijayawada</li>
-                      <li>Vizag</li>
-                      <li>Goa</li>
+                <details class="cities__column cities__group">
+                  <summary class="cities__summary">
+                    <h2 class="cities__title">World<br />Cities</h2>
+                    <span class="cities__summary-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="cities__panel">
+                    <ul class="cities__list">
+                      <li>Dubai</li>
+                      <li>Abu Dhabi</li>
+                      <li>Riyadh</li>
+                      <li>Doha</li>
                     </ul>
                   </div>
-                </div>
+                </details>
 
-                <div class="cities__column">
-                  <h2 class="cities__title">Opportunity<br />Cities - Middle East</h2>
-                  <ul class="cities__list">
-                    <li>Muscat</li>
-                    <li>Jeddah</li>
-                    <li>Sharjah</li>
-                    <li>Bahrain</li>
-                    <li>Ras Al</li>
-                    <li>Khaimah</li>
-                  </ul>
-                </div>
+                <details class="cities__column cities__group">
+                  <summary class="cities__summary">
+                    <h2 class="cities__title">Metro<br />Cities</h2>
+                    <span class="cities__summary-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="cities__panel">
+                    <ul class="cities__list">
+                      <li>Mumbai</li>
+                      <li>Delhi NCR</li>
+                      <li>Kolkata</li>
+                      <li>Bengaluru</li>
+                      <li>Hyderabad</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="cities__column cities__group">
+                  <summary class="cities__summary">
+                    <h2 class="cities__title">Emerging<br />Metro Cities</h2>
+                    <span class="cities__summary-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="cities__panel">
+                    <ul class="cities__list">
+                      <li>Jaipur</li>
+                      <li>Ahmedabad</li>
+                      <li>Pune</li>
+                      <li>Guwahati</li>
+                    </ul>
+                  </div>
+                </details>
+
+                <details class="cities__column cities__group">
+                  <summary class="cities__summary">
+                    <h2 class="cities__title">Opportunity<br />Cities - India</h2>
+                    <span class="cities__summary-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="cities__panel">
+                    <div class="cities__list cities__list--dual">
+                      <ul>
+                        <li>Ludhiana</li>
+                        <li>Chandigarh</li>
+                        <li>Surat</li>
+                        <li>Indore</li>
+                        <li>Bhopal</li>
+                        <li>Raipur</li>
+                        <li>Coimbatore</li>
+                      </ul>
+                      <ul>
+                        <li>Cochin</li>
+                        <li>Vijayawada</li>
+                        <li>Vizag</li>
+                        <li>Goa</li>
+                        <li>Agra</li>
+                        <li>Varanasi</li>
+                      </ul>
+                    </div>
+                  </div>
+                </details>
+
+                <details class="cities__column cities__group">
+                  <summary class="cities__summary">
+                    <h2 class="cities__title">Opportunity<br />Cities - Middle East</h2>
+                    <span class="cities__summary-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="cities__panel">
+                    <ul class="cities__list">
+                      <li>Muscat</li>
+                      <li>Jeddah</li>
+                      <li>Sharjah</li>
+                      <li>Bahrain</li>
+                      <li>Ras Al Khaimah</li>
+                    </ul>
+                  </div>
+                </details>
               </div>
 
               <p class="cities__footnote">New cities keep getting added to the above regularly.</p>
@@ -266,11 +292,17 @@
               </div>
             </article>
 
-            <button class="journey__action reveal" type="button" aria-describedby="journey-action-note">
+            <button
+              class="journey__action reveal"
+              type="button"
+              aria-describedby="journey-action-note"
+              aria-haspopup="dialog"
+            >
               Find Where You Belong
             </button>
             <p id="journey-action-note" class="journey__action-note" role="status" aria-live="polite">
-              Foottfall Intelligence is coming soon.
+              Foottfall Intelligence is coming soon. Leave your name, mobile number, and email and
+              we&apos;ll reach out.
             </p>
           </div>
         </div>
@@ -387,12 +419,10 @@
 
             <article class="connect-card connect-card--founders reveal">
               <div class="connect-card__founder-meta">
-                <h3>Rahul<br />Ahuja</h3>
-                <p>Founder</p>
+                <h3>Rahul Kumar<br />Ahuja</h3>
               </div>
               <div class="connect-card__director-meta">
-                <h3>Hriday<br />Ahuja</h3>
-                <p>Director</p>
+                <h3>Hriday Kumar<br />Ahuja</h3>
               </div>
               <aside class="connect-card__note">
                 Expansion decisions deserve on-<br />
@@ -404,27 +434,84 @@
           </div>
 
           <section class="brands reveal" aria-labelledby="brands-title">
-            <h2 id="brands-title" class="brands__title">Brands<br />Showcase</h2>
+            <div class="brands__heading">
+              <p class="brands__eyebrow">Brand Showcase</p>
+              <h2 id="brands-title" class="brands__title">Connected<br />Brands</h2>
+            </div>
 
             <div class="brands__track-wrap">
               <button class="brands__arrow" type="button" aria-label="Previous brands">&lsaquo;</button>
 
               <div class="brands__track">
-                <img
-                  src="/assets/brand-barbeque-nation.png"
-                  alt="Barbeque Nation"
-                  class="brands__logo brands__logo--barbeque"
-                />
-                <img
-                  src="/assets/brand-nandos.png"
-                  alt="Nando's"
-                  class="brands__logo brands__logo--nandos"
-                />
-                <img
-                  src="/assets/Absolute_Barbecues_India_id_qpml3fI_0.png"
-                  alt="Absolute Barbecues"
-                  class="brands__logo brands__logo--absolute"
-                />
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brand-barbeque-nation.png"
+                    alt="Barbeque Nation"
+                    class="brands__logo brands__logo--barbeque"
+                  />
+                </article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Toscano</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Salt</span></article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/Absolute_Barbecues_India_id_qpml3fI_0.png"
+                    alt="ABs"
+                    class="brands__logo brands__logo--absolute"
+                  />
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brand-nandos.png"
+                    alt="Nando&apos;s"
+                    class="brands__logo brands__logo--nandos"
+                  />
+                </article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Tandooriya</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Bread Pocket Co</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Bikanerwala</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Wow Momos</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Anna</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Antonia</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Pizza Di Rocco</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Al Safadi</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Social Distrikt</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Jardin Hotels</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Bloom Room</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Filli Cafe</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">D11</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Marassi</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Dana</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Oasis</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">BLVD 1890</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Red Sea</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Cenomi</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Jeddah Vibes</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Sharjah Sentral</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Sharooq</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Al Ganda Mall</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Lulu Malls</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">MAF</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Silicon Sentral</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Dalma</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Reem</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Abu Dhabi Mall</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">City Centre Doha</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Nayati</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">14 Entrar</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">LVL 5</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Amanora</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Phoenix</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">HCL Surat</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">High Street Apollo</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Jivana</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Vegas Mall</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">DLF</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Inorbit</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Korum</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">BIPL</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Express Avenue</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">Forum Kochi</span></article>
+                <article class="brands__item brands__item--text"><span class="brands__label">DB Mall</span></article>
               </div>
 
               <button class="brands__arrow" type="button" aria-label="Next brands">&rsaquo;</button>
@@ -432,7 +519,7 @@
           </section>
 
           <div id="position-asset" class="connect__cta-wrap">
-            <a href="mailto:business@foottfall.com" class="connect__cta">Position Your Asset</a>
+            <a href="mailto:info@foottfall.com" class="connect__cta">Position Your Asset</a>
           </div>
         </div>
 
@@ -461,6 +548,90 @@
         </footer>
       </section>
     </main>
+
+    <div class="lead-modal" id="lead-modal" hidden>
+      <div class="lead-modal__backdrop" data-lead-close></div>
+      <div
+        class="lead-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lead-modal-title"
+        aria-describedby="lead-modal-copy"
+      >
+        <button class="lead-modal__close" type="button" aria-label="Close form" data-lead-close>
+          &times;
+        </button>
+
+        <p class="lead-modal__eyebrow">Foottfall Intelligence</p>
+        <h2 id="lead-modal-title" class="lead-modal__title">Foottfall Intelligence is coming soon.</h2>
+        <p id="lead-modal-copy" class="lead-modal__copy">
+          Leave your name, mobile number, and email and we&apos;ll reach out.
+        </p>
+
+        <form
+          id="lead-capture-form"
+          class="lead-form"
+          action="https://formsubmit.co/info@foottfall.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Foottfall Intelligence soft lead" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" id="lead-next-url" value="" />
+          <input type="hidden" name="_url" id="lead-form-url" value="" />
+          <input type="hidden" name="_replyto" id="lead-replyto" value="" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="lead-form__honeypot" />
+          <input type="hidden" name="lead_type" value="soft_lead" />
+          <input type="hidden" name="source_page" value="Foottfall website" />
+          <input type="hidden" name="source_section" value="Cities / Intelligence CTA" />
+          <input type="hidden" name="source_url" id="lead-source-url" value="" />
+          <input type="hidden" name="submitted_at" id="lead-submitted-at" value="" />
+          <input type="hidden" name="user_agent" id="lead-user-agent" value="" />
+
+          <label class="lead-form__field">
+            <span class="lead-form__label">Name</span>
+            <input
+              id="lead-name"
+              class="lead-form__input"
+              type="text"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </label>
+
+          <label class="lead-form__field">
+            <span class="lead-form__label">Mobile</span>
+            <input
+              class="lead-form__input"
+              type="tel"
+              name="mobile"
+              autocomplete="tel"
+              inputmode="tel"
+              required
+            />
+          </label>
+
+          <label class="lead-form__field">
+            <span class="lead-form__label">Email</span>
+            <input
+              class="lead-form__input"
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </label>
+
+          <p id="lead-form-status" class="lead-form__status" role="status" aria-live="polite"></p>
+
+          <div class="lead-form__actions">
+            <button class="lead-form__submit" type="submit">Notify Me</button>
+            <button class="lead-form__secondary" type="button" data-lead-close>Maybe Later</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

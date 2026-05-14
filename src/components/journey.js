@@ -1,15 +1,30 @@
 export function initJourneyInteractions() {
   const cityItems = document.querySelectorAll('.cities__list li, .cities__list--dual li');
+  const cityGroups = document.querySelectorAll('.cities__group');
+  const cityGrid = document.querySelector('.cities__grid');
   const methodChips = document.querySelectorAll('.method__stage-chip');
-  const action = document.querySelector('.journey__action');
-  const note = document.querySelector('.journey__action-note');
-  let noteTimer;
+  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  const closeAllGroups = () => {
+    cityGroups.forEach((entry) => {
+      entry.open = false;
+    });
+  };
 
   cityItems.forEach((item) => {
     item.tabIndex = 0;
-    item.addEventListener('click', () => {
+
+    const activateItem = () => {
       cityItems.forEach((entry) => entry.classList.remove('is-active'));
       item.classList.add('is-active');
+    };
+
+    item.addEventListener('click', activateItem);
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activateItem();
+      }
     });
   });
 
@@ -21,15 +36,31 @@ export function initJourneyInteractions() {
     });
   });
 
-  if (!action || !note) {
-    return;
-  }
+  cityGroups.forEach((group) => {
+    const openGroup = () => {
+      cityGroups.forEach((entry) => {
+        entry.open = entry === group;
+      });
+    };
 
-  action.addEventListener('click', () => {
-    clearTimeout(noteTimer);
-    note.classList.add('is-visible');
-    noteTimer = window.setTimeout(() => {
-      note.classList.remove('is-visible');
-    }, 3200);
+    group.addEventListener('toggle', () => {
+      if (!group.open) {
+        return;
+      }
+
+      cityGroups.forEach((entry) => {
+        if (entry !== group) {
+          entry.open = false;
+        }
+      });
+    });
+
+    if (supportsHover) {
+      group.addEventListener('mouseenter', openGroup);
+    }
   });
+
+  if (supportsHover && cityGrid) {
+    cityGrid.addEventListener('mouseleave', closeAllGroups);
+  }
 }
