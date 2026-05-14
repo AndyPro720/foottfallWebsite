@@ -1,47 +1,26 @@
 export function initLeadCapture() {
-  const trigger = document.querySelector('.journey__action');
-  const note = document.querySelector('.journey__action-note');
+  const triggers = document.querySelectorAll('[data-lead-trigger]');
   const modal = document.getElementById('lead-modal');
   const dialog = modal?.querySelector('.lead-modal__dialog');
   const form = document.getElementById('lead-capture-form');
   const status = document.getElementById('lead-form-status');
   const closeButtons = modal?.querySelectorAll('[data-lead-close]');
-  const emailInput = form?.querySelector('input[name="email"]');
-  const nextUrl = document.getElementById('lead-next-url');
-  const formUrl = document.getElementById('lead-form-url');
-  const replyTo = document.getElementById('lead-replyto');
+  const sourceSection = document.getElementById('lead-source-section');
   const sourceUrl = document.getElementById('lead-source-url');
   const submittedAt = document.getElementById('lead-submitted-at');
   const userAgent = document.getElementById('lead-user-agent');
   const shell = document.querySelector('.site-shell');
+  const submitButton = form?.querySelector('.lead-form__submit');
 
-  if (!trigger || !note || !modal || !dialog || !form || !status) {
+  if (!triggers.length || !modal || !dialog || !form || !status || !submitButton) {
     return;
   }
 
-  let noteTimer;
   let closeTimer;
   let previousFocus = null;
 
-  const currentUrl = new URL(window.location.href);
-
-  const setNote = (message) => {
-    clearTimeout(noteTimer);
-    note.textContent = message;
-    note.classList.add('is-visible');
-
-    noteTimer = window.setTimeout(() => {
-      note.classList.remove('is-visible');
-    }, 4200);
-  };
-
-  const setStatus = (message, state = '') => {
+  const setStatus = (message = '') => {
     status.textContent = message;
-    status.className = 'lead-form__status';
-
-    if (state) {
-      status.classList.add(`lead-form__status--${state}`);
-    }
   };
 
   const lockScroll = () => {
@@ -56,49 +35,37 @@ export function initLeadCapture() {
 
   const closeModal = ({ restoreFocus = true } = {}) => {
     clearTimeout(closeTimer);
+    closeTimer = 0;
     modal.hidden = true;
     unlockScroll();
+    setStatus('');
+    form.reset();
 
     if (restoreFocus && previousFocus instanceof HTMLElement) {
       previousFocus.focus();
     }
   };
 
-  const openModal = () => {
+  const openModal = (trigger) => {
     clearTimeout(closeTimer);
-    previousFocus = document.activeElement;
+    closeTimer = 0;
+    previousFocus = trigger ?? document.activeElement;
     modal.hidden = false;
     lockScroll();
     setStatus('');
+
+    if (sourceSection && trigger?.dataset.leadSource) {
+      sourceSection.value = trigger.dataset.leadSource;
+    }
 
     window.requestAnimationFrame(() => {
       form.querySelector('.lead-form__input')?.focus();
     });
   };
 
-  const getSuccessUrl = () => {
-    const successUrl = new URL(window.location.href);
-    successUrl.searchParams.set('lead', 'success');
-    return successUrl.toString();
-  };
-
   const populateMetaFields = () => {
-    const locationHref = window.location.href;
-
-    if (nextUrl) {
-      nextUrl.value = getSuccessUrl();
-    }
-
-    if (formUrl) {
-      formUrl.value = locationHref;
-    }
-
-    if (replyTo && emailInput) {
-      replyTo.value = emailInput.value.trim();
-    }
-
     if (sourceUrl) {
-      sourceUrl.value = locationHref;
+      sourceUrl.value = window.location.href;
     }
 
     if (submittedAt) {
@@ -110,17 +77,8 @@ export function initLeadCapture() {
     }
   };
 
-  if (currentUrl.searchParams.get('lead') === 'success') {
-    setNote('Thanks. Your details are in and we will reach out.');
-    currentUrl.searchParams.delete('lead');
-    window.history.replaceState({}, '', currentUrl.toString());
-  }
-
-  trigger.addEventListener('click', () => {
-    setNote(
-      "Foottfall Intelligence is coming soon. Leave your name, mobile number, and email and we'll reach out.",
-    );
-    openModal();
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => openModal(trigger));
   });
 
   closeButtons?.forEach((button) => {
@@ -143,35 +101,46 @@ export function initLeadCapture() {
     }
   });
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     if (!form.reportValidity()) {
       return;
     }
 
-    const submitButton = form.querySelector('.lead-form__submit');
     populateMetaFields();
 
-    const formData = new FormData(form);
+    submitButton.setAttribute('disabled', 'true');
 
-    submitButton?.setAttribute('disabled', 'true');
-    setStatus('Opening FormSubmit verification/send flow...', 'pending');
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: new FormData(form),
+      });
 
-    formData.forEach((value, key) => {
-      const field = form.elements.namedItem(key);
+      const payload = await response.json().catch(() => ({}));
 
-      if (field instanceof RadioNodeList) {
-        return;
+      if (!response.ok || payload.success !== true) {
+        throw new Error('request-failed');
       }
 
-      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) {
-        field.value = String(value);
+      setStatus('Message sent.');
+      closeTimer = window.setTimeout(() => {
+        closeModal({ restoreFocus: false });
+      }, 1000);
+    } catch (error) {
+      console.error('Lead submission failed.', error);
+    } finally {
+      if (!closeTimer) {
+        submitButton.removeAttribute('disabled');
+      } else {
+        window.setTimeout(() => {
+          submitButton.removeAttribute('disabled');
+        }, 1000);
       }
-    });
-
-    window.setTimeout(() => {
-      HTMLFormElement.prototype.submit.call(form);
-    }, 120);
+    }
   });
 }

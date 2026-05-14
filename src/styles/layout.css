@@ -1158,10 +1158,10 @@ body.body--modal-open {
 
 .connect-card__founder-meta h3,
 .connect-card__director-meta h3 {
-  font-size: clamp(1.45rem, 2.25vw, 2.55rem);
+  font-size: clamp(1.18rem, 1.95vw, 2.1rem);
   font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.9;
+  line-height: 0.94;
 }
 
 .connect-card__founder-meta p,
@@ -1375,6 +1375,7 @@ body.body--modal-open {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.32), transparent);
   transform: skewX(-18deg);
   animation: ctaSheen 3.8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .connect__cta:hover {
@@ -1725,12 +1726,7 @@ body.body--modal-open {
 
   .connect-card__founder-meta h3,
   .connect-card__director-meta h3 {
-    font-size: clamp(1.5rem, 2.45vw, 2.85rem);
-  }
-
-  .connect-card__founder-meta p,
-  .connect-card__director-meta p {
-    font-size: clamp(0.82rem, 1.16vw, 1.25rem);
+    font-size: clamp(1.18rem, 1.95vw, 2.2rem);
   }
 
   .connect-card__note {
@@ -2299,7 +2295,7 @@ body.body--modal-open {
 
   .connect-card--founders {
     min-height: 28rem;
-    background-position: 65% center;
+    background-position: 62% center;
   }
 
   .connect-card {
@@ -2322,26 +2318,33 @@ body.body--modal-open {
   }
 
   .connect-card__founder-meta {
-    --meta-anchor-y: 0%;
-    left: 1.25rem;
-    top: 1.5rem;
+    --meta-anchor-y: -50%;
+    left: 1rem;
+    top: 37%;
     transform: translate3d(0, var(--meta-anchor-y), 0);
+    max-width: 6.6rem;
   }
 
   .connect-card__director-meta {
     left: auto;
-    right: 1.25rem;
-    top: 1.5rem;
+    right: 1rem;
+    top: 1.2rem;
     text-align: right;
+    max-width: 6rem;
   }
 
   .connect-card__note {
-    position: static;
-    width: 100%;
-    min-height: auto;
-    border-top-left-radius: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: min(52%, 12.5rem);
+    min-height: 5.3rem;
+    padding: 0.9rem 1rem;
+    border-top-left-radius: 1.15rem;
     border-top-right-radius: 0;
-    margin-top: auto;
+    margin-top: 0;
+    font-size: 0.72rem;
+    line-height: 1.32;
   }
 
   .brands__track-wrap {

@@ -297,6 +297,8 @@
               type="button"
               aria-describedby="journey-action-note"
               aria-haspopup="dialog"
+              data-lead-trigger
+              data-lead-source="Cities / Intelligence CTA"
             >
               Find Where You Belong
             </button>
@@ -422,7 +424,7 @@
                 <h3>Rahul Kumar<br />Ahuja</h3>
               </div>
               <div class="connect-card__director-meta">
-                <h3>Hriday Kumar<br />Ahuja</h3>
+                <h3>Hriday Rahul<br />Ahuja</h3>
               </div>
               <aside class="connect-card__note">
                 Expansion decisions deserve on-<br />
@@ -519,7 +521,15 @@
           </section>
 
           <div id="position-asset" class="connect__cta-wrap">
-            <a href="mailto:info@foottfall.com" class="connect__cta">Position Your Asset</a>
+            <button
+              class="connect__cta"
+              type="button"
+              aria-haspopup="dialog"
+              data-lead-trigger
+              data-lead-source="Position Your Asset CTA"
+            >
+              Position Your Asset
+            </button>
           </div>
         </div>
 
@@ -571,19 +581,16 @@
         <form
           id="lead-capture-form"
           class="lead-form"
-          action="https://formsubmit.co/info@foottfall.com"
+          action="https://api.web3forms.com/submit"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="Foottfall Intelligence soft lead" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" id="lead-next-url" value="" />
-          <input type="hidden" name="_url" id="lead-form-url" value="" />
-          <input type="hidden" name="_replyto" id="lead-replyto" value="" />
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="lead-form__honeypot" />
+          <input type="hidden" name="access_key" value="16504e34-b8f6-4cc4-892e-614c11c38ce0" />
+          <input type="hidden" name="subject" value="Foottfall Intelligence soft lead" />
+          <input type="hidden" name="from_name" value="Foottfall Website" />
+          <input type="text" name="botcheck" tabindex="-1" autocomplete="off" class="lead-form__honeypot" />
           <input type="hidden" name="lead_type" value="soft_lead" />
           <input type="hidden" name="source_page" value="Foottfall website" />
-          <input type="hidden" name="source_section" value="Cities / Intelligence CTA" />
+          <input type="hidden" name="source_section" id="lead-source-section" value="Cities / Intelligence CTA" />
           <input type="hidden" name="source_url" id="lead-source-url" value="" />
           <input type="hidden" name="submitted_at" id="lead-submitted-at" value="" />
           <input type="hidden" name="user_agent" id="lead-user-agent" value="" />
