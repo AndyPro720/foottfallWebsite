@@ -11,6 +11,8 @@ export function initLeadCapture() {
   const userAgent = document.getElementById('lead-user-agent');
   const shell = document.querySelector('.site-shell');
   const submitButton = form?.querySelector('.lead-form__submit');
+  const mobileInput = document.getElementById('lead-mobile');
+  const emailInput = document.getElementById('lead-email');
 
   if (!triggers.length || !modal || !dialog || !form || !status || !submitButton) {
     return;
@@ -21,6 +23,23 @@ export function initLeadCapture() {
 
   const setStatus = (message = '') => {
     status.textContent = message;
+  };
+
+  const clearContactValidation = () => {
+    mobileInput?.setCustomValidity('');
+    emailInput?.setCustomValidity('');
+  };
+
+  const validateContactFields = () => {
+    const mobile = mobileInput?.value.trim() ?? '';
+    const email = emailInput?.value.trim() ?? '';
+    const message =
+      mobile || email ? '' : 'Enter either a mobile number or an email address.';
+
+    mobileInput?.setCustomValidity(message);
+    emailInput?.setCustomValidity(message);
+
+    return !message;
   };
 
   const lockScroll = () => {
@@ -40,6 +59,7 @@ export function initLeadCapture() {
     unlockScroll();
     setStatus('');
     form.reset();
+    clearContactValidation();
 
     if (restoreFocus && previousFocus instanceof HTMLElement) {
       previousFocus.focus();
@@ -53,6 +73,7 @@ export function initLeadCapture() {
     modal.hidden = false;
     lockScroll();
     setStatus('');
+    clearContactValidation();
 
     if (sourceSection && trigger?.dataset.leadSource) {
       sourceSection.value = trigger.dataset.leadSource;
@@ -101,10 +122,24 @@ export function initLeadCapture() {
     }
   });
 
+  mobileInput?.addEventListener('input', () => {
+    const digitsOnly = mobileInput.value.replace(/\D+/g, '');
+
+    if (mobileInput.value !== digitsOnly) {
+      mobileInput.value = digitsOnly;
+    }
+
+    validateContactFields();
+  });
+
+  emailInput?.addEventListener('input', () => {
+    validateContactFields();
+  });
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    if (!form.reportValidity()) {
+    if (!validateContactFields() || !form.reportValidity()) {
       return;
     }
 

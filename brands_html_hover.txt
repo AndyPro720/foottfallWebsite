@@ -1,0 +1,459 @@
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brand-barbeque-nation.png"
+                    alt="Barbeque Nation"
+                    class="brands__logo brands__logo--barbeque"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Barbeque Nation</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/toscano.png"
+                    alt="Toscano"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Toscano</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/salt.png"
+                    alt="Salt"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Salt</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/Absolute_Barbecues_India_id_qpml3fI_0.png"
+                    alt="ABs"
+                    class="brands__logo brands__logo--absolute"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">ABs</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brand-nandos.png"
+                    alt="Nando&#39;s"
+                    class="brands__logo brands__logo--nandos"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Nando&#39;s</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/tandooriya_refetch.png"
+                    alt="Tandooriya"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Tandooriya</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/bread_pocket_co.png"
+                    alt="Bread Pocket Co"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Bread Pocket Co</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/bikanerwala.png"
+                    alt="Bikanerwala"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Bikanerwala</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/wow_momos.jpg"
+                    alt="Wow Momos"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Wow Momos</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/anna.png"
+                    alt="Anna"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Anna</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/antonia_refetch.png"
+                    alt="Antonia"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Antonia</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/pizza_di_rocco.png"
+                    alt="Pizza Di Rocco"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Pizza Di Rocco</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/al_safadi.png"
+                    alt="Al Safadi"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Al Safadi</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/social_distrikt.png"
+                    alt="Social Distrikt"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Social Distrikt</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/jardin_hotels.png"
+                    alt="Jardin Hotels"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Jardin Hotels</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/bloom_room_refetch.png"
+                    alt="Bloom Room"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Bloom Room</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/filli_cafe.png"
+                    alt="Filli cafe"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Filli cafe</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/d11.png"
+                    alt="D11"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">D11</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/marassi.png"
+                    alt="Marassi"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Marassi</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/dana.png"
+                    alt="Dana"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Dana</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/oasis.png"
+                    alt="oasis"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">oasis</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/blvd_1890.png"
+                    alt="blvd 1890"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">blvd 1890</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/red_sea.png"
+                    alt="Red Sea"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Red Sea</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/cenomi.png"
+                    alt="Cenomi"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Cenomi</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/jeddah_vibes.png"
+                    alt="Jeddah vibes"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Jeddah vibes</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/sharjah_sentral.png"
+                    alt="Sharjah Sentral"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Sharjah Sentral</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/sharooq.png"
+                    alt="sharooq"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">sharooq</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/al_ganda_mall.png"
+                    alt="al Ganda mall"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">al Ganda mall</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/lulu_malls.png"
+                    alt="lulu malls"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">lulu malls</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/maf.png"
+                    alt="MAF"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">MAF</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/silicon_sentral.png"
+                    alt="silicon sentral"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">silicon sentral</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/dalma.png"
+                    alt="Dalma"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Dalma</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/reem.png"
+                    alt="reem"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">reem</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/abu_dhabi_mall.webp"
+                    alt="Abu Dhabi mall"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Abu Dhabi mall</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/city_centre_doha.png"
+                    alt="City Centre Doha"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">City Centre Doha</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/nayati.png"
+                    alt="Nayati"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Nayati</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/14_entrar.png"
+                    alt="14 entrar"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">14 entrar</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/lvl_5.png"
+                    alt="LVL 5"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">LVL 5</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/amanora.png"
+                    alt="Amanora"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Amanora</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/phoenix_refetch.svg"
+                    alt="phoenix"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">phoenix</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/hcl_surat.png"
+                    alt="HCL Surat"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">HCL Surat</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/high_street_apollo.png"
+                    alt="High street Apollo"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">High street Apollo</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/jivana.png"
+                    alt="jivana"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">jivana</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/vegas_mall.png"
+                    alt="Vegas mall"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Vegas mall</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/dlf.png"
+                    alt="DLF"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">DLF</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/inorbit.jpg"
+                    alt="Inorbit"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Inorbit</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/korum.png"
+                    alt="Korum"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">Korum</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/bipl.png"
+                    alt="BIPL"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">BIPL</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/express_avenue.png"
+                    alt="express avenue"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">express avenue</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/forum_kochi.png"
+                    alt="forum kochi"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">forum kochi</div>
+                </article>
+                <article class="brands__item brands__item--logo">
+                  <img
+                    src="/assets/brands/db_mall.png"
+                    alt="db mall"
+                    class="brands__logo"
+                    loading="lazy"
+                  />
+                  <div class="brands__hover-label">db mall</div>
+                </article>

@@ -351,3 +351,103 @@
     transform: none !important;
   }
 }
+
+@media (max-width: 900px) {
+  .reveal,
+  .reveal--visible {
+    transition-duration: 360ms;
+  }
+
+  .reveal {
+    transform: translate3d(0, 0.55rem, 0);
+  }
+
+  .reveal--hero-media {
+    transform: scale(1.012);
+  }
+
+  .reveal--hero-panel,
+  .reveal--hero-copy,
+  .journey__metric.reveal,
+  .connect-card--about.reveal,
+  .connect-card--founders.reveal,
+  .connect__cta-wrap.reveal {
+    transform: translate3d(0, 0.45rem, 0);
+  }
+
+  .reveal--hero-title,
+  .journey__label.reveal,
+  .method__title.reveal {
+    transform: translate3d(-0.45rem, 0, 0);
+  }
+
+  .reveal--hero-panel.reveal--visible,
+  .reveal--hero-media.reveal--visible {
+    transition-duration: 420ms;
+  }
+
+  .journey__surface.reveal--visible .cities__column,
+  .journey__surface--categories.reveal--visible .category-card,
+  .method__banner.reveal--visible .method__tag,
+  .method__stage-row.reveal--visible .method__stage-chip,
+  .method__cards.reveal--visible .method-card--large,
+  .method__cards.reveal--visible .method-card--compact,
+  .method__cards.reveal--visible .method-card__definition,
+  .connect-card--about.reveal--visible .connect-card__shade,
+  .connect-card--about.reveal--visible .connect-card__content > *,
+  .connect-card--founders.reveal--visible .connect-card__founder-meta,
+  .connect-card--founders.reveal--visible .connect-card__director-meta,
+  .connect-card--founders.reveal--visible .connect-card__note,
+  .brands.reveal--visible .brands__title,
+  .brands.reveal--visible .brands__item,
+  .connect__cta-wrap.reveal--visible .connect__cta {
+    animation-duration: 420ms;
+  }
+
+  .journey__surface.reveal--visible .cities__column:nth-child(2),
+  .journey__surface--categories.reveal--visible .category-card:nth-child(2),
+  .method__stage-row.reveal--visible .method__stage-chip:nth-child(2),
+  .brands.reveal--visible .brands__item:nth-child(2),
+  .connect-card--about.reveal--visible .connect-card__content > *:nth-child(2) {
+    animation-delay: 55ms;
+  }
+
+  .journey__surface.reveal--visible .cities__column:nth-child(3),
+  .journey__surface--categories.reveal--visible .category-card:nth-child(3),
+  .method__stage-row.reveal--visible .method__stage-chip:nth-child(3),
+  .brands.reveal--visible .brands__item:nth-child(3),
+  .connect-card--about.reveal--visible .connect-card__content > *:nth-child(3),
+  .method__cards.reveal--visible .method-card__definition:nth-child(1) {
+    animation-delay: 95ms;
+  }
+
+  .journey__surface.reveal--visible .cities__column:nth-child(4),
+  .journey__surface--categories.reveal--visible .category-card:nth-child(4),
+  .method__stage-row.reveal--visible .method__stage-chip:nth-child(4),
+  .method__cards.reveal--visible .method-card__compact,
+  .method__cards.reveal--visible .method-card__definition:nth-child(2),
+  .connect-card--founders.reveal--visible .connect-card__director-meta {
+    animation-delay: 140ms;
+  }
+
+  .journey__surface.reveal--visible .cities__column:nth-child(5),
+  .journey__surface--categories.reveal--visible .category-card:nth-child(5),
+  .method__stage-row.reveal--visible .method__stage-chip:nth-child(5),
+  .method__cards.reveal--visible .method-card__definition:nth-child(3),
+  .connect-card--founders.reveal--visible .connect-card__note,
+  .journey__metric.reveal--visible .journey__pin-dot {
+    animation-delay: 180ms;
+  }
+
+  .journey__surface--categories.reveal--visible .category-card:nth-child(6) {
+    animation-delay: 220ms;
+  }
+
+  .journey__surface--categories.reveal--visible .category-card:nth-child(7) {
+    animation-delay: 260ms;
+  }
+
+  .journey__surface--categories.reveal--visible .category-card:nth-child(8) {
+    animation-delay: 300ms;
+  }
+}

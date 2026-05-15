@@ -1,0 +1,308 @@
+[
+  {
+    "brand": "Barbeque Nation",
+    "src": "/assets/brand-barbeque-nation.png",
+    "fileName": "brand-barbeque-nation.png",
+    "source": "manual"
+  },
+  {
+    "brand": "Toscano",
+    "src": "/assets/brands/toscano.png",
+    "fileName": "toscano.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Salt",
+    "src": "/assets/brands/salt.png",
+    "fileName": "salt.png",
+    "source": "generated"
+  },
+  {
+    "brand": "ABs",
+    "src": "/assets/Absolute_Barbecues_India_id_qpml3fI_0.png",
+    "fileName": "Absolute_Barbecues_India_id_qpml3fI_0.png",
+    "source": "manual"
+  },
+  {
+    "brand": "Nando's",
+    "src": "/assets/brand-nandos.png",
+    "fileName": "brand-nandos.png",
+    "source": "manual"
+  },
+  {
+    "brand": "Tandooriya",
+    "src": "/assets/brands/tandooriya_refetch.png",
+    "fileName": "tandooriya_refetch.png",
+    "source": "pinned"
+  },
+  {
+    "brand": "Bread Pocket Co",
+    "src": "/assets/brands/bread_pocket_co.png",
+    "fileName": "bread_pocket_co.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Bikanerwala",
+    "src": "/assets/brands/bikanerwala.png",
+    "fileName": "bikanerwala.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Wow Momos",
+    "src": "/assets/brands/wow_momos.jpg",
+    "fileName": "wow_momos.jpg",
+    "source": "generated"
+  },
+  {
+    "brand": "Anna",
+    "src": "/assets/brands/anna.png",
+    "fileName": "anna.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Antonia",
+    "src": "/assets/brands/antonia_refetch.png",
+    "fileName": "antonia_refetch.png",
+    "source": "pinned"
+  },
+  {
+    "brand": "Pizza Di Rocco",
+    "src": "/assets/brands/pizza_di_rocco.png",
+    "fileName": "pizza_di_rocco.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Al Safadi",
+    "src": "/assets/brands/al_safadi.png",
+    "fileName": "al_safadi.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Social Distrikt",
+    "src": "/assets/brands/social_distrikt.png",
+    "fileName": "social_distrikt.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Jardin Hotels",
+    "src": "/assets/brands/jardin_hotels.png",
+    "fileName": "jardin_hotels.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Bloom Room",
+    "src": "/assets/brands/bloom_room_refetch.png",
+    "fileName": "bloom_room_refetch.png",
+    "source": "pinned"
+  },
+  {
+    "brand": "Filli cafe",
+    "src": "/assets/brands/filli_cafe.png",
+    "fileName": "filli_cafe.png",
+    "source": "generated"
+  },
+  {
+    "brand": "D11",
+    "src": "/assets/brands/d11.png",
+    "fileName": "d11.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Marassi",
+    "src": "/assets/brands/marassi.png",
+    "fileName": "marassi.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Dana",
+    "src": "/assets/brands/dana.png",
+    "fileName": "dana.png",
+    "source": "generated"
+  },
+  {
+    "brand": "oasis",
+    "src": "/assets/brands/oasis.png",
+    "fileName": "oasis.png",
+    "source": "generated"
+  },
+  {
+    "brand": "blvd 1890",
+    "src": "/assets/brands/blvd_1890.png",
+    "fileName": "blvd_1890.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Red Sea",
+    "src": "/assets/brands/red_sea.png",
+    "fileName": "red_sea.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Cenomi",
+    "src": "/assets/brands/cenomi.png",
+    "fileName": "cenomi.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Jeddah vibes",
+    "src": "/assets/brands/jeddah_vibes.png",
+    "fileName": "jeddah_vibes.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Sharjah Sentral",
+    "src": "/assets/brands/sharjah_sentral.png",
+    "fileName": "sharjah_sentral.png",
+    "source": "generated"
+  },
+  {
+    "brand": "sharooq",
+    "src": "/assets/brands/sharooq.png",
+    "fileName": "sharooq.png",
+    "source": "generated"
+  },
+  {
+    "brand": "al Ganda mall",
+    "src": "/assets/brands/al_ganda_mall.png",
+    "fileName": "al_ganda_mall.png",
+    "source": "generated"
+  },
+  {
+    "brand": "lulu malls",
+    "src": "/assets/brands/lulu_malls.png",
+    "fileName": "lulu_malls.png",
+    "source": "generated"
+  },
+  {
+    "brand": "MAF",
+    "src": "/assets/brands/maf.png",
+    "fileName": "maf.png",
+    "source": "generated"
+  },
+  {
+    "brand": "silicon sentral",
+    "src": "/assets/brands/silicon_sentral.png",
+    "fileName": "silicon_sentral.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Dalma",
+    "src": "/assets/brands/dalma.png",
+    "fileName": "dalma.png",
+    "source": "generated"
+  },
+  {
+    "brand": "reem",
+    "src": "/assets/brands/reem.png",
+    "fileName": "reem.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Abu Dhabi mall",
+    "src": "/assets/brands/abu_dhabi_mall.webp",
+    "fileName": "abu_dhabi_mall.webp",
+    "source": "generated"
+  },
+  {
+    "brand": "City Centre Doha",
+    "src": "/assets/brands/city_centre_doha.png",
+    "fileName": "city_centre_doha.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Nayati",
+    "src": "/assets/brands/nayati.png",
+    "fileName": "nayati.png",
+    "source": "generated"
+  },
+  {
+    "brand": "14 entrar",
+    "src": "/assets/brands/14_entrar.png",
+    "fileName": "14_entrar.png",
+    "source": "generated"
+  },
+  {
+    "brand": "LVL 5",
+    "src": "/assets/brands/lvl_5.png",
+    "fileName": "lvl_5.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Amanora",
+    "src": "/assets/brands/amanora.png",
+    "fileName": "amanora.png",
+    "source": "generated"
+  },
+  {
+    "brand": "phoenix",
+    "src": "/assets/brands/phoenix_refetch.svg",
+    "fileName": "phoenix_refetch.svg",
+    "source": "pinned"
+  },
+  {
+    "brand": "HCL Surat",
+    "src": "/assets/brands/hcl_surat.png",
+    "fileName": "hcl_surat.png",
+    "source": "generated"
+  },
+  {
+    "brand": "High street Apollo",
+    "src": "/assets/brands/high_street_apollo.png",
+    "fileName": "high_street_apollo.png",
+    "source": "generated"
+  },
+  {
+    "brand": "jivana",
+    "src": "/assets/brands/jivana.png",
+    "fileName": "jivana.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Vegas mall",
+    "src": "/assets/brands/vegas_mall.png",
+    "fileName": "vegas_mall.png",
+    "source": "generated"
+  },
+  {
+    "brand": "DLF",
+    "src": "/assets/brands/dlf.png",
+    "fileName": "dlf.png",
+    "source": "generated"
+  },
+  {
+    "brand": "Inorbit",
+    "src": "/assets/brands/inorbit.jpg",
+    "fileName": "inorbit.jpg",
+    "source": "generated"
+  },
+  {
+    "brand": "Korum",
+    "src": "/assets/brands/korum.png",
+    "fileName": "korum.png",
+    "source": "generated"
+  },
+  {
+    "brand": "BIPL",
+    "src": "/assets/brands/bipl.png",
+    "fileName": "bipl.png",
+    "source": "generated"
+  },
+  {
+    "brand": "express avenue",
+    "src": "/assets/brands/express_avenue.png",
+    "fileName": "express_avenue.png",
+    "source": "generated"
+  },
+  {
+    "brand": "forum kochi",
+    "src": "/assets/brands/forum_kochi.png",
+    "fileName": "forum_kochi.png",
+    "source": "generated"
+  },
+  {
+    "brand": "db mall",
+    "src": "/assets/brands/db_mall.png",
+    "fileName": "db_mall.png",
+    "source": "generated"
+  }
+]

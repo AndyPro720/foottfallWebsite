@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Re-fetch Review</title>
+    <style>
+      :root {
+        --bg: #f5f1ea;
+        --card: rgba(255,255,255,0.92);
+        --stroke: rgba(28, 40, 36, 0.12);
+        --text: #20302b;
+        --muted: #66756f;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', serif;
+        background: linear-gradient(180deg, #faf6ef 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        width: min(1600px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 28px 0 36px;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 2.2rem;
+      }
+
+      p.lead {
+        margin: 0 0 24px;
+        color: var(--muted);
+      }
+
+      .review-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .review-card {
+        padding: 18px;
+        border: 1px solid var(--stroke);
+        border-radius: 18px;
+        background: var(--card);
+      }
+
+      .review-card h2 {
+        margin: 0 0 14px;
+        font-size: 1.1rem;
+      }
+
+      .review-card__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .review-slot {
+        display: grid;
+        gap: 8px;
+      }
+
+      .review-slot__label {
+        margin: 0;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .review-slot__frame {
+        display: grid;
+        place-items: center;
+        min-height: 140px;
+        padding: 18px;
+        border-radius: 14px;
+        background:
+          linear-gradient(45deg, rgba(15, 106, 84, 0.06) 25%, transparent 25%) -12px 0/24px 24px,
+          linear-gradient(-45deg, rgba(15, 106, 84, 0.06) 25%, transparent 25%) -12px 0/24px 24px,
+          linear-gradient(45deg, transparent 75%, rgba(15, 106, 84, 0.06) 75%) -12px 0/24px 24px,
+          linear-gradient(-45deg, transparent 75%, rgba(15, 106, 84, 0.06) 75%) -12px 0/24px 24px,
+          #fff;
+      }
+
+      .review-slot__image {
+        display: block;
+        max-width: 100%;
+        max-height: 96px;
+        object-fit: contain;
+      }
+
+      .review-slot__missing {
+        color: #8d3e3e;
+        font-weight: 700;
+      }
+
+      .review-slot__file {
+        margin: 0;
+        font-family: Consolas, 'Courier New', monospace;
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Brand Re-fetch Review</h1>
+      <p class="lead">Current homepage asset on the left, newly re-fetched candidate on the right.</p>
+      <section class="review-list">
+      <article class="review-card">
+        <h2>Toscano</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/toscano.png" alt="Toscano current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">toscano.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/toscano_refetch.png" alt="Toscano refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">toscano_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Salt</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/salt.png" alt="Salt current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">salt.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/salt_refetch.png" alt="Salt refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">salt_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Tandooriya</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/tandooriya.jpg" alt="Tandooriya current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">tandooriya.jpg</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/tandooriya_refetch.png" alt="Tandooriya refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">tandooriya_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Bread Pocket Co</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bread_pocket_co.png" alt="Bread Pocket Co current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bread_pocket_co.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bread_pocket_co_refetch.png" alt="Bread Pocket Co refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bread_pocket_co_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Bikanerwala</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bikanerwala.png" alt="Bikanerwala current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bikanerwala.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bikanerwala_refetch.png" alt="Bikanerwala refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bikanerwala_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Wow Momos</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/wow_momos.jpg" alt="Wow Momos current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">wow_momos.jpg</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/wow_momos_refetch.png" alt="Wow Momos refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">wow_momos_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Antonia</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/antonia.png" alt="Antonia current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">antonia.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/antonia_refetch.png" alt="Antonia refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">antonia_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Pizza Di Rocco</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/pizza_di_rocco.png" alt="Pizza Di Rocco current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">pizza_di_rocco.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/pizza_di_rocco_refetch.png" alt="Pizza Di Rocco refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">pizza_di_rocco_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Al Safadi</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/al_safadi.png" alt="Al Safadi current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">al_safadi.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/al_safadi_refetch.png" alt="Al Safadi refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">al_safadi_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Social Distrikt</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/social_distrikt.png" alt="Social Distrikt current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">social_distrikt.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/social_distrikt_refetch.svg" alt="Social Distrikt refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">social_distrikt_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Bloom Room</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bloom_room.png" alt="Bloom Room current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bloom_room.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bloom_room_refetch.png" alt="Bloom Room refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bloom_room_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Filli cafe</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/filli_cafe.png" alt="Filli cafe current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">filli_cafe.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/filli_cafe_refetch.svg" alt="Filli cafe refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">filli_cafe_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>D11</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/d11.png" alt="D11 current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">d11.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/d11_refetch.png" alt="D11 refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">d11_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Marassi</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/marassi.png" alt="Marassi current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">marassi.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/marassi_refetch.png" alt="Marassi refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">marassi_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Dana</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/dana.png" alt="Dana current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">dana.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/dana_refetch.png" alt="Dana refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">dana_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Red Sea</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/red_sea.png" alt="Red Sea current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">red_sea.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/red_sea_refetch.svg" alt="Red Sea refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">red_sea_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Cenomi</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/cenomi.png" alt="Cenomi current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">cenomi.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/cenomi_refetch.svg" alt="Cenomi refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">cenomi_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Sharjah Sentral</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/sharjah_sentral.png" alt="Sharjah Sentral current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">sharjah_sentral.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/sharjah_sentral_refetch.png" alt="Sharjah Sentral refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">sharjah_sentral_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>sharooq</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/sharooq.png" alt="sharooq current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">sharooq.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/sharooq_refetch.svg" alt="sharooq refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">sharooq_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>al Ganda mall</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/al_ganda_mall.png" alt="al Ganda mall current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">al_ganda_mall.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/al_ganda_mall_refetch.svg" alt="al Ganda mall refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">al_ganda_mall_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>silicon sentral</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/silicon_sentral.png" alt="silicon sentral current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">silicon_sentral.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/silicon_sentral_refetch.svg" alt="silicon sentral refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">silicon_sentral_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>City Centre Doha</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/city_centre_doha.png" alt="City Centre Doha current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">city_centre_doha.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/city_centre_doha_refetch.png" alt="City Centre Doha refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">city_centre_doha_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Nayati</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/nayati.png" alt="Nayati current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">nayati.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/nayati_refetch.png" alt="Nayati refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">nayati_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>14 entrar</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/14_entrar.png" alt="14 entrar current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">14_entrar.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/14_entrar_refetch.svg" alt="14 entrar refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">14_entrar_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>phoenix</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/phoenix.png" alt="phoenix current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">phoenix.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/phoenix_refetch.svg" alt="phoenix refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">phoenix_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>HCL Surat</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/hcl_surat.png" alt="HCL Surat current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">hcl_surat.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/hcl_surat_refetch.svg" alt="HCL Surat refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">hcl_surat_refetch.svg</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>High street Apollo</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/high_street_apollo.png" alt="High street Apollo current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">high_street_apollo.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/high_street_apollo_refetch.png" alt="High street Apollo refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">high_street_apollo_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Vegas mall</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/vegas_mall.png" alt="Vegas mall current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">vegas_mall.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/vegas_mall_refetch.png" alt="Vegas mall refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">vegas_mall_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Inorbit</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/inorbit.jpg" alt="Inorbit current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">inorbit.jpg</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/inorbit_refetch.png" alt="Inorbit refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">inorbit_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>Korum</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/korum.png" alt="Korum current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">korum.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/korum_refetch.png" alt="Korum refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">korum_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>BIPL</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bipl.png" alt="BIPL current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bipl.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/bipl_refetch.png" alt="BIPL refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">bipl_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>express avenue</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/express_avenue.png" alt="express avenue current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">express_avenue.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/express_avenue_refetch.png" alt="express avenue refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">express_avenue_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>forum kochi</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/forum_kochi.png" alt="forum kochi current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">forum_kochi.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/forum_kochi_refetch.png" alt="forum kochi refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">forum_kochi_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      <article class="review-card">
+        <h2>db mall</h2>
+        <div class="review-card__grid">
+          <section class="review-slot">
+            <p class="review-slot__label">Current</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/db_mall.png" alt="db mall current" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">db_mall.png</p>
+          </section>
+          <section class="review-slot">
+            <p class="review-slot__label">Re-fetch</p>
+            <div class="review-slot__frame">
+              <img src="./assets/brands/db_mall_refetch.png" alt="db mall refetch" class="review-slot__image" loading="lazy" />
+            </div>
+            <p class="review-slot__file">db_mall_refetch.png</p>
+          </section>
+        </div>
+      </article>
+      </section>
+    </main>
+  </body>
+</html>

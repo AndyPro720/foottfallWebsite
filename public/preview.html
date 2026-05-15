@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foottfall Brand Logo Audit</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3efe8;
+        --card: rgba(255, 255, 255, 0.88);
+        --stroke: rgba(33, 44, 40, 0.14);
+        --text: #1f2c28;
+        --muted: #61716b;
+        --accent: #0f6a54;
+        --danger: #8d3e3e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, 'Times New Roman', serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(202, 179, 132, 0.18), transparent 22rem),
+          radial-gradient(circle at top right, rgba(15, 106, 84, 0.1), transparent 26rem),
+          linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+      }
+
+      main {
+        width: min(1500px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 32px 0 40px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.3rem;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .audit-summary {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .audit-summary p {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .audit-pill {
+        padding: 10px 14px;
+        border: 1px solid var(--stroke);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.75);
+        color: var(--accent);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .audit-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .audit-card {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--stroke);
+        border-radius: 20px;
+        background: var(--card);
+        box-shadow: 0 18px 40px rgba(36, 44, 40, 0.06);
+      }
+
+      .audit-card--missing {
+        border-color: rgba(141, 62, 62, 0.28);
+        background: rgba(255, 248, 248, 0.92);
+      }
+
+      .audit-card__logo-wrap {
+        display: grid;
+        place-items: center;
+        min-height: 132px;
+        padding: 18px;
+        border-radius: 16px;
+        background:
+          linear-gradient(45deg, rgba(15, 106, 84, 0.06) 25%, transparent 25%) -12px 0/24px 24px,
+          linear-gradient(-45deg, rgba(15, 106, 84, 0.06) 25%, transparent 25%) -12px 0/24px 24px,
+          linear-gradient(45deg, transparent 75%, rgba(15, 106, 84, 0.06) 75%) -12px 0/24px 24px,
+          linear-gradient(-45deg, transparent 75%, rgba(15, 106, 84, 0.06) 75%) -12px 0/24px 24px,
+          #ffffff;
+      }
+
+      .audit-card__logo {
+        display: block;
+        max-width: 100%;
+        max-height: 88px;
+        object-fit: contain;
+      }
+
+      .audit-card__missing {
+        color: var(--danger);
+        font-weight: 700;
+      }
+
+      .audit-card__meta {
+        display: grid;
+        gap: 5px;
+      }
+
+      .audit-card__title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .audit-card__file {
+        margin: 0;
+        color: var(--muted);
+        font-family: Consolas, 'Courier New', monospace;
+        font-size: 0.72rem;
+        line-height: 1.45;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="audit-summary">
+        <div>
+          <h1>Foottfall Brand Logo Audit</h1>
+          <p>51 of 51 brands resolved to logo assets. Cards show the exact file selected for the homepage.</p>
+        </div>
+        <div class="audit-pill">Generated from local assets</div>
+      </section>
+      <section class="audit-grid">
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="../assets/brand-barbeque-nation.png" alt="Barbeque Nation" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Barbeque Nation</h2>
+          <p class="audit-card__file">brand-barbeque-nation.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/toscano.png" alt="Toscano" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Toscano</h2>
+          <p class="audit-card__file">toscano.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/salt.png" alt="Salt" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Salt</h2>
+          <p class="audit-card__file">salt.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="../assets/Absolute_Barbecues_India_id_qpml3fI_0.png" alt="ABs" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">ABs</h2>
+          <p class="audit-card__file">Absolute_Barbecues_India_id_qpml3fI_0.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="../assets/brand-nandos.png" alt="Nando&#39;s" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Nando&#39;s</h2>
+          <p class="audit-card__file">brand-nandos.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/tandooriya_refetch.png" alt="Tandooriya" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Tandooriya</h2>
+          <p class="audit-card__file">tandooriya_refetch.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/bread_pocket_co.png" alt="Bread Pocket Co" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Bread Pocket Co</h2>
+          <p class="audit-card__file">bread_pocket_co.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/bikanerwala.png" alt="Bikanerwala" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Bikanerwala</h2>
+          <p class="audit-card__file">bikanerwala.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/wow_momos.jpg" alt="Wow Momos" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Wow Momos</h2>
+          <p class="audit-card__file">wow_momos.jpg</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/anna.png" alt="Anna" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Anna</h2>
+          <p class="audit-card__file">anna.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/antonia_refetch.png" alt="Antonia" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Antonia</h2>
+          <p class="audit-card__file">antonia_refetch.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/pizza_di_rocco.png" alt="Pizza Di Rocco" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Pizza Di Rocco</h2>
+          <p class="audit-card__file">pizza_di_rocco.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/al_safadi.png" alt="Al Safadi" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Al Safadi</h2>
+          <p class="audit-card__file">al_safadi.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/social_distrikt.png" alt="Social Distrikt" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Social Distrikt</h2>
+          <p class="audit-card__file">social_distrikt.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/jardin_hotels.png" alt="Jardin Hotels" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Jardin Hotels</h2>
+          <p class="audit-card__file">jardin_hotels.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/bloom_room_refetch.png" alt="Bloom Room" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Bloom Room</h2>
+          <p class="audit-card__file">bloom_room_refetch.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/filli_cafe.png" alt="Filli cafe" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Filli cafe</h2>
+          <p class="audit-card__file">filli_cafe.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/d11.png" alt="D11" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">D11</h2>
+          <p class="audit-card__file">d11.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/marassi.png" alt="Marassi" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Marassi</h2>
+          <p class="audit-card__file">marassi.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/dana.png" alt="Dana" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Dana</h2>
+          <p class="audit-card__file">dana.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/oasis.png" alt="oasis" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">oasis</h2>
+          <p class="audit-card__file">oasis.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/blvd_1890.png" alt="blvd 1890" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">blvd 1890</h2>
+          <p class="audit-card__file">blvd_1890.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/red_sea.png" alt="Red Sea" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Red Sea</h2>
+          <p class="audit-card__file">red_sea.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/cenomi.png" alt="Cenomi" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Cenomi</h2>
+          <p class="audit-card__file">cenomi.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/jeddah_vibes.png" alt="Jeddah vibes" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Jeddah vibes</h2>
+          <p class="audit-card__file">jeddah_vibes.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/sharjah_sentral.png" alt="Sharjah Sentral" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Sharjah Sentral</h2>
+          <p class="audit-card__file">sharjah_sentral.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/sharooq.png" alt="sharooq" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">sharooq</h2>
+          <p class="audit-card__file">sharooq.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/al_ganda_mall.png" alt="al Ganda mall" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">al Ganda mall</h2>
+          <p class="audit-card__file">al_ganda_mall.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/lulu_malls.png" alt="lulu malls" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">lulu malls</h2>
+          <p class="audit-card__file">lulu_malls.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/maf.png" alt="MAF" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">MAF</h2>
+          <p class="audit-card__file">maf.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/silicon_sentral.png" alt="silicon sentral" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">silicon sentral</h2>
+          <p class="audit-card__file">silicon_sentral.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/dalma.png" alt="Dalma" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Dalma</h2>
+          <p class="audit-card__file">dalma.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/reem.png" alt="reem" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">reem</h2>
+          <p class="audit-card__file">reem.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/abu_dhabi_mall.webp" alt="Abu Dhabi mall" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Abu Dhabi mall</h2>
+          <p class="audit-card__file">abu_dhabi_mall.webp</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/city_centre_doha.png" alt="City Centre Doha" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">City Centre Doha</h2>
+          <p class="audit-card__file">city_centre_doha.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/nayati.png" alt="Nayati" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Nayati</h2>
+          <p class="audit-card__file">nayati.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/14_entrar.png" alt="14 entrar" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">14 entrar</h2>
+          <p class="audit-card__file">14_entrar.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/lvl_5.png" alt="LVL 5" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">LVL 5</h2>
+          <p class="audit-card__file">lvl_5.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/amanora.png" alt="Amanora" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Amanora</h2>
+          <p class="audit-card__file">amanora.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/phoenix_refetch.svg" alt="phoenix" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">phoenix</h2>
+          <p class="audit-card__file">phoenix_refetch.svg</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/hcl_surat.png" alt="HCL Surat" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">HCL Surat</h2>
+          <p class="audit-card__file">hcl_surat.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/high_street_apollo.png" alt="High street Apollo" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">High street Apollo</h2>
+          <p class="audit-card__file">high_street_apollo.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/jivana.png" alt="jivana" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">jivana</h2>
+          <p class="audit-card__file">jivana.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/vegas_mall.png" alt="Vegas mall" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Vegas mall</h2>
+          <p class="audit-card__file">vegas_mall.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/dlf.png" alt="DLF" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">DLF</h2>
+          <p class="audit-card__file">dlf.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/inorbit.jpg" alt="Inorbit" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Inorbit</h2>
+          <p class="audit-card__file">inorbit.jpg</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/korum.png" alt="Korum" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">Korum</h2>
+          <p class="audit-card__file">korum.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/bipl.png" alt="BIPL" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">BIPL</h2>
+          <p class="audit-card__file">bipl.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/express_avenue.png" alt="express avenue" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">express avenue</h2>
+          <p class="audit-card__file">express_avenue.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/forum_kochi.png" alt="forum kochi" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">forum kochi</h2>
+          <p class="audit-card__file">forum_kochi.png</p>
+        </div>
+      </article>
+      <article class="audit-card ">
+        <div class="audit-card__logo-wrap">
+          <img src="./assets/brands/db_mall.png" alt="db mall" class="audit-card__logo" loading="lazy" />
+        </div>
+        <div class="audit-card__meta">
+          <h2 class="audit-card__title">db mall</h2>
+          <p class="audit-card__file">db_mall.png</p>
+        </div>
+      </article>
+      </section>
+    </main>
+  </body>
+</html>
