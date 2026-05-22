@@ -109,8 +109,8 @@
   },
   {
     "brand": "Marassi",
-    "src": "/assets/brands/marassi.png",
-    "fileName": "marassi.png",
+    "src": "/assets/brands/marassi.jpg",
+    "fileName": "marassi.jpg",
     "source": "generated"
   },
   {
@@ -139,8 +139,8 @@
   },
   {
     "brand": "Cenomi",
-    "src": "/assets/brands/cenomi.png",
-    "fileName": "cenomi.png",
+    "src": "/assets/brands/cenomi.jpg",
+    "fileName": "cenomi.jpg",
     "source": "generated"
   },
   {
@@ -199,8 +199,8 @@
   },
   {
     "brand": "Abu Dhabi mall",
-    "src": "/assets/brands/abu_dhabi_mall.webp",
-    "fileName": "abu_dhabi_mall.webp",
+    "src": "/assets/brands/abu_dhabi_mall.jpg",
+    "fileName": "abu_dhabi_mall.jpg",
     "source": "generated"
   },
   {
@@ -211,8 +211,8 @@
   },
   {
     "brand": "Nayati",
-    "src": "/assets/brands/nayati.png",
-    "fileName": "nayati.png",
+    "src": "/assets/brands/nayati.jpg",
+    "fileName": "nayati.jpg",
     "source": "generated"
   },
   {
@@ -235,8 +235,8 @@
   },
   {
     "brand": "phoenix",
-    "src": "/assets/brands/phoenix_refetch.svg",
-    "fileName": "phoenix_refetch.svg",
+    "src": "/assets/brands/phoenix.png",
+    "fileName": "phoenix.png",
     "source": "pinned"
   },
   {

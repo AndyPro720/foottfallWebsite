@@ -65,7 +65,7 @@ export const BRAND_LOGOS = [
   {
     name: 'phoenix',
     query: 'Phoenix Palladium mall logo transparent',
-    assetFile: 'phoenix_refetch.svg',
+    assetFile: 'phoenix.png',
   },
   { name: 'HCL Surat', query: 'HCL Surat logo transparent' },
   { name: 'High street Apollo', query: 'High street Apollo logo transparent' },
