@@ -7,80 +7,9 @@ export function initBrandCarousel() {
   let autoScrollResumeTimer = 0;
   let autoScrollEnabled = true;
 
-  const brandDomains = {
-    toscano: 'https://www.toscano.co.in',
-    salt: 'https://www.saltrestaurants.com',
-    tandooriya: 'https://www.tandooriya.com',
-    'bread pocket co': 'https://www.breadpocket.com',
-    bikanerwala: 'https://www.bikanervala.com',
-    'wow momos': 'https://www.wowmomo.com',
-    anna: 'https://www.annarestaurant.com',
-    antonia: 'https://www.antoniarestaurant.com',
-    'pizza di rocco': 'https://www.pizzadirocco.com',
-    'al safadi': 'https://www.alsafadi-restaurants.com',
-    'social distrikt': 'https://www.socialdistrikt.com',
-    'jardin hotels': 'https://www.jardinhotels.com',
-    'bloom room': 'https://www.bloomrooms.com',
-    'filli cafe': 'https://www.fillicafe.com',
-    d11: 'https://www.d11cafe.com',
-    marassi: 'https://www.marassigalleria.com',
-    dana: 'https://www.danamall.com',
-    oasis: 'https://www.oasismalls.com',
-    'blvd 1890': 'https://www.blvd1890.com',
-    'red sea': 'https://www.redseamall.com',
-    cenomi: 'https://www.cenomi.com',
-    'jeddah vibes': 'https://www.jeddahvibes.com',
-    'sharjah sentral': 'https://www.sharjahcentral.com',
-    sharooq: 'https://www.sharooq.com',
-    'al ganda mall': 'https://www.algandamall.com',
-    'lulu malls': 'https://www.lulumall.in',
-    maf: 'https://www.mafglobal.com',
-    'silicon sentral': 'https://www.siliconcentralmall.com',
-    dalma: 'https://www.dalmamall.ae',
-    reem: 'https://www.reemmall.com',
-    'abu dhabi mall': 'https://www.abudhabimall.com',
-    'city centre doha': 'https://www.citycentredoha.com',
-    nayati: 'https://www.nayati.com',
-    '14 entrar': 'https://www.14entrar.com',
-    'lvl 5': 'https://www.lvl5.com',
-    amanora: 'https://www.amanoramall.com',
-    phoenix: 'https://www.phoenixmarketcity.com',
-    'hcl surat': 'https://www.hclsurat.com',
-    'high street apollo': 'https://www.highstreetapollo.com',
-    jivana: 'https://www.jivana.com',
-    'vegas mall': 'https://www.vegasmall.in',
-    dlf: 'https://www.dlf.in',
-    inorbit: 'https://www.inorbit.in',
-    korum: 'https://www.korummall.com',
-    bipl: 'https://www.bipl.co.in',
-    'express avenue': 'https://www.expressavenuemall.com',
-    'forum kochi': 'https://www.forumkochimall.com',
-    'db mall': 'https://www.dbcity.in',
-  };
-
   if (!track || track.children.length <= 1) {
     return;
   }
-
-  track.querySelectorAll('.brands__item--text').forEach((item) => {
-    const label = item.querySelector('.brands__label');
-    const brandName = label?.textContent.trim().toLowerCase();
-    const domain = brandName ? brandDomains[brandName] : '';
-
-    if (!label || !domain || item.querySelector('.brands__logo')) {
-      return;
-    }
-
-    const logo = document.createElement('img');
-    logo.className = 'brands__logo brands__logo--mark';
-    logo.alt = label.textContent.trim();
-    logo.referrerPolicy = 'no-referrer';
-    logo.loading = 'lazy';
-    logo.src = `https://www.google.com/s2/favicons?sz=128&domain_url=${encodeURIComponent(domain)}`;
-
-    item.prepend(logo);
-    item.classList.add('brands__item--stacked');
-  });
 
   const getScrollDistance = () => {
     const gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
