@@ -8,15 +8,15 @@
 These requirements focus on the marketing website's visual fidelity and content.
 
 ### Core Structure
-- [ ] **CORE-01**: Initialize Vite project with Vanilla JS and Vanilla CSS.
-- [ ] **CORE-02**: Set up global design tokens (colors, typography) based on wireframe.
-- [ ] **CORE-03**: Implement responsive base layout (navigation, footer).
+- [x] **CORE-01**: Initialize Vite project with Vanilla JS and Vanilla CSS.
+- [x] **CORE-02**: Set up global design tokens (colors, typography) based on wireframe.
+- [x] **CORE-03**: Implement responsive base layout (navigation, footer).
 
 ### Section 1: Hero / Landing
-- [ ] **HERO-01**: Full-width high-quality background image (restaurant/retail interior).
-- [ ] **HERO-02**: "FOOTFALL LEASING" heading with premium serif typography.
-- [ ] **HERO-03**: "Where Your Brand Belongs" tagline and clear primary CTA.
-- [ ] **HERO-04**: Minimalist navigation bar with logo and anchors to sections.
+- [x] **HERO-01**: Full-width high-quality background image (restaurant/retail interior).
+- [x] **HERO-02**: "FOOTFALL LEASING" heading with premium serif typography.
+- [x] **HERO-03**: "Where Your Brand Belongs" tagline and clear primary CTA.
+- [x] **HERO-04**: Minimalist navigation bar with logo and anchors to sections.
 
 ### Section 2: Cities & Regional Bases
 - [ ] **CITY-01**: Geographic presence display with categories: World, Metro, Emerging, Opportunity.

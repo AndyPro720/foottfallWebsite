@@ -35,7 +35,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   1. Full-width hero section matches wireframe pixel-for-pixel.
   2. Navigation bar is functional and responsive.
 **Plans**: 1 plan
-- [ ] 02-01: Hero section and navigation implementation.
+- [x] 02-01: Hero section and navigation implementation.
 
 ### Phase 3: Geographic & Intelligence Narrative
 **Goal**: Showcase Foottfall's regional reach and intelligence capability.
