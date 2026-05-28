@@ -19,33 +19,33 @@ These requirements focus on the marketing website's visual fidelity and content.
 - [x] **HERO-04**: Minimalist navigation bar with logo and anchors to sections.
 
 ### Section 2: Cities & Regional Bases
-- [ ] **CITY-01**: Geographic presence display with categories: World, Metro, Emerging, Opportunity.
-- [ ] **CITY-02**: Clean grid layout for city names with hover effects.
+- [x] **CITY-01**: Geographic presence display with categories: World, Metro, Emerging, Opportunity.
+- [x] **CITY-02**: Clean grid layout for city names with hover effects.
 
 ### Section 3: Trade Area Intelligence (Intro)
-- [ ] **INTL-01**: "140+ trade areas mapped" narrative section with supporting copy.
-- [ ] **INTL-02**: "Find Where You Belong" CTA linking to future /intelligence portal.
+- [x] **INTL-01**: "140+ trade areas mapped" narrative section with supporting copy.
+- [x] **INTL-02**: "Find Where You Belong" CTA linking to future /intelligence portal.
 
 ### Section 4: Categories We Serve
-- [ ] **CATS-01**: Visual grid/cards for sectors (F&B, Entertainment, Wellness, etc.).
-- [ ] **CATS-02**: Premium hover states and transitions for category cards.
+- [x] **CATS-01**: Visual grid/cards for sectors (F&B, Entertainment, Wellness, etc.).
+- [x] **CATS-02**: Premium hover states and transitions for category cards.
 
 ### Section 5: How We Work (Process)
-- [ ] **PROC-01**: Three-stage process visualization (City Plotting, DCB Framework, Stock Matching).
-- [ ] **PROC-02**: Secondary "Explore Intelligence" CTA.
+- [x] **PROC-01**: Three-stage process visualization (City Plotting, DCB Framework, Stock Matching).
+- [x] **PROC-02**: Secondary "Explore Intelligence" CTA.
 
 ### Section 6: About & Founder
-- [ ] **ABOT-01**: Founder bio section for Rahul Ahuja with portrait image.
-- [ ] **ABOT-02**: Philosophy and vision statement copy.
+- [x] **ABOT-01**: Founder bio section for Rahul Ahuja with portrait image.
+- [x] **ABOT-02**: Philosophy and vision statement copy.
 
 ### Section 7: Brands & Footer
-- [ ] **BRND-01**: Logo wall/carousel of client brands (Starbucks, Zara, etc.).
-- [ ] **FOOT-01**: Complete footer with contact info (info@foottfall.com) and office locations.
+- [x] **BRND-01**: Logo wall/carousel of client brands (Starbucks, Zara, etc.).
+- [x] **FOOT-01**: Complete footer with contact info (info@foottfall.com) and office locations.
 
 ### Technical & SEO
-- [ ] **TECH-01**: 100% visual fidelity match to Design 2/4 PDF.
-- [ ] **TECH-02**: Fully responsive implementation (mobile/tablet/desktop).
-- [ ] **SEO-01**: Optimized meta tags, semantic HTML, and fast load times.
+- [x] **TECH-01**: 100% visual fidelity match to Design 2/4 PDF.
+- [x] **TECH-02**: Fully responsive implementation (mobile/tablet/desktop).
+- [x] **SEO-01**: Optimized meta tags, semantic HTML, and fast load times.
 
 ## v2 Requirements (Phase 2)
 
@@ -67,15 +67,15 @@ These requirements focus on the marketing website's visual fidelity and content.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01-03 | Phase 1.1 | Pending |
-| HERO-01-04 | Phase 1.2 | Pending |
-| CITY-01-02 | Phase 1.3 | Pending |
-| INTL-01-02 | Phase 1.3 | Pending |
-| CATS-01-02 | Phase 1.4 | Pending |
-| PROC-01-02 | Phase 1.4 | Pending |
-| ABOT-01-02 | Phase 1.5 | Pending |
-| BRND-01, FOOT-01 | Phase 1.5 | Pending |
-| TECH-01-02, SEO-01 | Phase 1.6 | Pending |
+| CORE-01-03 | Phase 1.1 | Complete |
+| HERO-01-04 | Phase 1.2 | Complete |
+| CITY-01-02 | Phase 1.3 | Complete |
+| INTL-01-02 | Phase 1.3 | Complete |
+| CATS-01-02 | Phase 1.4 | Complete |
+| PROC-01-02 | Phase 1.4 | Complete |
+| ABOT-01-02 | Phase 1.5 | Complete |
+| BRND-01, FOOT-01 | Phase 1.5 | Complete |
+| TECH-01-02, SEO-01 | Phase 1.6 | Complete |
 
 **Coverage:**
 - v1 requirements: 23 total
@@ -84,4 +84,5 @@ These requirements focus on the marketing website's visual fidelity and content.
 
 ---
 *Requirements defined: 2026-05-13*
-*Last updated: 2026-05-13 after initial definition*
+*Last updated: 2026-05-28 after marking website requirements complete*
+
