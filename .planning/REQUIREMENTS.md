@@ -50,10 +50,10 @@ These requirements focus on the marketing website's visual fidelity and content.
 ## v2 Requirements (Phase 2)
 
 ### Map Intelligence Portal
-- **MAP-01**: Interactive MapLibre GL map at `/intelligence`.
-- **MAP-02**: Country -> City -> Trade Area zoom hierarchy.
-- **MAP-03**: DCB Sidebar with Demographics, Commercial, and Brandscape tabs.
-- **MAP-04**: Lead capture system (soft and warm leads).
+- [x] **MAP-01**: Interactive MapLibre GL map at `/intelligence`.
+- [x] **MAP-02**: Country -> City -> Trade Area zoom hierarchy.
+- [x] **MAP-03**: DCB Sidebar with Demographics, Commercial, and Brandscape tabs.
+- [x] **MAP-04**: Lead capture system (soft and warm leads).
 
 ## Out of Scope
 
@@ -76,13 +76,15 @@ These requirements focus on the marketing website's visual fidelity and content.
 | ABOT-01-02 | Phase 1.5 | Complete |
 | BRND-01, FOOT-01 | Phase 1.5 | Complete |
 | TECH-01-02, SEO-01 | Phase 1.6 | Complete |
+| MAP-01-04 | Phase 7.1 | Complete |
 
 **Coverage:**
 - v1 requirements: 23 total
 - Mapped to phases: 23
+- v2 map requirements: 4 total
+- Completed: 4
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-05-13*
-*Last updated: 2026-05-28 after marking website requirements complete*
-
+*Last updated: 2026-05-28 after marking map intelligence requirements complete*

@@ -12,7 +12,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
 - [x] **Phase 4: Services & Methodology** - Category grid and the 3-stage process.
 - [x] **Phase 5: Brand Story & Social Proof** - Founder bio and client showcase.
 - [x] **Phase 6: Polish, Performance & SEO** - Final fidelity check and technical optimization.
-- [ ] **Phase 7: Map Intelligence Portal (Future)** - Porting the legacy map application.
+- [x] **Phase 7: Map Intelligence Portal** - Porting the legacy map application.
 
 ## Phase Details
 
@@ -85,7 +85,8 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
 **Success Criteria**:
   1. Map portal accessible at /intelligence.
   2. Interactive layers and DCB sidebar are functional.
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 07-01: Map Intelligence Portal Integration.
 
 ## Progress
 
@@ -97,5 +98,4 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
 | 4. Services | 1/1 | Complete ✅ | 2026-05-28 |
 | 5. Story | 1/1 | Complete ✅ | 2026-05-28 |
 | 6. Polish | 1/1 | Complete ✅ | 2026-05-28 |
-| 7. Map Portal | 0/TBD | Not started | - |
-
+| 7. Map Portal | 1/1 | Complete ✅ | 2026-05-28 |
