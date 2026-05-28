@@ -1,0 +1,24 @@
+{
+    "countries": [
+        {
+            "id": "india",
+            "name": "India",
+            "color": "#00732F",
+            "center": [
+                78.9629,
+                20.5937
+            ],
+            "borderFile": "india.geojson"
+        },
+        {
+            "id": "uae",
+            "name": "UAE",
+            "color": "#E40D0D",
+            "center": [
+                53.8478,
+                23.4241
+            ],
+            "borderFile": "uae.geojson"
+        }
+    ]
+}

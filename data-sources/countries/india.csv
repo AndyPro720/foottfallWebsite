@@ -1,0 +1,23 @@
+id,name,city,tat_tier,corridor_type,lat,lng,rent_band,avg_rent_month,est_spend_visit,anchors,live_units,brand_presence,population,age_profiling,gender_mix,rental_band_proxy,total_footfall,daypart_peak
+pune-kp,Koregaon Park,Pune,TAT-1 (CBD),Nightlife,18.5362,73.8939,Premium+,"₹28,000-45,000","₹2,800-4,800",Phoenix Marketcity,65,"Social, High Spirits, Starbucks",45000,Young Professionals,48:52,High,"30,000+",Late Night
+pune-kn,Kalyani Nagar,Pune,TAT-1 (CBD),Nightlife,18.5463,73.9033,Premium,"₹25,000-40,000","₹2,400-4,200",Mariplex,55,"Toit, Flour Works",40000,Young Professionals,50:50,High,"25,000+",Evening
+pune-cp,Camp,Pune,TAT-1 (CBD),High Street,18.5133,73.8777,High Street,"₹25,000-40,000+","₹2,400-4,200",SGS Mall,150,"Burger King, Kayani Bakery",60000,Mixed,55:45,Mid-High,"50,000+",Afternoon/Evening
+pune-vn,Viman Nagar,Pune,TAT-2 (PBD),Nightlife / Family,18.5679,73.9143,Mid-High,"₹18,000-28,000","₹1,600-3,000",Phoenix Marketcity,120,"Zara, H&M, Social",85000,Students & Families,52:48,Mid-High,"45,000+",All Day
+pune-au,Aundh,Pune,TAT-2 (PBD),Family Dining,18.5580,73.8075,Mid-High,"₹20,000-32,000","₹1,800-3,200",Westend Mall,85,"Westside, Starbucks",70000,Families,48:52,Mid-High,"35,000+",Evening
+pune-kt,Kothrud,Pune,TAT-2 (PBD),Family Dining,18.5074,73.8077,Mid-High,"₹20,000-32,000","₹1,800-3,000","Pavilion Mall (nearby)",90,"McD, Chitale Bandhu",90000,Families & Students,50:50,Mid,"40,000+",Evening
+pune-ban,Baner,Pune,TAT-2 (PBD),Nightlife / High-Energy,18.5590,73.7868,Mid-High,"₹22,000-35,000","₹2,000-3,600",High Street,110,"Effingut, Balewadi High St",55000,IT Crowd,55:45,High,"38,000+",Evening
+pune-wak,Wakad,Pune,TAT-2 (PBD),Family / Community,18.5987,73.7658,Mid,"₹15,000-25,000","₹1,400-2,600",Phoenix Wakad,75,"Dominos, Absolute Barbecues",120000,Young Families,53:47,Mid,"42,000+",Weekend
+pune-kh,Kharadi,Pune,TAT-2 (PBD),QSR / Volume,18.5514,73.9348,Mid,"₹24,000","₹2,000-3,800",WTC,95,"KFC, Chili's",80000,IT Professionals,60:40,Mid,"50,000+",Lunch/Evening
+pune-hd,Hadapsar,Pune,TAT-2 (PBD),QSR / Volume,18.5089,73.9259,Mid,"₹14,000-24,000","₹1,200-2,200",Amanora Mall,130,"McD, Pizza Hut",150000,Mixed,55:45,Low-Mid,"60,000+",Weekend
+pune-mn,Manjari,Pune,TAT-3 (TBD),Future Growth,18.5100,73.9500,Low-Mid,"₹10,000-18,000","₹800-1,500",-,20,"Local Brands",30000,Emerging,55:45,Low,"15,000+",Evening
+pune-mos,Moshi,Pune,TAT-3 (TBD),QSR / Volume,18.6500,73.8500,Low-Mid,"₹8,000-15,000","₹600-1,200",-,15,"Local QSRs",45000,Industrial/Mixed,60:40,Low,"20,000+",Evening
+mumbai-bkc,BKC,Mumbai,TAT-1 (CBD),Business / Premium,19.0607,72.8777,Premium+,"₹350-500/sqft","₹3,000-6,000",Jio World Drive,80,"Nutcracker, O Pedro, Starbucks",75000,Corporate / HNI,60:40,Very High,"90,000+",Lunch/Evening
+mumbai-ban,Bandra West,Mumbai,TAT-1 (CBD),High Street / Nightlife,19.0596,72.8295,Premium,"₹300-450/sqft","₹2,500-5,000",Linking Road,350,"Subko, Bastian, Olive",120000,Trendsetters,50:50,High,"100,000+",Evening
+mumbai-col,Colaba,Mumbai,TAT-1 (CBD),Tourism / Heritage,18.9067,72.8147,Premium,"₹250-400/sqft","₹2,000-4,000",Taj Mahal Hotel,150,"Leopold, Mondegar, Starbucks",50000,Tourists,55:45,High,"80,000+",All Day
+mumbai-lp,Lower Parel,Mumbai,TAT-2 (PBD),Premium / Mall,18.9953,72.8247,Premium,"₹250-400/sqft","₹2,500-5,000",Phoenix Palladium,250,"Zara, Gucci, Ishaara",90000,Mixed,50:50,High,"110,000+",Evening
+mumbai-juhu,Juhu,Mumbai,TAT-1 (CBD),Luxury / Residential,19.1075,72.8263,Premium+,"₹300-500/sqft","₹2,800-5,500",J.W. Marriott,60,"Soho House, Prithvi Cafe",60000,HNI / Celeb,48:52,Very High,"50,000+",Evening
+mumbai-and,Andheri West,Mumbai,TAT-2 (PBD),Nightlife / Media,19.1136,72.8360,Mid-High,"₹180-280/sqft","₹1,500-3,000",Infiniti Mall,300,"Joey's Pizza, 145, Social",180000,Media/Creative,52:48,Mid-High,"120,000+",Evening
+mumbai-pow,Powai,Mumbai,TAT-2 (PBD),Community / Expat,19.1176,72.9060,Mid-High,"₹150-250/sqft","₹1,800-3,500",Galleria,120,"Social, Aromas, Haagen Dazs",85000,Expats / Corp,50:50,High,"60,000+",Evening
+mumbai-mal,Malad West,Mumbai,TAT-2 (PBD),QSR / Family,19.1828,72.8402,Mid,"₹120-200/sqft","₹1,200-2,500","Inorbit Mall, Infiniti",280,"Chili's, Pizza Hut",200000,Families,50:50,Mid,"150,000+",Weekend
+mumbai-vashi,Vashi,Mumbai,TAT-3 (TBD),Growth / Retail,19.0748,73.0019,Low-Mid,"₹100-180/sqft","₹1,000-2,000",Inorbit Vashi,180,"Pop Tates, British Brewing",150000,Families,52:48,Mid,"100,000+",Weekend
+mumbai-thane,Thane West,Mumbai,TAT-2 (PBD),Family / Volume,19.2183,72.9781,Mid,"₹100-180/sqft","₹1,000-2,200",Viviana Mall,250,"SodaBottleOpenerWala, Hitchki",300000,Families,50:50,Mid,"200,000+",Weekend
