@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Foottfall Intelligence maps trade areas, retail demand, and available properties across India and the UAE." />
+  <meta property="og:title" content="Foottfall Intelligence" />
+  <meta property="og:description"
+    content="Explore trade areas and match available properties with brand expansion requirements." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Favicon%2032x32%20and%2016x16/32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Favicon%2032x32%20and%2016x16/16x16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/pages/intelligence/style.css" />
+  <title>Foottfall Intelligence</title>
+</head>
+
+<body class="intelligence-page">
+  <main class="intel-shell" aria-label="Foottfall Intelligence map portal">
+    <section class="intel-map-stage" aria-label="Interactive trade area map">
+      <div id="map-container" class="intel-map"></div>
+
+      <header class="intel-topbar">
+        <a class="intel-brand" href="/" aria-label="Back to Foottfall home">
+          <img src="/assets/Emblem/SVG/Asset%203.svg" alt="" aria-hidden="true" />
+          <span>Foottfall Intelligence</span>
+        </a>
+
+        <nav class="intel-breadcrumb" aria-label="Map breadcrumb">
+          <button type="button" class="intel-back" id="back-button" disabled>Back</button>
+          <ol id="breadcrumb-list">
+            <li>Overview</li>
+          </ol>
+        </nav>
+
+        <div class="intel-mode" role="group" aria-label="Choose intelligence flow">
+          <button type="button" class="intel-mode__button is-active" data-flow="match">Match</button>
+          <button type="button" class="intel-mode__button" data-flow="explore">Explore</button>
+        </div>
+      </header>
+
+      <aside class="intel-filter-panel" id="customisation-panel" aria-labelledby="customisation-title">
+        <div class="intel-panel__header">
+          <p class="intel-eyebrow">Customisation</p>
+          <h1 id="customisation-title">Find the right trade area</h1>
+          <button type="button" class="intel-icon-button" id="filter-toggle" aria-expanded="true"
+            aria-controls="filter-body">Minimize</button>
+        </div>
+
+        <form id="match-form" class="intel-form">
+          <div id="filter-body" class="intel-form__body">
+            <fieldset class="intel-fieldset">
+              <legend>Category</legend>
+              <label><input type="checkbox" name="category" value="fb" checked /> F&amp;B</label>
+              <label><input type="checkbox" name="category" value="retail" /> Retail</label>
+              <label><input type="checkbox" name="category" value="fashion" /> Fashion</label>
+              <label><input type="checkbox" name="category" value="wellness" /> Wellness</label>
+              <label><input type="checkbox" name="category" value="lifestyle" /> Lifestyle</label>
+            </fieldset>
+
+            <fieldset class="intel-fieldset">
+              <legend>Property Size</legend>
+              <label><input type="radio" name="size" value="any" checked /> Any size</label>
+              <label><input type="radio" name="size" value="<500" /> Under 500 sqft</label>
+              <label><input type="radio" name="size" value="500-2000" /> 500-2,000 sqft</label>
+              <label><input type="radio" name="size" value="2000-5000" /> 2,000-5,000 sqft</label>
+              <label><input type="radio" name="size" value="5000+" /> 5,000+ sqft</label>
+            </fieldset>
+
+            <fieldset class="intel-fieldset">
+              <legend>Budget per sqft</legend>
+              <label><input type="radio" name="budget" value="any" checked /> Any budget</label>
+              <label><input type="radio" name="budget" value="<200" /> Under 200</label>
+              <label><input type="radio" name="budget" value="200-500" /> 200-500</label>
+              <label><input type="radio" name="budget" value="500-1000" /> 500-1,000</label>
+              <label><input type="radio" name="budget" value="1000+" /> 1,000+</label>
+            </fieldset>
+
+            <div class="intel-form__actions">
+              <button type="submit" class="intel-primary">Find Matches</button>
+              <button type="button" class="intel-secondary" id="clear-filters">Clear</button>
+            </div>
+          </div>
+        </form>
+      </aside>
+
+      <aside class="intel-explore-panel" aria-label="Explore cities">
+        <p class="intel-eyebrow">Explore</p>
+        <div class="intel-city-buttons" id="city-buttons">
+          <button type="button" data-city="Mumbai">Mumbai</button>
+          <button type="button" data-city="Pune">Pune</button>
+          <button type="button" data-city="Dubai">Dubai</button>
+        </div>
+      </aside>
+
+      <aside class="intel-legend" id="legend" aria-label="Map legend"></aside>
+    </section>
+
+    <aside id="sidebar" class="intel-sidebar" aria-labelledby="sidebar-title">
+      <div class="intel-sidebar__header">
+        <p class="intel-eyebrow">Trade Area</p>
+        <h2 id="sidebar-title">Select a trade area</h2>
+        <button type="button" class="intel-icon-button" id="sidebar-toggle" aria-expanded="true"
+          aria-controls="sidebar-body">Hide</button>
+      </div>
+
+      <div id="sidebar-body" class="intel-sidebar__body">
+        <section class="intel-core-stats" aria-label="Core statistics">
+          <article>
+            <span>Daily footfall</span>
+            <strong id="stat-footfall">--</strong>
+          </article>
+          <article>
+            <span>Rent band</span>
+            <strong id="stat-rent">--</strong>
+          </article>
+          <article>
+            <span>Average spend</span>
+            <strong id="stat-spend">--</strong>
+          </article>
+        </section>
+
+        <canvas id="stats-chart" class="intel-chart" width="320" height="180"></canvas>
+
+        <section class="intel-properties" aria-labelledby="properties-title">
+          <div class="intel-section-heading">
+            <h3 id="properties-title">Available Properties</h3>
+            <span id="property-count">0</span>
+          </div>
+          <div id="property-list" class="intel-property-list"></div>
+        </section>
+
+        <details class="intel-details">
+          <summary>Demographics</summary>
+          <div id="demographics-panel"></div>
+        </details>
+
+        <details class="intel-details">
+          <summary>Brandscape</summary>
+          <div id="brandscape-panel"></div>
+        </details>
+
+        <button type="button" class="intel-primary intel-primary--wide" id="warm-lead-open">
+          Contact Advisory
+        </button>
+      </div>
+    </aside>
+  </main>
+
+  <dialog id="results-modal" class="intel-dialog" aria-labelledby="results-title">
+    <div class="intel-dialog__header">
+      <h2 id="results-title">Matched trade areas</h2>
+      <button type="button" class="intel-icon-button" data-dialog-close="results-modal">Close</button>
+    </div>
+    <div id="results-list" class="intel-results-list"></div>
+  </dialog>
+
+  <dialog id="lead-modal" class="intel-dialog" aria-labelledby="lead-title">
+    <div class="intel-dialog__header">
+      <h2 id="lead-title">Speak with Foottfall Advisory</h2>
+      <button type="button" class="intel-icon-button" data-dialog-close="lead-modal">Close</button>
+    </div>
+    <form id="warm-lead-form" class="intel-lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="16504e34-b8f6-4cc4-892e-614c11c38ce0" />
+      <input type="hidden" name="subject" value="Foottfall Intelligence warm lead" />
+      <input type="hidden" name="from_name" value="Foottfall Intelligence" />
+      <input type="text" name="botcheck" tabindex="-1" autocomplete="off" class="intel-honeypot" />
+      <input type="hidden" name="lead_type" value="warm_lead" />
+      <input type="hidden" name="source_url" id="warm-source-url" value="" />
+      <input type="hidden" name="match_context" id="warm-match-context" value="" />
+
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <label>
+        <span>Brand</span>
+        <input type="text" name="brand" autocomplete="organization" required />
+      </label>
+      <label>
+        <span>Phone</span>
+        <input type="tel" name="phone" autocomplete="tel" required />
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+
+      <p id="warm-lead-status" class="intel-form-status" role="status" aria-live="polite"></p>
+      <button type="submit" class="intel-primary intel-primary--wide">Submit</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="/src/pages/intelligence/main.js"></script>
+</body>
+
+</html>
