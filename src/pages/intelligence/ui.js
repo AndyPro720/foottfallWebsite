@@ -20,6 +20,26 @@ export function getLeadContext(results) {
   });
 }
 
+export async function submitLeadData({ action, fields, formData }, fetchImpl = fetch) {
+  const validation = validateLeadFields(fields);
+  if (!validation.valid) {
+    return { ok: false, reason: 'validation', validation };
+  }
+
+  const response = await fetchImpl(action, {
+    method: 'POST',
+    headers: { Accept: 'application/json' },
+    body: formData
+  });
+  const payload = await response.json().catch(() => ({}));
+
+  if (!response.ok || payload.success !== true) {
+    return { ok: false, reason: 'request-failed', payload };
+  }
+
+  return { ok: true, payload };
+}
+
 function setText(node, value) {
   if (node) node.textContent = String(value || '');
 }
@@ -146,13 +166,12 @@ export class UIController {
       setText(this.leadStatus, 'Sending...');
 
       try {
-        const response = await fetch(this.leadForm.action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(this.leadForm)
+        const result = await submitLeadData({
+          action: this.leadForm.action,
+          fields,
+          formData: new FormData(this.leadForm)
         });
-        const payload = await response.json().catch(() => ({}));
-        if (!response.ok || payload.success !== true) {
+        if (!result.ok) {
           throw new Error('lead-submit-failed');
         }
 

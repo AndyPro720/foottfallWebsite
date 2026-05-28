@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --force",
     "build": "npm run prepare-all && vite build",
+    "test": "vitest run",
     "preview": "vite preview",
     "clean": "rimraf node_modules/.vite dist",
     "prepare-cities": "node scripts/prepare_data.cjs",
