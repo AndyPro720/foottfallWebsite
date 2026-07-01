@@ -322,6 +322,7 @@ export class WizardController {
   updateStepUI() {
     if (!this.panel) return;
     this.panel.dataset.step = String(this.state.step);
+    document.body.dataset.wizardStep = String(this.state.step);
 
     this.panel.querySelectorAll('.wizard-step').forEach((step) => {
       const stepNum = Number(step.dataset.stepContent);

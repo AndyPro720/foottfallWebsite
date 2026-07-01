@@ -209,8 +209,78 @@ export class SidebarController {
   init() {
     this.bindTabEvents();
     this.bindCollapse();
+    this.bindMobileResize();
     this.clear();
     return this;
+  }
+
+  isMobileLayout() {
+    return window.matchMedia?.('(max-width: 760px)').matches || false;
+  }
+
+  clearMobileStack() {
+    this.leftRoot?.classList.remove('is-mobile-primary', 'is-mobile-peek');
+    this.rightRoot?.classList.remove('is-mobile-primary', 'is-mobile-peek');
+  }
+
+  activateMobileSide(side) {
+    this.recall(side);
+    this.clearMobileStack();
+    if (!this.isMobileLayout()) return;
+
+    const primaryRoot = side === 'left' ? this.leftRoot : this.rightRoot;
+    const secondaryRoot = side === 'left' ? this.rightRoot : this.leftRoot;
+    primaryRoot?.classList.add('is-mobile-primary');
+    if (secondaryRoot?.classList.contains('is-active') && !secondaryRoot.classList.contains('is-collapsed')) {
+      secondaryRoot.classList.add('is-mobile-peek');
+    }
+  }
+
+  bindMobileResize() {
+    [this.leftRoot, this.rightRoot].filter(Boolean).forEach((root) => {
+      root.addEventListener('pointerdown', (event) => this.startMobileResize(event, root));
+    });
+  }
+
+  startMobileResize(event, root) {
+    if (!this.isMobileLayout() || root.classList.contains('is-mobile-peek')) return;
+    if (event.target.closest('button, a, input, select, textarea')) return;
+
+    const rect = root.getBoundingClientRect();
+    const header = event.target.closest('.intel-sidebar__header');
+    const onGrabber = event.clientY - rect.top <= 24;
+    if (!header && !onGrabber) return;
+
+    event.preventDefault();
+
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    const minHeight = Math.max(220, viewportHeight * 0.3);
+    const maxHeight = Math.max(minHeight, viewportHeight * 0.78);
+    const startY = event.clientY;
+    const startHeight = root.getBoundingClientRect().height;
+    let moved = false;
+
+    const onMove = (moveEvent) => {
+      const delta = startY - moveEvent.clientY;
+      if (Math.abs(delta) > 4) moved = true;
+      const nextHeight = Math.min(maxHeight, Math.max(minHeight, startHeight + delta));
+      document.documentElement.style.setProperty('--intel-mobile-sidebar-h', `${Math.round(nextHeight)}px`);
+      document.body.classList.add('is-resizing-sidebar');
+    };
+
+    const onEnd = () => {
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onEnd);
+      window.removeEventListener('pointercancel', onEnd);
+      document.body.classList.remove('is-resizing-sidebar');
+      if (moved) this._suppressPeekTap = true;
+      setTimeout(() => { this._suppressPeekTap = false; }, 0);
+    };
+
+    root.setPointerCapture?.(event.pointerId);
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onEnd, { once: true });
+    window.addEventListener('pointercancel', onEnd, { once: true });
   }
 
   // ---- visibility modes -------------------------------------------------
@@ -223,6 +293,7 @@ export class SidebarController {
     this.recall('right');
     this.leftRoot?.classList.add('is-active');
     this.rightRoot?.classList.add('is-active');
+    this.activateMobileSide('right');
   }
 
   showMatches() {
@@ -233,6 +304,7 @@ export class SidebarController {
     this.recall('left');
     this.leftRoot?.classList.add('is-active');
     this.rightRoot?.classList.remove('is-active');
+    this.activateMobileSide('left');
     this.hideStatsCard();
   }
 
@@ -248,6 +320,7 @@ export class SidebarController {
     this.recall('left');
     this.leftRoot?.classList.add('is-active');
     this.rightRoot?.classList.remove('is-active');
+    this.activateMobileSide('left');
     this.hideStatsCard();
   }
 
@@ -293,6 +366,7 @@ export class SidebarController {
     this.rightRoot?.classList.remove('is-active');
     this.leftRoot?.classList.remove('is-collapsed');
     this.rightRoot?.classList.remove('is-collapsed');
+    this.clearMobileStack();
     if (this.leftHandle) this.leftHandle.hidden = true;
     if (this.rightHandle) this.rightHandle.hidden = true;
     this.hideStatsCard();
@@ -308,14 +382,21 @@ export class SidebarController {
     document.querySelectorAll('[data-collapse]').forEach((btn) => {
       btn.addEventListener('click', () => this.collapse(btn.dataset.collapse));
     });
-    this.leftHandle?.addEventListener('click', () => this.recall('left'));
-    this.rightHandle?.addEventListener('click', () => this.recall('right'));
+    this.leftHandle?.addEventListener('click', () => this.activateMobileSide('left'));
+    this.rightHandle?.addEventListener('click', () => this.activateMobileSide('right'));
+    this.leftRoot?.addEventListener('click', (event) => {
+      if (!this._suppressPeekTap && this.leftRoot.classList.contains('is-mobile-peek') && event.target.closest('.intel-sidebar__header')) this.activateMobileSide('left');
+    });
+    this.rightRoot?.addEventListener('click', (event) => {
+      if (!this._suppressPeekTap && this.rightRoot.classList.contains('is-mobile-peek') && event.target.closest('.intel-sidebar__header')) this.activateMobileSide('right');
+    });
   }
 
   collapse(side) {
     const root = side === 'left' ? this.leftRoot : this.rightRoot;
     const handle = side === 'left' ? this.leftHandle : this.rightHandle;
     root?.classList.add('is-collapsed');
+    root?.classList.remove('is-mobile-primary', 'is-mobile-peek');
     if (handle && root?.classList.contains('is-active')) handle.hidden = false;
   }
 
@@ -604,6 +685,7 @@ export class SidebarController {
     this.propertyDetail.hidden = false;
     this.recall('right');
     this.rightRoot?.classList.add('is-active');
+    this.activateMobileSide('right');
   }
 
   backFromDetail() {

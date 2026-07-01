@@ -127,6 +127,9 @@ export class MapComponent {
         }
         // Auto-collapse the attribution control to just the ⓘ toggle.
         this.collapseAttribution();
+        const handleViewportResize = () => this.resize();
+        window.addEventListener('resize', handleViewportResize);
+        window.addEventListener('orientationchange', () => setTimeout(handleViewportResize, 250));
         this.handlers.onReady(this);
       });
     };
