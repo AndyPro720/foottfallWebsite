@@ -13,6 +13,8 @@ export function initLeadCapture() {
   const submitButton = form?.querySelector('.lead-form__submit');
   const mobileInput = document.getElementById('lead-mobile');
   const emailInput = document.getElementById('lead-email');
+  const earlyAccessCheckbox = document.getElementById('landing-early-access');
+  const earlyAccessValue = document.getElementById('landing-early-access-value');
 
   if (!triggers.length || !modal || !dialog || !form || !status || !submitButton) {
     return;
@@ -33,8 +35,13 @@ export function initLeadCapture() {
   const validateContactFields = () => {
     const mobile = mobileInput?.value.trim() ?? '';
     const email = emailInput?.value.trim() ?? '';
-    const message =
-      mobile || email ? '' : 'Enter either a mobile number or an email address.';
+    let message = '';
+
+    if (!mobile && !email) {
+      message = 'Enter either a mobile number or an email address.';
+    } else if (mobile && (mobile.length < 7 || mobile.length > 15)) {
+      message = 'Enter a valid mobile number.';
+    }
 
     mobileInput?.setCustomValidity(message);
     emailInput?.setCustomValidity(message);
@@ -59,6 +66,7 @@ export function initLeadCapture() {
     unlockScroll();
     setStatus('');
     form.reset();
+    if (earlyAccessValue) earlyAccessValue.value = 'No';
     clearContactValidation();
 
     if (restoreFocus && previousFocus instanceof HTMLElement) {
@@ -74,6 +82,8 @@ export function initLeadCapture() {
     lockScroll();
     setStatus('');
     clearContactValidation();
+    if (earlyAccessCheckbox) earlyAccessCheckbox.checked = false;
+    if (earlyAccessValue) earlyAccessValue.value = 'No';
 
     if (sourceSection && trigger?.dataset.leadSource) {
       sourceSection.value = trigger.dataset.leadSource;
@@ -123,7 +133,7 @@ export function initLeadCapture() {
   });
 
   mobileInput?.addEventListener('input', () => {
-    const digitsOnly = mobileInput.value.replace(/\D+/g, '');
+    const digitsOnly = mobileInput.value.replace(/\D+/g, '').slice(0, 15);
 
     if (mobileInput.value !== digitsOnly) {
       mobileInput.value = digitsOnly;
@@ -136,6 +146,10 @@ export function initLeadCapture() {
     validateContactFields();
   });
 
+  earlyAccessCheckbox?.addEventListener('change', () => {
+    if (earlyAccessValue) earlyAccessValue.value = earlyAccessCheckbox.checked ? 'Yes' : 'No';
+  });
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -144,6 +158,7 @@ export function initLeadCapture() {
     }
 
     populateMetaFields();
+    if (earlyAccessValue) earlyAccessValue.value = earlyAccessCheckbox?.checked ? 'Yes' : 'No';
 
     submitButton.setAttribute('disabled', 'true');
 

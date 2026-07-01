@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
 const INVENTORY_FILE = 'C:/Users/angaj/repos/foottfallBackend/Inventory for app (1).xlsx';
 const OUTPUT_FILE = path.join(ROOT_DIR, 'src', 'data', 'properties.json');
+const MOCK_PROPERTIES_FILE = path.join(ROOT_DIR, 'data-sources', 'mock-properties.json');
 
 const TRADE_AREA_RULES = [
   { match: ['baner road, kapil malhar', 'baner road, fab india', 'ganraj chowk', 'baner road', 'balewadi'], id: 'pune-ban', name: 'Baner', city: 'Pune' },
@@ -75,6 +76,15 @@ function getHyperlink(sheet, rowIndex, colIndex, fallback) {
   return cleanText(cell?.l?.Target || fallback);
 }
 
+function loadMockProperties() {
+  if (!fs.existsSync(MOCK_PROPERTIES_FILE)) return [];
+  const parsed = JSON.parse(fs.readFileSync(MOCK_PROPERTIES_FILE, 'utf8'));
+  if (!Array.isArray(parsed)) {
+    throw new Error(`Mock property file must contain an array: ${MOCK_PROPERTIES_FILE}`);
+  }
+  return parsed;
+}
+
 function loadRows(workbook, sheet) {
   const rows = XLSX.utils.sheet_to_json(sheet, {
     header: 1,
@@ -101,7 +111,7 @@ function importProperties() {
   const sheet = workbook.Sheets[sheetName];
   const { rows, headerIndex } = loadRows(workbook, sheet);
 
-  const properties = rows
+  let properties = rows
     .map((row, rowIndex) => ({ row, rowIndex }))
     .slice(headerIndex + 1)
     .filter(({ row }) => normalizeKey(row[1]) === 'available')
@@ -131,11 +141,15 @@ function importProperties() {
     })
     .filter((property) => property.name && property.name.toLowerCase() !== 'na');
 
+  const mockProperties = loadMockProperties();
+  properties = [...properties, ...mockProperties];
+
   fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
   fs.writeFileSync(OUTPUT_FILE, `${JSON.stringify(properties, null, 2)}\n`);
 
   const mappedCount = properties.filter((property) => property.tradeArea).length;
-  console.log(`Imported ${properties.length} available properties from ${sheetName}.`);
+  console.log(`Imported ${properties.length - mockProperties.length} available properties from ${sheetName}.`);
+  if (mockProperties.length) console.log(`Appended ${mockProperties.length} mock properties from ${path.relative(ROOT_DIR, MOCK_PROPERTIES_FILE)}.`);
   console.log(`Mapped ${mappedCount}/${properties.length} properties to trade areas.`);
   console.log(`Wrote ${OUTPUT_FILE}`);
 }

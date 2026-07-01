@@ -17,6 +17,22 @@ const BUDGET_RANGES = {
   '1000+': [1000, Infinity]
 };
 
+const SPEND_RANGES = {
+  any: [0, Infinity],
+  '<1000': [0, 999],
+  '1000-3000': [1000, 3000],
+  '3000-5000': [3000, 5000],
+  '5000+': [5000, Infinity]
+};
+
+function parseSpendMidpoint(spendString) {
+  const matches = String(spendString || '').replace(/,/g, '').match(/\d+/g);
+  if (!matches?.length) return null;
+  const nums = matches.map(Number);
+  if (nums.length === 1) return nums[0];
+  return (nums[0] + nums[1]) / 2;
+}
+
 const CATEGORY_ALIASES = {
   'f&b': 'fb',
   fnb: 'fb',
@@ -75,6 +91,14 @@ export function propertyMatchesBudget(property, budget = 'any') {
   return range === BUDGET_RANGES.any || inRange(property.price, range);
 }
 
+export function propertyMatchesSpend(property, spend = 'any', spendRange = null) {
+  // Prefer an explicit numeric [min,max] range (country-normalized) over keyed range.
+  const range = Array.isArray(spendRange) ? spendRange : (SPEND_RANGES[spend] || SPEND_RANGES.any);
+  if (range === SPEND_RANGES.any) return true;
+  const spendValue = parseSpendMidpoint(tradeData[property.tradeArea]?.stats?.spend);
+  return spendValue != null && inRange(spendValue, range);
+}
+
 export function propertyMatchesQuery(property, query = {}) {
   if (query.city && property.city !== query.city) return false;
   if (!property.tradeArea) return false;
@@ -82,7 +106,8 @@ export function propertyMatchesQuery(property, query = {}) {
   return (
     propertyMatchesCategory(property, query.categories || query.category || []) &&
     propertyMatchesSize(property, query.size || 'any') &&
-    propertyMatchesBudget(property, query.budget || 'any')
+    propertyMatchesBudget(property, query.budget || 'any') &&
+    propertyMatchesSpend(property, query.spend || 'any', query.spendRange)
   );
 }
 
@@ -117,40 +142,10 @@ export function readFilterForm(form) {
   };
 }
 
-function createResultCard(property) {
-  const card = document.createElement('article');
-  card.className = 'intel-result-card';
-
-  const title = document.createElement('h3');
-  title.textContent = property.name || 'Unnamed property';
-
-  const meta = document.createElement('p');
-  meta.textContent = `${property.tradeAreaName || 'Trade area'} | ${property.sizeLabel || 'Size unavailable'} | ${property.priceLabel || 'Price unavailable'}`;
-
-  card.append(title, meta);
-  return card;
-}
-
-function renderEmptyState(container) {
-  const wrapper = document.createElement('div');
-  wrapper.className = 'intel-empty-state';
-
-  const title = document.createElement('h3');
-  title.textContent = 'No matching properties found';
-
-  const body = document.createElement('p');
-  body.textContent = 'Try adjusting your filters (size or budget) or contact our advisory team.';
-
-  wrapper.append(title, body);
-  container.replaceChildren(wrapper);
-}
-
 export class FiltersController {
   constructor(options = {}) {
     this.form = options.form || document.getElementById('match-form');
     this.clearButton = options.clearButton || document.getElementById('clear-filters');
-    this.resultsList = options.resultsList || document.getElementById('results-list');
-    this.resultsModal = options.resultsModal || document.getElementById('results-modal');
     this.map = options.map || null;
     this.onResults = options.onResults || (() => {});
     this.lastResults = null;
@@ -167,29 +162,16 @@ export class FiltersController {
     if (!this.form) return null;
 
     const query = readFilterForm(this.form);
+    const currentCity = this.map?.getCurrentView?.()?.city;
+    if (currentCity) query.city = currentCity;
+
     const results = matchProperties(query);
     this.lastResults = results;
 
     this.map?.focusTradeAreas?.(results.tradeAreaIds);
-    this.renderResults(results);
     this.onResults(results);
 
     return results;
-  }
-
-  renderResults(results) {
-    if (!this.resultsList) return;
-
-    if (!results.properties.length) {
-      renderEmptyState(this.resultsList);
-    } else {
-      const cards = results.properties.map(createResultCard);
-      this.resultsList.replaceChildren(...cards);
-    }
-
-    if (this.resultsModal && typeof this.resultsModal.showModal === 'function' && !this.resultsModal.open) {
-      this.resultsModal.showModal();
-    }
   }
 
   clear() {

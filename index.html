@@ -35,10 +35,10 @@
       </a>
 
       <ul class="nav__links" id="nav-links">
-        <li><a href="/intelligence/" class="nav__link">Intelligence</a></li>
+        <li><a href="/intelligence/?flow=match" class="nav__link">Intelligence</a></li>
         <li><a href="#cities" class="nav__link" data-section="cities">Cities &amp; Categories</a></li>
         <li><a href="#about" class="nav__link" data-section="about">About &amp; Connect</a></li>
-        <li><a href="#position-asset" class="nav__link nav__link--cta">Position Your Asset</a></li>
+        <li><a href="/intelligence/?flow=match" class="nav__link nav__link--cta">Position Your Asset</a></li>
       </ul>
 
       <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -197,6 +197,35 @@
             </div>
           </article>
 
+          <article class="journey-insight reveal" aria-label="Foottfall Intelligence live market signal">
+            <div class="journey-insight__copy">
+              <p class="journey-insight__eyebrow"><span class="journey-insight__live-dot" aria-hidden="true"></span>Live
+                Market Signal</p>
+              <h3 id="landing-insight-title" class="journey-insight__title">BKC is pulling premium F&amp;B demand.</h3>
+              <p id="landing-insight-meta" class="journey-insight__meta">6 available matches across Mumbai and Dubai.
+              </p>
+            </div>
+            <dl class="journey-insight__stats">
+              <div>
+                <dt id="landing-insight-kicker">Trade Area</dt>
+                <dd id="landing-insight-primary">BKC</dd>
+              </div>
+              <div>
+                <dt>Footfall</dt>
+                <dd id="landing-insight-secondary">90,000+</dd>
+              </div>
+              <div>
+                <dt>Rent</dt>
+                <dd id="landing-insight-tertiary">INR 420/sqft</dd>
+              </div>
+              <div>
+                <dt>Properties</dt>
+                <dd id="landing-insight-available">14</dd>
+              </div>
+            </dl>
+            <a class="journey-insight__link" href="/intelligence/?flow=match">Run a match</a>
+          </article>
+
           <article class="journey__surface journey__surface--categories reveal">
             <div class="categories__grid">
               <article class="category-card category-card--popover" tabindex="0" role="button"
@@ -272,13 +301,11 @@
             </div>
           </article>
 
-          <button class="journey__action reveal" type="button" aria-describedby="journey-action-note"
-            aria-haspopup="dialog" data-lead-trigger data-lead-source="Cities / Intelligence CTA">
+          <a class="journey__action" href="/intelligence/?flow=match" aria-describedby="journey-action-note">
             Find Where You Belong
-          </button>
-          <p id="journey-action-note" class="journey__action-note" role="status" aria-live="polite">
-            Foottfall Intelligence is coming soon. Leave your name and either a mobile number or
-            email, and we&apos;ll reach out.
+          </a>
+          <p id="journey-action-note" class="journey__action-note">
+            Pick your city and requirements - Foottfall Intelligence matches you to the right trade areas instantly.
           </p>
         </div>
       </div>
@@ -510,10 +537,9 @@
         </section>
 
         <div id="position-asset" class="connect__cta-wrap">
-          <button class="connect__cta" type="button" aria-haspopup="dialog" data-lead-trigger
-            data-lead-source="Position Your Asset CTA">
+          <a class="connect__cta" href="/intelligence/?flow=match">
             Position Your Asset
-          </button>
+          </a>
         </div>
       </div>
 
@@ -553,6 +579,10 @@
       <p id="lead-modal-copy" class="lead-modal__copy">
         Leave your name and either a mobile number or email, and we&apos;ll reach out.
       </p>
+      <label class="lead-form__early-access">
+        <input type="checkbox" id="landing-early-access" />
+        <span>I'm interested for early access to Foottfall Intelligence&trade;</span>
+      </label>
 
       <form id="lead-capture-form" class="lead-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="16504e34-b8f6-4cc4-892e-614c11c38ce0" />
@@ -565,6 +595,7 @@
         <input type="hidden" name="source_url" id="lead-source-url" value="" />
         <input type="hidden" name="submitted_at" id="lead-submitted-at" value="" />
         <input type="hidden" name="user_agent" id="lead-user-agent" value="" />
+        <input type="hidden" name="early_access_interest" id="landing-early-access-value" value="No" />
 
         <label class="lead-form__field">
           <span class="lead-form__label">Name</span>
@@ -574,7 +605,7 @@
         <label class="lead-form__field">
           <span class="lead-form__label">Mobile</span>
           <input id="lead-mobile" class="lead-form__input" type="tel" name="mobile" autocomplete="tel"
-            inputmode="numeric" pattern="[0-9]*" />
+            inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" />
         </label>
 
         <label class="lead-form__field">
