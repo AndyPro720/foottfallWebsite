@@ -102,44 +102,52 @@ function loadRows(workbook, sheet) {
 }
 
 function importProperties() {
+  let properties = [];
+  let excelCount = 0;
+  let hasExcel = false;
+  let sheetName = '';
+
   if (!fs.existsSync(INVENTORY_FILE)) {
-    throw new Error(`Inventory spreadsheet not found: ${INVENTORY_FILE}`);
+    console.warn(`⚠️  Inventory spreadsheet not found at: ${INVENTORY_FILE}`);
+    console.warn(`   Falling back to mock properties only.`);
+  } else {
+    hasExcel = true;
+    const workbook = XLSX.readFile(INVENTORY_FILE, { cellDates: false });
+    sheetName = workbook.SheetNames[0];
+    const sheet = workbook.Sheets[sheetName];
+    const { rows, headerIndex } = loadRows(workbook, sheet);
+
+    properties = rows
+      .map((row, rowIndex) => ({ row, rowIndex }))
+      .slice(headerIndex + 1)
+      .filter(({ row }) => normalizeKey(row[1]) === 'available')
+      .map(({ row, rowIndex }) => {
+        const tradeArea = mapTradeArea(row[11]);
+        const size = parseFirstNumber(row[6]);
+        const price = parseFirstNumber(row[17]);
+
+        return {
+          name: cleanText(row[0]),
+          status: cleanText(row[1]),
+          buildingType: cleanText(row[5]),
+          size,
+          sizeLabel: cleanText(row[6]),
+          floor: cleanText(row[7]),
+          locationLink: getHyperlink(sheet, rowIndex, 9, row[9]),
+          address: cleanText(row[10]),
+          sourceTradeArea: cleanText(row[11]),
+          tradeArea: tradeArea.id,
+          tradeAreaName: tradeArea.name,
+          city: tradeArea.city,
+          suitableFor: parseSuitableFor(row[12]),
+          price,
+          priceLabel: cleanText(row[17]),
+          note: cleanText(row[34])
+        };
+      })
+      .filter((property) => property.name && property.name.toLowerCase() !== 'na');
+    excelCount = properties.length;
   }
-
-  const workbook = XLSX.readFile(INVENTORY_FILE, { cellDates: false });
-  const sheetName = workbook.SheetNames[0];
-  const sheet = workbook.Sheets[sheetName];
-  const { rows, headerIndex } = loadRows(workbook, sheet);
-
-  let properties = rows
-    .map((row, rowIndex) => ({ row, rowIndex }))
-    .slice(headerIndex + 1)
-    .filter(({ row }) => normalizeKey(row[1]) === 'available')
-    .map(({ row, rowIndex }) => {
-      const tradeArea = mapTradeArea(row[11]);
-      const size = parseFirstNumber(row[6]);
-      const price = parseFirstNumber(row[17]);
-
-      return {
-        name: cleanText(row[0]),
-        status: cleanText(row[1]),
-        buildingType: cleanText(row[5]),
-        size,
-        sizeLabel: cleanText(row[6]),
-        floor: cleanText(row[7]),
-        locationLink: getHyperlink(sheet, rowIndex, 9, row[9]),
-        address: cleanText(row[10]),
-        sourceTradeArea: cleanText(row[11]),
-        tradeArea: tradeArea.id,
-        tradeAreaName: tradeArea.name,
-        city: tradeArea.city,
-        suitableFor: parseSuitableFor(row[12]),
-        price,
-        priceLabel: cleanText(row[17]),
-        note: cleanText(row[34])
-      };
-    })
-    .filter((property) => property.name && property.name.toLowerCase() !== 'na');
 
   const mockProperties = loadMockProperties();
   properties = [...properties, ...mockProperties];
@@ -148,7 +156,9 @@ function importProperties() {
   fs.writeFileSync(OUTPUT_FILE, `${JSON.stringify(properties, null, 2)}\n`);
 
   const mappedCount = properties.filter((property) => property.tradeArea).length;
-  console.log(`Imported ${properties.length - mockProperties.length} available properties from ${sheetName}.`);
+  if (hasExcel) {
+    console.log(`Imported ${excelCount} available properties from ${sheetName}.`);
+  }
   if (mockProperties.length) console.log(`Appended ${mockProperties.length} mock properties from ${path.relative(ROOT_DIR, MOCK_PROPERTIES_FILE)}.`);
   console.log(`Mapped ${mappedCount}/${properties.length} properties to trade areas.`);
   console.log(`Wrote ${OUTPUT_FILE}`);
