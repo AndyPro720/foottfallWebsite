@@ -6,7 +6,7 @@ import {
   LinearScale,
   Tooltip
 } from 'chart.js';
-import { getPropertiesForTradeArea } from './filters.js';
+import { dataService } from './data-service.js';
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip);
 
@@ -342,7 +342,7 @@ export class SidebarController {
       frag.append(heading);
       groups.get(cls).forEach((f) => {
         const p = f.properties || {};
-        const count = getPropertiesForTradeArea(p.id).length;
+        const count = dataService.getPropertiesForTradeArea(p.id).length;
         const item = document.createElement('button');
         item.type = 'button';
         item.className = 'intel-tier-item';
@@ -428,7 +428,7 @@ export class SidebarController {
     // In the tailored (match) funnel, only surface the user's matched properties for this area.
     const tailored = this.tailoredMode && this.tailoredByArea;
     const areaProperties = overrideProperties
-      || (tailored ? (this.tailoredByArea[id] || []) : getPropertiesForTradeArea(id));
+      || (tailored ? (this.tailoredByArea[id] || []) : dataService.getPublicPropertiesForTradeArea(id));
     const stats = data.stats || {};
     const demographics = data.demographics || {};
     const commercial = data.commercial || {};

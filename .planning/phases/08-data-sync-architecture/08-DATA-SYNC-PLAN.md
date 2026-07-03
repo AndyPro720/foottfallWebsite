@@ -1,9 +1,27 @@
 # Phase 08 — Intelligence Data Sync & Exposure Architecture
 
-**Status:** Planned
+**Status:** In progress — code landed (Steps 1, 2, 4, 5); Step 3 (deploy hook + env) is manual infra
 **Date:** 2026-07-01
 **Owner:** Angaj Sharma
 **Depends on:** Phase 07 (Map Intelligence Portal), `eager-stirring-breeze.md` Phase 5 (Backend Data Architecture)
+
+> **Implementation status (2026-07-01)**
+> - ✅ **Step 1** — `foottfallBackend/functions/index.js`: `runExport()` now projects
+>   each `status==='active'` doc through `toPublicListing()` (PUBLIC allowlist +
+>   derived `sizeLabel`/`tradeAreaName`/`mainImage`/`approxLocation`), writes
+>   `exports/public-listings.json`, and best-effort POSTs the deploy hook. Live leak closed.
+> - ✅ **Step 2** — `scripts/import-properties.js`: fetches `PUBLIC_LISTINGS_URL`
+>   (env-overridable), re-applies a website-side PUBLIC allowlist (defense-in-depth),
+>   falls back to mock on failure. Verified: bundle carries only the 13 public keys.
+> - ✅ **Step 4** — `src/pages/intelligence/data-service.js`: `StaticDataService`
+>   (getProperties / getPropertyById / getPropertiesForTradeArea +
+>   `getPublicPropertiesForTradeArea` cosmetic 3-cap) + `ApiDataService` stub; wired
+>   through `filters.js` and `sidebar.js`. Tests + prod build green.
+> - ✅ **Step 5** — verified `properties.json` and `dist` bundle contain no
+>   GATED/NEVER fields (lat/long hits in the bundle are Mapbox lib code, not data).
+> - ⏳ **Step 3 (manual)** — deploy the updated function, create the Cloudflare deploy
+>   hook, and set the two env values below. Until then the site builds off the mock
+>   fallback. See §9 Step 3 for the exact values.
 
 ---
 
@@ -277,9 +295,25 @@ Firestore directly with auth, unlocking all fields and unrestricted search.
   fields** (drops `locationLink`, `address`, `price`, `priceLabel`, `note`).
 - Keep the mock fallback for local dev when the URL is unreachable.
 
-### Step 3 — Wire the deploy hook
-- Create a Cloudflare Pages deploy hook for the `intelligence` project.
-- Store its URL in the Cloud Function config; POST it at the end of `runExport()`.
+### Step 3 — Wire the deploy hook *(remaining manual infra)*
+Code is ready (`triggerDeployHook()` in the function, env-overridable fetch in the
+importer). To activate end-to-end:
+1. **Deploy the function:** `cd foottfallBackend && firebase deploy --only functions:exportInventoryToJSON,functions:scheduledExportInventory`.
+2. **Create a Cloudflare Pages deploy hook** for the intelligence project (Settings →
+   Builds & deployments → Deploy hooks). Copy the generated POST URL.
+3. **Set the hook on the function** (so export → rebuild is automatic):
+   `firebase functions:secrets:set CLOUDFLARE_DEPLOY_HOOK_URL` (or a `.env`), then redeploy.
+4. **Set the source URL on the website build** — in Cloudflare Pages env vars, set
+   `PUBLIC_LISTINGS_URL` to the confirmed public object URL. The importer defaults to
+   `https://storage.googleapis.com/footfall-inventory.firebasestorage.app/exports/public-listings.json`;
+   **verify the bucket suffix** (`.firebasestorage.app` vs `.appspot.com`) — a local
+   fetch of the default returned HTTP 403 (object not published yet, bucket reachable).
+5. **Trigger once** via the backend "Export" button (or `fire` the schedule) and confirm
+   the object is public + the site rebuilds.
+
+> **Cleanup:** the old code wrote the *full-field* `exports/inventory.json`. If any run
+> ever produced it, delete that Storage object — it is a stale full-data leak. The new
+> code writes only `exports/public-listings.json`.
 
 ### Step 4 — DataService seam (Phase 5 groundwork, static impl only)
 `src/pages/intelligence/data-service.js` (new)

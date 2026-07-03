@@ -1,79 +1,83 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import XLSX from 'xlsx';
+import { resolveTradeArea } from '../src/data/tradeAreaMap.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
-const INVENTORY_FILE = 'C:/Users/angaj/repos/foottfallBackend/Inventory for app (1).xlsx';
 const OUTPUT_FILE = path.join(ROOT_DIR, 'src', 'data', 'properties.json');
 const MOCK_PROPERTIES_FILE = path.join(ROOT_DIR, 'data-sources', 'mock-properties.json');
 
-const TRADE_AREA_RULES = [
-  { match: ['baner road, kapil malhar', 'baner road, fab india', 'ganraj chowk', 'baner road', 'balewadi'], id: 'pune-ban', name: 'Baner', city: 'Pune' },
-  { match: ['opposite westend mall', 'aundh', 'ganeshkhind road'], id: 'pune-au', name: 'Aundh', city: 'Pune' },
-  { match: ['kothrud', 'paud rd'], id: 'pune-kt', name: 'Kothrud', city: 'Pune' },
-  { match: ['hadapsar', 'amanora'], id: 'pune-hd', name: 'Hadapsar', city: 'Pune' },
-  { match: ['viman nagar', 'airport rd'], id: 'pune-vn', name: 'Viman Nagar', city: 'Pune' },
-  { match: ['kharadi', 'wagholi', 'nagar road'], id: 'pune-kh', name: 'Kharadi', city: 'Pune' },
-  { match: ['pimpri-chinchwad', 'old mumbai pune highway', 'nigdi', 'moshi'], id: 'pune-mos', name: 'Moshi', city: 'Pune' },
-  { match: ['satara road', 'katraj', 'fc road', 'yana'], id: 'pune-cp', name: 'Camp', city: 'Pune' },
-  { match: ['bavdhan'], id: 'pune-kt', name: 'Kothrud', city: 'Pune' },
-  { match: ['wakad'], id: 'pune-wak', name: 'Wakad', city: 'Pune' },
-  { match: ['manjari'], id: 'pune-mn', name: 'Manjari', city: 'Pune' },
-  { match: ['koregaon'], id: 'pune-kp', name: 'Koregaon Park', city: 'Pune' },
-  { match: ['kalyani'], id: 'pune-kn', name: 'Kalyani Nagar', city: 'Pune' }
+// The backend Cloud Function (foottfallBackend) exports a field-sanitized
+// artifact to public Firebase Storage. This build step fetches it and bakes it
+// into the bundle — no credentials (the file is public), and cost is decoupled
+// from website traffic. See .planning/phases/08-data-sync-architecture.
+//
+// The exact bucket suffix (.appspot.com vs .firebasestorage.app) can differ per
+// project, so the URL is overridable via env. Set PUBLIC_LISTINGS_URL in the
+// Cloudflare Pages build environment to the confirmed URL.
+const PUBLIC_LISTINGS_URL =
+  process.env.PUBLIC_LISTINGS_URL ||
+  'https://firebasestorage.googleapis.com/v0/b/footfall-inventory.firebasestorage.app/o/exports%2Fpublic-listings.json?alt=media&token=f6b3f87d-d27c-423f-b9f3-eec071475528';
+
+// Defense-in-depth allowlist: even if the upstream artifact regresses or the
+// mock fallback carries extra fields, only these PUBLIC-tier keys are ever
+// written into the shipped bundle. This mirrors toPublicListing() in the
+// backend export function — keep the two in sync.
+const PUBLIC_FIELDS = [
+  'id',
+  'name',
+  'buildingType',
+  'size',
+  'sizeLabel',
+  'floor',
+  'suitableFor',
+  'tradeArea',
+  'tradeAreaName',
+  'city',
+  'status',
+  'price',
+  'priceLabel',
+  'parking',
+  'outsideSpace',
+  'serviceEntry',
+  'liftAccess',
+  'bohSpace',
+  'fireExit',
+  'vicinityBrands',
+  'mainImage',
+  'approxLocation'
 ];
 
-function cleanText(value) {
-  if (value === null || value === undefined) return '';
-  return String(value).replace(/\s+/g, ' ').trim();
+function pickPublic(property) {
+  const clean = {};
+  for (const key of PUBLIC_FIELDS) {
+    if (property[key] !== undefined) clean[key] = property[key];
+  }
+  return clean;
 }
 
-function normalizeKey(value) {
-  return cleanText(value).toLowerCase();
-}
-
-function parseFirstNumber(value) {
-  const cleaned = cleanText(value).replace(/,/g, '');
-  const match = cleaned.match(/\d+(?:\.\d+)?/);
-  return match ? Number(match[0]) : null;
-}
-
-function parseSuitableFor(value) {
-  const raw = normalizeKey(value);
-  if (!raw || raw === 'na') return [];
-  if (raw === 'all') return ['fb', 'retail', 'fashion', 'wellness', 'lifestyle'];
-
-  const categories = new Set();
-  if (raw.includes('fnb') || raw.includes('f&b')) categories.add('fb');
-  if (!raw.includes('not fnb') && !raw.includes('not for fnb') && raw.includes('food')) categories.add('fb');
-  if (raw.includes('bank')) categories.add('retail');
-  if (raw.includes('showroom')) categories.add('retail');
-  if (raw.includes('retail')) categories.add('retail');
-  if (raw.includes('fashion')) categories.add('fashion');
-  if (raw.includes('wellness')) categories.add('wellness');
-  if (raw.includes('lifestyle')) categories.add('lifestyle');
-  if (raw.includes('not fnb') || raw.includes('not for fnb')) categories.add('retail');
-
-  return Array.from(categories);
-}
-
-function mapTradeArea(value) {
-  const key = normalizeKey(value);
-  const rule = TRADE_AREA_RULES.find((entry) => entry.match.some((needle) => key.includes(needle)));
-
-  return rule || {
-    id: null,
-    name: cleanText(value),
-    city: null
+// Reconcile the backend's free-text trade area onto a canonical geoData area
+// the map can render. Keeps the raw label in tradeAreaName when unresolved so
+// diagnostics/counts still work; tradeArea stays null so the site hides it.
+function applyTradeArea(property) {
+  const rawName = property.tradeAreaName || property.tradeArea;
+  const resolved = resolveTradeArea(property.city, rawName);
+  return {
+    ...property,
+    tradeArea: resolved.id,
+    tradeAreaName: resolved.name,
+    city: resolved.city
   };
 }
 
-function getHyperlink(sheet, rowIndex, colIndex, fallback) {
-  const address = XLSX.utils.encode_cell({ r: rowIndex, c: colIndex });
-  const cell = sheet[address];
-  return cleanText(cell?.l?.Target || fallback);
+function normalizeProperties(payload) {
+  // Accept either the export wrapper { properties: [...] } or a bare array.
+  const list = Array.isArray(payload) ? payload : payload?.properties;
+  if (!Array.isArray(list)) {
+    throw new Error('Fetched payload did not contain a properties array.');
+  }
+  return list.map(pickPublic).map(applyTradeArea);
 }
 
 function loadMockProperties() {
@@ -85,88 +89,40 @@ function loadMockProperties() {
   return parsed;
 }
 
-function loadRows(workbook, sheet) {
-  const rows = XLSX.utils.sheet_to_json(sheet, {
-    header: 1,
-    raw: false,
-    blankrows: false,
-    defval: null
-  });
-
-  const headerIndex = rows.findIndex((row) => cleanText(row[0]) === 'Property Name' && cleanText(row[1]) === 'Property Status');
-  if (headerIndex === -1) {
-    throw new Error('Could not find the property inventory header row.');
+async function fetchPublicListings() {
+  const response = await fetch(PUBLIC_LISTINGS_URL, { redirect: 'follow' });
+  if (!response.ok) {
+    throw new Error(`Fetch failed with HTTP ${response.status}`);
   }
-
-  return { rows, headerIndex };
+  return response.json();
 }
 
-function importProperties() {
+async function importProperties() {
   let properties = [];
-  let excelCount = 0;
-  let hasExcel = false;
-  let sheetName = '';
+  let source = '';
 
-  if (!fs.existsSync(INVENTORY_FILE)) {
-    console.warn(`⚠️  Inventory spreadsheet not found at: ${INVENTORY_FILE}`);
-    console.warn(`   Falling back to mock properties only.`);
-  } else {
-    hasExcel = true;
-    const workbook = XLSX.readFile(INVENTORY_FILE, { cellDates: false });
-    sheetName = workbook.SheetNames[0];
-    const sheet = workbook.Sheets[sheetName];
-    const { rows, headerIndex } = loadRows(workbook, sheet);
-
-    properties = rows
-      .map((row, rowIndex) => ({ row, rowIndex }))
-      .slice(headerIndex + 1)
-      .filter(({ row }) => normalizeKey(row[1]) === 'available')
-      .map(({ row, rowIndex }) => {
-        const tradeArea = mapTradeArea(row[11]);
-        const size = parseFirstNumber(row[6]);
-        const price = parseFirstNumber(row[17]);
-
-        return {
-          name: cleanText(row[0]),
-          status: cleanText(row[1]),
-          buildingType: cleanText(row[5]),
-          size,
-          sizeLabel: cleanText(row[6]),
-          floor: cleanText(row[7]),
-          locationLink: getHyperlink(sheet, rowIndex, 9, row[9]),
-          address: cleanText(row[10]),
-          sourceTradeArea: cleanText(row[11]),
-          tradeArea: tradeArea.id,
-          tradeAreaName: tradeArea.name,
-          city: tradeArea.city,
-          suitableFor: parseSuitableFor(row[12]),
-          price,
-          priceLabel: cleanText(row[17]),
-          note: cleanText(row[34])
-        };
-      })
-      .filter((property) => property.name && property.name.toLowerCase() !== 'na');
-    excelCount = properties.length;
+  try {
+    console.log(`Fetching public listings from ${PUBLIC_LISTINGS_URL} ...`);
+    const payload = await fetchPublicListings();
+    properties = normalizeProperties(payload);
+    source = 'remote export';
+  } catch (error) {
+    console.warn(`⚠️  Could not fetch public listings: ${error.message}`);
+    console.warn('   Falling back to mock properties for this build.');
+    properties = normalizeProperties(loadMockProperties());
+    source = 'mock fallback';
   }
-
-  const mockProperties = loadMockProperties();
-  properties = [...properties, ...mockProperties];
 
   fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
   fs.writeFileSync(OUTPUT_FILE, `${JSON.stringify(properties, null, 2)}\n`);
 
   const mappedCount = properties.filter((property) => property.tradeArea).length;
-  if (hasExcel) {
-    console.log(`Imported ${excelCount} available properties from ${sheetName}.`);
-  }
-  if (mockProperties.length) console.log(`Appended ${mockProperties.length} mock properties from ${path.relative(ROOT_DIR, MOCK_PROPERTIES_FILE)}.`);
+  console.log(`Imported ${properties.length} properties (${source}).`);
   console.log(`Mapped ${mappedCount}/${properties.length} properties to trade areas.`);
   console.log(`Wrote ${OUTPUT_FILE}`);
 }
 
-try {
-  importProperties();
-} catch (error) {
+importProperties().catch((error) => {
   console.error(error.message);
   process.exit(1);
-}
+});

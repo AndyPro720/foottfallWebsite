@@ -21,3 +21,39 @@ mumbai-pow,Powai,Mumbai,TAT-2 (PBD),Community / Expat,19.1176,72.9060,Mid-High,"
 mumbai-mal,Malad West,Mumbai,TAT-2 (PBD),QSR / Family,19.1828,72.8402,Mid,"₹120-200/sqft","₹1,200-2,500","Inorbit Mall, Infiniti",280,"Chili's, Pizza Hut",200000,Families,50:50,Mid,"150,000+",Weekend
 mumbai-vashi,Vashi,Mumbai,TAT-3 (TBD),Growth / Retail,19.0748,73.0019,Low-Mid,"₹100-180/sqft","₹1,000-2,000",Inorbit Vashi,180,"Pop Tates, British Brewing",150000,Families,52:48,Mid,"100,000+",Weekend
 mumbai-thane,Thane West,Mumbai,TAT-2 (PBD),Family / Volume,19.2183,72.9781,Mid,"₹100-180/sqft","₹1,000-2,200",Viviana Mall,250,"SodaBottleOpenerWala, Hitchki",300000,Families,50:50,Mid,"200,000+",Weekend
+bardhaman-nazrul-pally,Nazrul Pally,Bardhaman,TAT-2 (PBD),High Street,23.25374,87.85745,Mid,Mock — pending,Mock — pending,,3,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-borivali-west,Borivali west,Mumbai,TAT-2 (PBD),High Street,19.22918,72.84054,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-dadar-east,Dadar East,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+jaipur-vaishali-nagar,Vaishali Nagar,Jaipur,TAT-2 (PBD),High Street,26.90779,75.74251,Mid,Mock — pending,Mock — pending,,13,,N/A,Mixed,50:50,Mid,N/A,Evening
+bardhaman-highway-116a,Highway 116A,Bardhaman,TAT-2 (PBD),High Street,23.23214,87.86022,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-sion,Sion,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-andheri-east,Andheri East,Mumbai,TAT-2 (PBD),High Street,19.12196,72.87117,Mid,Mock — pending,Mock — pending,,17,,N/A,Mixed,50:50,Mid,N/A,Evening
+bokaro-chas,Chas,Bokaro,TAT-2 (PBD),High Street,23.63033,86.17442,Mid,Mock — pending,Mock — pending,,5,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-cda-cuttack,CDA Cuttack,Cuttack,TAT-2 (PBD),High Street,20.48080,85.82243,Mid,Mock — pending,Mock — pending,,7,,N/A,Mixed,50:50,Mid,N/A,Evening
+bardhaman-curzon-gate,Curzon Gate,Bardhaman,TAT-2 (PBD),High Street,23.24166,87.86876,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+patna-kankarbagh,Kankarbagh,Patna,TAT-2 (PBD),High Street,25.60031,85.14966,Mid,Mock — pending,Mock — pending,,13,,N/A,Mixed,50:50,Mid,N/A,Evening
+jaipur-civil-lines,Civil Lines,Jaipur,TAT-2 (PBD),High Street,26.90271,75.78606,Mid,Mock — pending,Mock — pending,,6,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-kandivali-east,Kandivali East,Mumbai,TAT-2 (PBD),High Street,19.20778,72.86810,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bangalore-banashankari,Banashankari,Bangalore,TAT-2 (PBD),High Street,12.92028,77.55711,Mid,Mock — pending,Mock — pending,,4,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhubhneshwar-patia-square,Patia Square,Bhubhneshwar,TAT-2 (PBD),High Street,20.34400,85.82116,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+ahmedabad-maninagar,Maninagar,Ahmedabad,TAT-2 (PBD),High Street,23.00196,72.60299,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-ghatkopar-west,Ghatkopar west,Mumbai,TAT-2 (PBD),High Street,19.08617,72.90816,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+agra-fatehabad-road,Fatehabad Road,Agra,TAT-2 (PBD),High Street,27.15739,78.05278,Mid,Mock — pending,Mock — pending,,5,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhubhneshwar-patia,Patia,Bhubhneshwar,TAT-2 (PBD),High Street,20.35328,85.82047,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-chitaipur,Chitaipur,Varanasi,TAT-2 (PBD),High Street,25.27450,82.96370,Mid,Mock — pending,Mock — pending,,5,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-cantoment-road,Cantoment Road,Cuttack,TAT-2 (PBD),High Street,20.47573,85.87876,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-bhu-hyderabad-gate-side,BHU Hyderabad Gate side,Varanasi,TAT-2 (PBD),High Street,25.26232,82.97815,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhubhneshwar-nandankanan,Nandankanan,Bhubhneshwar,TAT-2 (PBD),High Street,20.33818,85.81875,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+bardhaman-gt-road-towards-alisha-bus-stand,GT Road Towards Alisha Bus Stand,Bardhaman,TAT-2 (PBD),High Street,23.22237,87.87992,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-mira-bhayandar,Mira Bhayandar,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+pune-shivajinagar,Shivajinagar,Pune,TAT-2 (PBD),High Street,18.52005,73.83986,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-kandivali-west,Kandivali West,Mumbai,TAT-2 (PBD),High Street,19.21298,72.84663,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+pune-parvati-paytha,Parvati Paytha,Pune,TAT-2 (PBD),High Street,18.48933,73.85515,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-mahmoorganj,Mahmoorganj,Varanasi,TAT-2 (PBD),High Street,25.30489,82.98082,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-link-road,Link Road,Cuttack,TAT-2 (PBD),High Street,20.45687,85.88147,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-ravindrapuri,Ravindrapuri,Varanasi,TAT-2 (PBD),High Street,25.29787,82.99695,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bokaro-bokaro-steel-city,Bokaro Steel City,Bokaro,TAT-2 (PBD),High Street,23.66752,86.13997,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhopal-laghati,Laghati,Bhopal,TAT-2 (PBD),High Street,23.27194,77.36771,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+noida-noida-sec-32,Noida sec 32,Noida,TAT-2 (PBD),High Street,28.57469,77.35034,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-chembur,Chembur,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-dolamundai-chauraha,Dolamundai Chauraha,Cuttack,TAT-2 (PBD),High Street,20.46353,85.88010,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening

@@ -1071,6 +1071,1014 @@ export const geoData = {
   {
     "type": "Feature",
     "properties": {
+      "id": "bardhaman-nazrul-pally",
+      "name": "Nazrul Pally",
+      "city": "Bardhaman",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        87.85745,
+        23.25374
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-borivali-west",
+      "name": "Borivali west",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.84054,
+        19.22918
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-dadar-east",
+      "name": "Dadar East",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.87038,
+        19.13402
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "jaipur-vaishali-nagar",
+      "name": "Vaishali Nagar",
+      "city": "Jaipur",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        75.74251,
+        26.90779
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bardhaman-highway-116a",
+      "name": "Highway 116A",
+      "city": "Bardhaman",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        87.86022,
+        23.23214
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-sion",
+      "name": "Sion",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.87038,
+        19.13402
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-andheri-east",
+      "name": "Andheri East",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.87117,
+        19.12196
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bokaro-chas",
+      "name": "Chas",
+      "city": "Bokaro",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        86.17442,
+        23.63033
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "cuttack-cda-cuttack",
+      "name": "CDA Cuttack",
+      "city": "Cuttack",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.82243,
+        20.4808
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bardhaman-curzon-gate",
+      "name": "Curzon Gate",
+      "city": "Bardhaman",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        87.86876,
+        23.24166
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "patna-kankarbagh",
+      "name": "Kankarbagh",
+      "city": "Patna",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.14966,
+        25.60031
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "jaipur-civil-lines",
+      "name": "Civil Lines",
+      "city": "Jaipur",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        75.78606,
+        26.90271
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-kandivali-east",
+      "name": "Kandivali East",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.8681,
+        19.20778
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bangalore-banashankari",
+      "name": "Banashankari",
+      "city": "Bangalore",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.55711,
+        12.92028
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bhubhneshwar-patia-square",
+      "name": "Patia Square",
+      "city": "Bhubhneshwar",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.82116,
+        20.344
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "ahmedabad-maninagar",
+      "name": "Maninagar",
+      "city": "Ahmedabad",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.60299,
+        23.00196
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-ghatkopar-west",
+      "name": "Ghatkopar west",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.90816,
+        19.08617
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "agra-fatehabad-road",
+      "name": "Fatehabad Road",
+      "city": "Agra",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        78.05278,
+        27.15739
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bhubhneshwar-patia",
+      "name": "Patia",
+      "city": "Bhubhneshwar",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.82047,
+        20.35328
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "varanasi-chitaipur",
+      "name": "Chitaipur",
+      "city": "Varanasi",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        82.9637,
+        25.2745
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "cuttack-cantoment-road",
+      "name": "Cantoment Road",
+      "city": "Cuttack",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.87876,
+        20.47573
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "varanasi-bhu-hyderabad-gate-side",
+      "name": "BHU Hyderabad Gate side",
+      "city": "Varanasi",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        82.97815,
+        25.26232
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bhubhneshwar-nandankanan",
+      "name": "Nandankanan",
+      "city": "Bhubhneshwar",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.81875,
+        20.33818
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bardhaman-gt-road-towards-alisha-bus-stand",
+      "name": "GT Road Towards Alisha Bus Stand",
+      "city": "Bardhaman",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        87.87992,
+        23.22237
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-mira-bhayandar",
+      "name": "Mira Bhayandar",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.87038,
+        19.13402
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "pune-shivajinagar",
+      "name": "Shivajinagar",
+      "city": "Pune",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        73.83986,
+        18.52005
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-kandivali-west",
+      "name": "Kandivali West",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.84663,
+        19.21298
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "pune-parvati-paytha",
+      "name": "Parvati Paytha",
+      "city": "Pune",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        73.85515,
+        18.48933
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "varanasi-mahmoorganj",
+      "name": "Mahmoorganj",
+      "city": "Varanasi",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        82.98082,
+        25.30489
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "cuttack-link-road",
+      "name": "Link Road",
+      "city": "Cuttack",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.88147,
+        20.45687
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "varanasi-ravindrapuri",
+      "name": "Ravindrapuri",
+      "city": "Varanasi",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        82.99695,
+        25.29787
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bokaro-bokaro-steel-city",
+      "name": "Bokaro Steel City",
+      "city": "Bokaro",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        86.13997,
+        23.66752
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "bhopal-laghati",
+      "name": "Laghati",
+      "city": "Bhopal",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.36771,
+        23.27194
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "noida-noida-sec-32",
+      "name": "Noida sec 32",
+      "city": "Noida",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.35034,
+        28.57469
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "mumbai-chembur",
+      "name": "Chembur",
+      "city": "Mumbai",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        72.87038,
+        19.13402
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "id": "cuttack-dolamundai-chauraha",
+      "name": "Dolamundai Chauraha",
+      "city": "Cuttack",
+      "type": "TAT-2 (PBD)",
+      "color": "#FF9800",
+      "corridor": "High Street",
+      "subCategory": "family",
+      "suitableFor": [
+        "fb",
+        "fashion"
+      ],
+      "propertySizes": [
+        "500-2000",
+        "2000-5000"
+      ],
+      "ticketRange": "200-500"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.8801,
+        20.46353
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
       "id": "dubai-dt",
       "name": "Downtown Dubai",
       "city": "Dubai",
@@ -1941,6 +2949,870 @@ export const tradeData = {
       "SodaBottleOpenerWala",
       "Hitchki"
     ]
+  },
+  "bardhaman-nazrul-pally": {
+    "name": "Nazrul Pally",
+    "city": "Bardhaman",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "3",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-borivali-west": {
+    "name": "Borivali west",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-dadar-east": {
+    "name": "Dadar East",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "0",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "jaipur-vaishali-nagar": {
+    "name": "Vaishali Nagar",
+    "city": "Jaipur",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "13",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bardhaman-highway-116a": {
+    "name": "Highway 116A",
+    "city": "Bardhaman",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "2",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-sion": {
+    "name": "Sion",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "0",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-andheri-east": {
+    "name": "Andheri East",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "17",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bokaro-chas": {
+    "name": "Chas",
+    "city": "Bokaro",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "5",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "cuttack-cda-cuttack": {
+    "name": "CDA Cuttack",
+    "city": "Cuttack",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "7",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bardhaman-curzon-gate": {
+    "name": "Curzon Gate",
+    "city": "Bardhaman",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "2",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "patna-kankarbagh": {
+    "name": "Kankarbagh",
+    "city": "Patna",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "13",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "jaipur-civil-lines": {
+    "name": "Civil Lines",
+    "city": "Jaipur",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "6",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-kandivali-east": {
+    "name": "Kandivali East",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bangalore-banashankari": {
+    "name": "Banashankari",
+    "city": "Bangalore",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "4",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bhubhneshwar-patia-square": {
+    "name": "Patia Square",
+    "city": "Bhubhneshwar",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "ahmedabad-maninagar": {
+    "name": "Maninagar",
+    "city": "Ahmedabad",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-ghatkopar-west": {
+    "name": "Ghatkopar west",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "2",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "agra-fatehabad-road": {
+    "name": "Fatehabad Road",
+    "city": "Agra",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "5",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bhubhneshwar-patia": {
+    "name": "Patia",
+    "city": "Bhubhneshwar",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "varanasi-chitaipur": {
+    "name": "Chitaipur",
+    "city": "Varanasi",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "5",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "cuttack-cantoment-road": {
+    "name": "Cantoment Road",
+    "city": "Cuttack",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "varanasi-bhu-hyderabad-gate-side": {
+    "name": "BHU Hyderabad Gate side",
+    "city": "Varanasi",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bhubhneshwar-nandankanan": {
+    "name": "Nandankanan",
+    "city": "Bhubhneshwar",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "2",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bardhaman-gt-road-towards-alisha-bus-stand": {
+    "name": "GT Road Towards Alisha Bus Stand",
+    "city": "Bardhaman",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-mira-bhayandar": {
+    "name": "Mira Bhayandar",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "0",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "pune-shivajinagar": {
+    "name": "Shivajinagar",
+    "city": "Pune",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "2",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-kandivali-west": {
+    "name": "Kandivali West",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "pune-parvati-paytha": {
+    "name": "Parvati Paytha",
+    "city": "Pune",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "2",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "varanasi-mahmoorganj": {
+    "name": "Mahmoorganj",
+    "city": "Varanasi",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "cuttack-link-road": {
+    "name": "Link Road",
+    "city": "Cuttack",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "varanasi-ravindrapuri": {
+    "name": "Ravindrapuri",
+    "city": "Varanasi",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bokaro-bokaro-steel-city": {
+    "name": "Bokaro Steel City",
+    "city": "Bokaro",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "bhopal-laghati": {
+    "name": "Laghati",
+    "city": "Bhopal",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "noida-noida-sec-32": {
+    "name": "Noida sec 32",
+    "city": "Noida",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "mumbai-chembur": {
+    "name": "Chembur",
+    "city": "Mumbai",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "0",
+      "rentBand": "Mid"
+    },
+    "brands": []
+  },
+  "cuttack-dolamundai-chauraha": {
+    "name": "Dolamundai Chauraha",
+    "city": "Cuttack",
+    "tier": "TAT-2 (PBD)",
+    "corridor": "High Street",
+    "type": "TAT-2 (PBD)",
+    "stats": {
+      "rent": "Mock — pending",
+      "spend": "Mock — pending",
+      "footfall": "N/A"
+    },
+    "demographics": {
+      "population": "N/A",
+      "age": "Mixed",
+      "gender": "50:50",
+      "segment": "Mid"
+    },
+    "commercial": {
+      "anchors": [],
+      "units": "1",
+      "rentBand": "Mid"
+    },
+    "brands": []
   },
   "dubai-dt": {
     "name": "Downtown Dubai",

@@ -1,5 +1,5 @@
-import properties from '../../data/properties.json';
 import { geoData, tradeData } from '../../data/geoData.js';
+import { dataService } from './data-service.js';
 
 const SIZE_RANGES = {
   any: [0, Infinity],
@@ -111,7 +111,7 @@ export function propertyMatchesQuery(property, query = {}) {
   );
 }
 
-export function matchProperties(query = {}, sourceProperties = properties) {
+export function matchProperties(query = {}, sourceProperties = dataService.getProperties()) {
   const matches = sourceProperties.filter((property) => propertyMatchesQuery(property, query));
   const tradeAreaIds = Array.from(new Set(matches.map((property) => property.tradeArea).filter(Boolean)));
   const tradeAreas = tradeAreaIds.map((tradeAreaId) => ({
@@ -129,7 +129,7 @@ export function matchProperties(query = {}, sourceProperties = properties) {
   };
 }
 
-export function getPropertiesForTradeArea(tradeAreaId, sourceProperties = properties) {
+export function getPropertiesForTradeArea(tradeAreaId, sourceProperties = dataService.getProperties()) {
   return sourceProperties.filter((property) => property.tradeArea === tradeAreaId);
 }
 
@@ -184,5 +184,3 @@ export class FiltersController {
     }
   }
 }
-
-export { properties as propertyInventory };
