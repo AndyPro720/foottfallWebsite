@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script>
+    if ('serviceWorker' in navigator && !sessionStorage.getItem('foottfall-sw-cleaned')) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        if (!registrations.length) return;
+        sessionStorage.setItem('foottfall-sw-cleaned', 'true');
+        return Promise.all(registrations.map(function(registration) {
+          return registration.unregister();
+        })).then(function() {
+          window.location.reload();
+        });
+      }).catch(function(err) {
+        console.error('Service worker unregistration failed:', err);
+      });
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Foottfall Intelligence maps trade areas, retail demand, and available properties across India and the UAE." />
+  <meta property="og:title" content="Foottfall Intelligence" />
+  <meta property="og:description"
+    content="Explore trade areas and match available properties with brand expansion requirements." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Favicon%2032x32%20and%2016x16/32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Favicon%2032x32%20and%2016x16/16x16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/pages/intelligence/style.css" />
+  <title>Foottfall Intelligence</title>
+</head>
+
+<body class="intelligence-page">
+  <main class="intel-shell" aria-label="Foottfall Intelligence map portal">
+    <section class="intel-map-stage" aria-label="Interactive trade area map">
+      <div id="map-container" class="intel-map"></div>
+
+
+      <header class="intel-topbar">
+        <a class="intel-brand" href="/" aria-label="Foottfall Intelligence — back to home">
+          <img src="/assets/Emblem/SVG/Asset%204.svg" alt="Foottfall" />
+          <span class="intel-brand__sub">Intelligence</span>
+        </a>
+
+        <nav class="intel-breadcrumb" aria-label="Map breadcrumb">
+          <a class="intel-home-crumb" href="/" aria-label="Back to Foottfall home">
+            <img src="/assets/Emblem/SVG/Asset%204.svg" alt="" aria-hidden="true" />
+          </a>
+          <button type="button" class="intel-back" id="back-button" disabled aria-label="Go back">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ol id="breadcrumb-list">
+            <li>India</li>
+          </ol>
+        </nav>
+      </header>
+
+      <p class="intel-mobile-disclaimer" role="note">
+        Foottfall Intelligence is meant to run on bigger screens. Mobile uses a simplified view.
+      </p>
+
+      <button type="button" class="intel-global-toggle" id="global-toggle" title="Toggle global view" aria-label="Toggle global view">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </button>
+
+      <div id="explore-panel-container">
+        <div class="intel-city-switcher" id="city-buttons" role="group" aria-label="Switch city"></div>
+      </div>
+
+      <!-- Free-explore CTA: invoke the matching questionnaire -->
+      <button type="button" class="intel-run-cta" id="run-intel">
+        <span class="intel-run-cta__spark">✦</span>
+        Run our intelligence match
+      </button>
+
+      <!-- Spotlight: cycles available properties in the focused country/city (free explore) -->
+      <aside class="intel-spotlight" id="spotlight-card" hidden aria-label="Property spotlight">
+        <div class="intel-spotlight__head">
+          <span class="intel-spotlight__pin">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="currentColor"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></svg>
+          </span>
+          <div>
+            <h3 class="intel-spotlight__name" id="spot-name">—</h3>
+            <p class="intel-spotlight__loc" id="spot-loc">—</p>
+          </div>
+        </div>
+        <div class="intel-spotlight__row">
+          <span class="intel-spotlight__eyebrow">Property Spotlight</span>
+          <span class="intel-spotlight__period" id="spot-period">Available</span>
+        </div>
+        <div class="intel-spotlight__chips" id="spot-chips"></div>
+        <dl class="intel-spotlight__stats">
+          <div>
+            <dt>Size</dt>
+            <dd id="spot-size">--</dd>
+          </div>
+          <div>
+            <dt>Rent</dt>
+            <dd id="spot-rent">--</dd>
+          </div>
+          <div>
+            <dt>Floor</dt>
+            <dd id="spot-floor">--</dd>
+          </div>
+        </dl>
+        <div class="intel-spotlight__metric">
+          <div class="intel-spotlight__metric-top">
+            <span>Trade-area footfall</span><strong id="spot-footfall">--</strong>
+          </div>
+        </div>
+        <button type="button" class="intel-spotlight__cta" id="spot-cta">View this property</button>
+      </aside>
+
+      <!-- Prompt shown when a tailored user clicks a city/country -->
+      <div class="intel-flow-prompt" id="flow-prompt" hidden>
+        <button type="button" class="intel-flow-prompt__close" id="flow-prompt-close" aria-label="Stay in match mode">&times;</button>
+        <p class="intel-flow-prompt__text" id="flow-prompt-text">Leave your tailored matches and explore freely?</p>
+        <div class="intel-flow-prompt__actions">
+          <button type="button" class="intel-secondary" id="flow-prompt-refine">Refine filters</button>
+          <button type="button" class="intel-primary" id="flow-prompt-free">Free explore</button>
+        </div>
+      </div>
+
+      <div id="wizard-overlay" class="intel-wizard-overlay" hidden>
+        <div class="intel-wizard-panel" data-step="1">
+          <header class="intel-wizard__header">
+            <p class="intel-eyebrow">Find Your Trade Area</p>
+            <h2>Find Where You Belong</h2>
+            <p class="intel-wizard__mobile-note">
+              This intelligence view is built for bigger screens. Mobile shows the essentials.
+            </p>
+            <div class="intel-wizard__progress">
+              <span class="wizard-step-dot is-active" data-dot="1">1</span>
+              <span class="wizard-step-dot" data-dot="2">2</span>
+              <span class="wizard-step-dot" data-dot="3">3</span>
+            </div>
+            <button type="button" class="intel-wizard__skip" id="wizard-skip">Skip to free explore</button>
+          </header>
+
+          <div class="intel-wizard__body">
+            <section class="wizard-step is-active" data-step-content="1">
+              <h3 class="wizard-step__title">Where are you looking?</h3>
+              <div class="wizard-section" id="wizard-country-section">
+                <p class="wizard-step__label">Choose a country</p>
+                <div class="wizard-card-grid" id="wizard-countries"></div>
+              </div>
+              <div class="wizard-section" id="wizard-city-section" hidden>
+                <p class="wizard-step__label">Choose a city</p>
+                <div class="wizard-card-grid" id="wizard-cities"></div>
+              </div>
+              <div class="wizard-section wizard-personal" id="wizard-personal" hidden>
+                <p class="wizard-step__label">A few details <span class="wizard-optional">— optional, for a personal touch</span></p>
+                <div class="wizard-personal-grid">
+                  <input type="text" id="wizard-name" class="wizard-input" placeholder="Your name" autocomplete="name" />
+                  <input type="text" id="wizard-brand" class="wizard-input" placeholder="Brand name" autocomplete="organization" />
+                  <input type="email" id="wizard-email" class="wizard-input" placeholder="Email" autocomplete="email" />
+                  <input type="tel" id="wizard-phone" class="wizard-input" placeholder="Phone" autocomplete="tel" inputmode="numeric" pattern="[0-9]{7,15}" />
+                </div>
+              </div>
+            </section>
+
+            <section class="wizard-step" data-step-content="2" hidden>
+              <h3 class="wizard-step__title">What suits your brand?</h3>
+
+              <div class="wizard-field">
+                <label class="wizard-step__label">Category <span class="wizard-optional">— select all that apply</span></label>
+                <div class="wizard-chips" id="wizard-categories">
+                  <button type="button" class="wizard-chip" data-value="food">Restaurants &amp; Food Brands</button>
+                  <button type="button" class="wizard-chip" data-value="hospitality">Entertainment-Led Hospitality</button>
+                  <button type="button" class="wizard-chip" data-value="fashion">Fashion</button>
+                  <button type="button" class="wizard-chip" data-value="wellness">Wellness &amp; Grooming</button>
+                  <button type="button" class="wizard-chip" data-value="fitness">Fitness &amp; Lifestyle</button>
+                  <button type="button" class="wizard-chip" data-value="gaming">Gaming &amp; Social Play</button>
+                  <button type="button" class="wizard-chip" data-value="healthcare">Modern Healthcare</button>
+                  <button type="button" class="wizard-chip" data-value="workspaces">Flexible Workspaces</button>
+                  <button type="button" class="wizard-chip" data-value="hotels">New Age Hotels</button>
+                </div>
+              </div>
+
+              <div class="wizard-field wizard-reveal" data-wreveal="size" hidden>
+                <label class="wizard-step__label">Property size</label>
+                <div class="wizard-options wizard-options--grid" id="wizard-sizes">
+                  <button type="button" class="wizard-option" data-value="<500">Under 500 sq.ft</button>
+                  <button type="button" class="wizard-option" data-value="500-2000">500&ndash;2,000 sq.ft</button>
+                  <button type="button" class="wizard-option" data-value="2000-5000">2,000&ndash;5,000 sq.ft</button>
+                  <button type="button" class="wizard-option" data-value="5000+">5,000+ sq.ft</button>
+                </div>
+              </div>
+
+              <div class="wizard-field wizard-reveal" data-wreveal="spend" hidden>
+                <label class="wizard-step__label">Avg. customer spend per visit</label>
+                <div class="wizard-options wizard-options--grid" id="wizard-spend"></div>
+              </div>
+            </section>
+
+            <section class="wizard-step" data-step-content="3" hidden>
+              <h3 class="wizard-step__title">Your tailored matches</h3>
+              <div class="wizard-results-summary" id="wizard-results-summary">
+                <span class="wizard-result-spark">✦</span>
+                <p class="wizard-result-count">--</p>
+                <p class="wizard-result-lead">tailored matches</p>
+                <p class="wizard-result-meta">--</p>
+              </div>
+              <p class="wizard-step__hint">We&rsquo;ve highlighted your matching trade areas on the map. Explore them, or unlock the full intelligence on every property.</p>
+            </section>
+          </div>
+
+          <footer class="intel-wizard__footer">
+            <button type="button" class="intel-secondary" id="wizard-back" hidden>Back</button>
+            <button type="button" class="intel-primary is-incomplete" id="wizard-next">Next</button>
+            <button type="button" class="intel-primary" id="wizard-finish" hidden>Explore on map</button>
+          </footer>
+        </div>
+      </div>
+
+      <aside class="intel-stats-card" id="stats-card" hidden aria-label="Trade area commercial snapshot">
+        <div class="intel-stats-card__head">
+          <span class="intel-stats-card__tier" id="stats-tier-dot"></span>
+          <div>
+            <p class="intel-stats-card__eyebrow" id="stats-tier-label">--</p>
+            <h3 class="intel-stats-card__title" id="stats-title">--</h3>
+            <p class="intel-stats-card__corridor" id="stats-corridor"></p>
+          </div>
+        </div>
+        <dl class="intel-stats-card__metrics">
+          <div>
+            <dt>Avg. Rent</dt>
+            <dd id="stats-rent">--</dd>
+          </div>
+          <div>
+            <dt>Spend/Visit</dt>
+            <dd id="stats-spend">--</dd>
+          </div>
+          <div>
+            <dt>Units</dt>
+            <dd id="stats-units">--</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <aside class="intel-legend" id="legend" aria-label="Map legend"></aside>
+    </section>
+
+    <!-- LEFT sidebar: trade-area intelligence (explore) / matches (match flow) -->
+    <aside id="sidebar-left" class="intel-sidebar intel-sidebar--left" aria-label="Trade area intelligence">
+      <!-- Intel mode -->
+      <div class="intel-sidebar__pane" id="left-intel">
+        <div class="intel-sidebar__header">
+          <div>
+            <p class="intel-eyebrow" id="ta-tier">Trade Area</p>
+            <h2 id="ta-title">Select a trade area</h2>
+          </div>
+          <button type="button" class="intel-sidebar-close" data-collapse="left" aria-label="Collapse panel">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="intel-sidebar__body">
+          <button type="button" class="intel-detail-back" id="ta-back" hidden>
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span id="ta-back-label">Back</span>
+          </button>
+          <div class="dcb-tabs">
+            <button type="button" class="dcb-tab active" data-tab="demographics">Demographics</button>
+            <button type="button" class="dcb-tab" data-tab="commercial">Commercial</button>
+            <button type="button" class="dcb-tab" data-tab="brandscape">Brandscape</button>
+          </div>
+
+          <div class="dcb-content">
+            <div class="dcb-panel active" id="panel-demographics">
+              <div class="dcb-section">
+                <div class="dcb-section-title">Population &amp; Density</div>
+                <div class="demo-stat-grid">
+                  <div class="demo-stat">
+                    <div class="demo-stat-value" id="demo-population">--</div>
+                    <div class="demo-stat-label">Population</div>
+                  </div>
+                  <div class="demo-stat">
+                    <div class="demo-stat-value" id="demo-gender">--</div>
+                    <div class="demo-stat-label">Gender Ratio</div>
+                  </div>
+                </div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Target Profile</div>
+                <div class="demo-stat">
+                  <div class="demo-stat-value" id="demo-age">--</div>
+                  <div class="demo-stat-label">Primary Age Group</div>
+                </div>
+                <div class="demo-profile-badge" id="demo-segment">--</div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Footfall</div>
+                <div class="demo-stat">
+                  <div class="demo-stat-value" id="demo-footfall" style="font-size: 1.4rem; color: var(--intel-green-soft);">--</div>
+                  <div class="demo-stat-label">Est. Daily Visitors</div>
+                </div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Metrics Distribution</div>
+                <canvas id="stats-chart" class="intel-chart" width="320" height="180"></canvas>
+              </div>
+            </div>
+
+            <div class="dcb-panel" id="panel-commercial">
+              <div class="dcb-section">
+                <div class="dcb-section-title">Rental Metrics</div>
+                <div class="commercial-stat-row"><span class="commercial-stat-label">Avg. Rent</span><span class="commercial-stat-value" id="comm-avg-rent">--</span></div>
+                <div class="commercial-stat-row"><span class="commercial-stat-label">Rent Band</span><span class="commercial-stat-value" id="comm-rent-band">--</span></div>
+                <div class="commercial-stat-row"><span class="commercial-stat-label">Avg. Spend/Visit</span><span class="commercial-stat-value" id="comm-avg-spend">--</span></div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Commercial Units</div>
+                <div class="commercial-stat-row"><span class="commercial-stat-label">Total Units</span><span class="commercial-stat-value" id="comm-total-units">--</span></div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Anchor Tenants</div>
+                <div class="anchor-chips" id="comm-anchors"></div>
+              </div>
+            </div>
+
+            <div class="dcb-panel" id="panel-brandscape">
+              <div class="dcb-section">
+                <div class="dcb-section-title">Existing Brands</div>
+                <div class="brand-list" id="brand-chips"></div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Category Saturation</div>
+                <div class="saturation-grid" id="saturation-container"></div>
+              </div>
+              <div class="dcb-section">
+                <div class="dcb-section-title">Whitespace Opportunities</div>
+                <div class="whitespace-list" id="whitespace-chips">
+                  <span class="whitespace-chip">Pet Care</span>
+                  <span class="whitespace-chip">Coworking</span>
+                  <span class="whitespace-chip">EV Charging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Matches mode (match flow) -->
+      <div class="intel-sidebar__pane" id="left-matches" hidden>
+        <div class="intel-sidebar__header">
+          <div>
+            <p class="intel-eyebrow">Your Matches</p>
+            <h2 id="match-title">0 properties</h2>
+          </div>
+          <button type="button" class="intel-sidebar-close" data-collapse="left" aria-label="Collapse panel">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="intel-sidebar__body">
+          <button type="button" class="intel-refilter" id="refilter-btn">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Refine filters
+          </button>
+          <p class="intel-match-meta" id="match-meta"></p>
+          <div id="match-list" class="intel-property-list"></div>
+        </div>
+        <div class="intel-sidebar__footer">
+          <button type="button" class="intel-primary intel-primary--wide js-lead-open">Unlock complete intelligence</button>
+        </div>
+      </div>
+
+      <!-- City mode: browse trade areas grouped by tier -->
+      <div class="intel-sidebar__pane" id="left-city" hidden>
+        <div class="intel-sidebar__header">
+          <div>
+            <p class="intel-eyebrow" id="city-eyebrow">City</p>
+            <h2 id="city-title">Trade Area Tiers</h2>
+          </div>
+          <button type="button" class="intel-sidebar-close" data-collapse="left" aria-label="Collapse panel">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="intel-sidebar__body">
+          <p class="intel-city-hint">Trade areas grouped by tier — the count shows available properties. Or tap a pin on the map.</p>
+          <div id="city-area-list" class="intel-tier-list"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT sidebar: available properties (explore) -->
+    <aside id="sidebar-right" class="intel-sidebar intel-sidebar--right" aria-label="Available properties">
+      <div class="intel-sidebar__header">
+        <div>
+          <p class="intel-eyebrow">Properties</p>
+          <div class="intel-property-heading">
+            <h2 id="properties-title">Available Properties</h2>
+            <span id="property-count" class="intel-property-count">0</span>
+          </div>
+        </div>
+        <button type="button" class="intel-sidebar-close" data-collapse="right" aria-label="Collapse panel">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="intel-sidebar__body">
+        <div id="right-list-view">
+          <div id="property-list" class="intel-property-list"></div>
+        </div>
+        <div id="property-detail" class="intel-property-detail" hidden></div>
+      </div>
+      <div class="intel-sidebar__footer">
+        <button type="button" class="intel-primary intel-primary--wide js-lead-open">Unlock complete intelligence</button>
+      </div>
+    </aside>
+
+    <!-- Collapse handles (siblings so they stay on-screen when a panel slides out) -->
+    <button type="button" class="intel-sidebar-handle intel-sidebar-handle--left" id="left-handle" aria-label="Open trade area panel" hidden>
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="intel-sidebar-handle intel-sidebar-handle--right" id="right-handle" aria-label="Open properties panel" hidden>
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </main>
+
+  <dialog id="lead-modal" class="intel-dialog intel-lead-dialog" aria-labelledby="lead-title">
+    <button type="button" class="intel-lead-close" data-dialog-close="lead-modal" aria-label="Close">&times;</button>
+    <div class="intel-lead-progress" id="lead-progress" hidden>
+      <span class="lead-dot is-active"></span><span class="lead-dot"></span><span class="lead-dot"></span>
+    </div>
+
+    <form id="warm-lead-form" class="intel-lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="16504e34-b8f6-4cc4-892e-614c11c38ce0" />
+      <input type="hidden" name="subject" value="Foottfall Intelligence — Unlock request" />
+      <input type="hidden" name="from_name" value="Foottfall Intelligence" />
+      <input type="text" name="botcheck" tabindex="-1" autocomplete="off" class="intel-honeypot" />
+      <input type="hidden" name="lead_type" value="warm_lead" />
+      <input type="hidden" name="source_url" id="warm-source-url" value="" />
+      <input type="hidden" name="match_context" id="warm-match-context" value="" />
+      <input type="hidden" name="primary_customers" id="lead-primary-customers" value="" />
+      <input type="hidden" name="early_access_interest" id="lead-early-access-value" value="No" />
+
+      <!-- Slide 1 — intro -->
+      <section class="lead-slide is-active" data-lead-slide="1">
+        <span class="lead-spark">✦</span>
+        <h2 id="lead-title">Unlock complete intelligence</h2>
+        <p class="lead-intro">
+          Foottfall Intelligence is constantly getting sharper — our AI keeps learning the streets,
+          and the minds behind it are here to guide you for your curated requirements.
+          For now, unlock the <strong>human-touch intelligence</strong>: tell us a little, and our team
+          tailors the rest.
+        </p>
+        <label class="lead-early-access">
+          <input type="checkbox" id="lead-early-access" />
+          <span>I'm interested for early access to Foottfall Intelligence&trade;</span>
+        </label>
+        <button type="button" class="intel-primary intel-primary--wide" data-lead-next>Get started</button>
+      </section>
+
+      <!-- Slide 2 — contact (mandatory) -->
+      <section class="lead-slide" data-lead-slide="2" hidden>
+        <h3 class="lead-slide__title">Your details</h3>
+        <div class="lead-field">
+          <label for="lead-name">Name</label>
+          <input id="lead-name" type="text" name="name" autocomplete="name" required />
+        </div>
+        <div class="lead-field">
+          <label for="lead-brand">Brand</label>
+          <input id="lead-brand" type="text" name="brand" autocomplete="organization" required />
+        </div>
+        <div class="lead-field">
+          <label for="lead-email">Email</label>
+          <input id="lead-email" type="email" name="email" autocomplete="email" required />
+        </div>
+        <div class="lead-field">
+          <label for="lead-phone">Mobile</label>
+          <div class="lead-phone">
+            <select id="lead-cc" name="country_code" aria-label="Country code">
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+971">🇦🇪 +971</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+65">🇸🇬 +65</option>
+            </select>
+            <input id="lead-phone" type="tel" name="phone" autocomplete="tel" inputmode="numeric" pattern="[0-9]{7,15}" placeholder="Mobile number" required />
+          </div>
+        </div>
+        <div class="lead-actions">
+          <button type="button" class="intel-secondary" data-lead-back>Back</button>
+          <button type="button" class="intel-primary" data-lead-next>Continue</button>
+        </div>
+      </section>
+
+      <!-- Slide 3 — business (optional) -->
+      <section class="lead-slide" data-lead-slide="3" hidden>
+        <h3 class="lead-slide__title">Your business <span class="lead-optional">— optional</span></h3>
+        <div class="lead-field">
+          <label for="lead-years">Years in business</label>
+          <select id="lead-years" name="years_in_business">
+            <option value="">Select…</option>
+            <option>Pre-launch</option>
+            <option>Less than 1 year</option>
+            <option>1–3 years</option>
+            <option>3–5 years</option>
+            <option>5–10 years</option>
+            <option>10+ years</option>
+          </select>
+        </div>
+        <div class="lead-field lead-reveal" data-reveal="2" hidden>
+          <label>Primary customers</label>
+          <div class="lead-chips" id="lead-customers">
+            <button type="button" class="lead-chip" data-value="Residential">Residential</button>
+            <button type="button" class="lead-chip" data-value="Office crowd">Office crowd</button>
+            <button type="button" class="lead-chip" data-value="Institutes">Institutes</button>
+            <button type="button" class="lead-chip" data-value="Tourists">Tourists</button>
+            <button type="button" class="lead-chip" data-value="High-street footfall">High-street footfall</button>
+          </div>
+        </div>
+        <div class="lead-reveal" data-reveal="3" hidden>
+          <div class="lead-field-row">
+            <div class="lead-field">
+              <label for="lead-stores">Number of stores</label>
+              <input id="lead-stores" type="number" name="number_of_stores" min="0" placeholder="e.g. 4" />
+            </div>
+            <div class="lead-field">
+              <label for="lead-areas">Preferred trade areas</label>
+              <input id="lead-areas" type="text" name="preferred_trade_areas" placeholder="e.g. Koregaon Park" />
+            </div>
+          </div>
+          <div class="lead-field">
+            <label for="lead-comments">Comments</label>
+            <textarea id="lead-comments" name="comments" rows="3" placeholder="Anything else we should know?"></textarea>
+          </div>
+        </div>
+        <div class="lead-actions">
+          <button type="button" class="intel-secondary" data-lead-back>Back</button>
+          <button type="submit" class="intel-primary" id="lead-submit">Submit</button>
+        </div>
+      </section>
+
+      <!-- Slide 4 — confirmation -->
+      <section class="lead-slide lead-slide--done" data-lead-slide="4" hidden>
+        <span class="lead-check">✓</span>
+        <h3 class="lead-slide__title">You're in good hands</h3>
+        <p class="lead-intro" id="lead-done-msg">Our team is already looking into your requirements and will reach out shortly with curated trade areas and properties.</p>
+        <div class="lead-actions">
+          <a class="intel-secondary" href="/">Back to website</a>
+          <button type="button" class="intel-primary" data-dialog-close="lead-modal">Continue exploring</button>
+        </div>
+      </section>
+
+      <p id="warm-lead-status" class="intel-form-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <script type="module" src="/src/pages/intelligence/main.js"></script>
+</body>
+
+</html>

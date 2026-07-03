@@ -6,13 +6,13 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
 
 ## Phases
 
-- [ ] **Phase 1: Foundation & Design System** - Project initialization and global styling.
-- [ ] **Phase 2: Hero & Navigation** - The primary entry point and brand identity.
-- [ ] **Phase 3: Geographic & Intelligence Narrative** - Cities and trade area storytelling.
-- [ ] **Phase 4: Services & Methodology** - Category grid and the 3-stage process.
-- [ ] **Phase 5: Brand Story & Social Proof** - Founder bio and client showcase.
-- [ ] **Phase 6: Polish, Performance & SEO** - Final fidelity check and technical optimization.
-- [ ] **Phase 7: Map Intelligence Portal (Future)** - Porting the legacy map application.
+- [x] **Phase 1: Foundation & Design System** - Project initialization and global styling.
+- [x] **Phase 2: Hero & Navigation** - The primary entry point and brand identity.
+- [x] **Phase 3: Geographic & Intelligence Narrative** - Cities and trade area storytelling.
+- [x] **Phase 4: Services & Methodology** - Category grid and the 3-stage process.
+- [x] **Phase 5: Brand Story & Social Proof** - Founder bio and client showcase.
+- [x] **Phase 6: Polish, Performance & SEO** - Final fidelity check and technical optimization.
+- [x] **Phase 7: Map Intelligence Portal** - Porting the legacy map application.
 
 ## Phase Details
 
@@ -25,7 +25,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   2. CSS variables for colors (Forest Green, Cream, Gold) are defined.
   3. Typography (Playfair Display, Outfit) is integrated.
 **Plans**: 1 plan
-- [ ] 01-01: Project setup and design token implementation.
+- [x] 01-01: Project setup and design token implementation.
 
 ### Phase 2: Hero & Navigation
 **Goal**: Implement the primary brand showcase.
@@ -35,7 +35,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   1. Full-width hero section matches wireframe pixel-for-pixel.
   2. Navigation bar is functional and responsive.
 **Plans**: 1 plan
-- [ ] 02-01: Hero section and navigation implementation.
+- [x] 02-01: Hero section and navigation implementation.
 
 ### Phase 3: Geographic & Intelligence Narrative
 **Goal**: Showcase Foottfall's regional reach and intelligence capability.
@@ -45,7 +45,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   1. Cities grid is implemented with categories.
   2. Trade Area Intelligence section narrative is clear.
 **Plans**: 1 plan
-- [ ] 03-01: Cities grid and intelligence narrative.
+- [x] 03-01: Cities grid and intelligence narrative.
 
 ### Phase 4: Services & Methodology
 **Goal**: Detail the sectors served and the DCB framework.
@@ -55,7 +55,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   1. Category cards have premium hover effects.
   2. The 3-stage process visualization is implemented.
 **Plans**: 1 plan
-- [ ] 04-01: Services grid and process methodology.
+- [x] 04-01: Services grid and process methodology.
 
 ### Phase 5: Brand Story & Social Proof
 **Goal**: Humanize the brand and provide social proof.
@@ -65,7 +65,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   1. Founder bio and brands wall match design.
   2. Footer is complete with all contact details.
 **Plans**: 1 plan
-- [ ] 05-01: About, Brands, and Footer implementation.
+- [x] 05-01: About, Brands, and Footer implementation.
 
 ### Phase 6: Polish, Performance & SEO
 **Goal**: Ensure "to the dot" fidelity and technical excellence.
@@ -76,7 +76,7 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
   2. Website is fully responsive on mobile/tablet.
   3. Meta tags and SEO assets are in place.
 **Plans**: 1 plan
-- [ ] 06-01: Final polish and SEO optimization.
+- [x] 06-01: Final polish and SEO optimization.
 
 ### Phase 7: Map Intelligence Portal
 **Goal**: Integrate the toned-down map intelligence application.
@@ -85,16 +85,17 @@ The journey from a blank directory to a premium, pixel-perfect marketing website
 **Success Criteria**:
   1. Map portal accessible at /intelligence.
   2. Interactive layers and DCB sidebar are functional.
-**Plans**: TBD
+**Plans**: 1 plan
+- [x] 07-01: Map Intelligence Portal Integration.
 
 ## Progress
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 1/1 | Complete ✅ | 2026-05-13 |
-| 2. Hero & Nav | 1/1 | Planned ✓ | - |
-| 3. Narrative | 0/1 | Not started | - |
-| 4. Services | 0/1 | Not started | - |
-| 5. Story | 0/1 | Not started | - |
-| 6. Polish | 0/1 | Not started | - |
-| 7. Map Portal | 0/TBD | Not started | - |
+| 2. Hero & Nav | 1/1 | Complete ✅ | 2026-05-28 |
+| 3. Narrative | 1/1 | Complete ✅ | 2026-05-28 |
+| 4. Services | 1/1 | Complete ✅ | 2026-05-28 |
+| 5. Story | 1/1 | Complete ✅ | 2026-05-28 |
+| 6. Polish | 1/1 | Complete ✅ | 2026-05-28 |
+| 7. Map Portal | 1/1 | Complete ✅ | 2026-05-28 |

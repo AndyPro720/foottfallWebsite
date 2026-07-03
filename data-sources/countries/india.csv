@@ -1,0 +1,59 @@
+id,name,city,tat_tier,corridor_type,lat,lng,rent_band,avg_rent_month,est_spend_visit,anchors,live_units,brand_presence,population,age_profiling,gender_mix,rental_band_proxy,total_footfall,daypart_peak
+pune-kp,Koregaon Park,Pune,TAT-1 (CBD),Nightlife,18.5362,73.8939,Premium+,"₹28,000-45,000","₹2,800-4,800",Phoenix Marketcity,65,"Social, High Spirits, Starbucks",45000,Young Professionals,48:52,High,"30,000+",Late Night
+pune-kn,Kalyani Nagar,Pune,TAT-1 (CBD),Nightlife,18.5463,73.9033,Premium,"₹25,000-40,000","₹2,400-4,200",Mariplex,55,"Toit, Flour Works",40000,Young Professionals,50:50,High,"25,000+",Evening
+pune-cp,Camp,Pune,TAT-1 (CBD),High Street,18.5133,73.8777,High Street,"₹25,000-40,000+","₹2,400-4,200",SGS Mall,150,"Burger King, Kayani Bakery",60000,Mixed,55:45,Mid-High,"50,000+",Afternoon/Evening
+pune-vn,Viman Nagar,Pune,TAT-2 (PBD),Nightlife / Family,18.5679,73.9143,Mid-High,"₹18,000-28,000","₹1,600-3,000",Phoenix Marketcity,120,"Zara, H&M, Social",85000,Students & Families,52:48,Mid-High,"45,000+",All Day
+pune-au,Aundh,Pune,TAT-2 (PBD),Family Dining,18.5580,73.8075,Mid-High,"₹20,000-32,000","₹1,800-3,200",Westend Mall,85,"Westside, Starbucks",70000,Families,48:52,Mid-High,"35,000+",Evening
+pune-kt,Kothrud,Pune,TAT-2 (PBD),Family Dining,18.5074,73.8077,Mid-High,"₹20,000-32,000","₹1,800-3,000","Pavilion Mall (nearby)",90,"McD, Chitale Bandhu",90000,Families & Students,50:50,Mid,"40,000+",Evening
+pune-ban,Baner,Pune,TAT-2 (PBD),Nightlife / High-Energy,18.5590,73.7868,Mid-High,"₹22,000-35,000","₹2,000-3,600",High Street,110,"Effingut, Balewadi High St",55000,IT Crowd,55:45,High,"38,000+",Evening
+pune-wak,Wakad,Pune,TAT-2 (PBD),Family / Community,18.5987,73.7658,Mid,"₹15,000-25,000","₹1,400-2,600",Phoenix Wakad,75,"Dominos, Absolute Barbecues",120000,Young Families,53:47,Mid,"42,000+",Weekend
+pune-kh,Kharadi,Pune,TAT-2 (PBD),QSR / Volume,18.5514,73.9348,Mid,"₹24,000","₹2,000-3,800",WTC,95,"KFC, Chili's",80000,IT Professionals,60:40,Mid,"50,000+",Lunch/Evening
+pune-hd,Hadapsar,Pune,TAT-2 (PBD),QSR / Volume,18.5089,73.9259,Mid,"₹14,000-24,000","₹1,200-2,200",Amanora Mall,130,"McD, Pizza Hut",150000,Mixed,55:45,Low-Mid,"60,000+",Weekend
+pune-mn,Manjari,Pune,TAT-3 (TBD),Future Growth,18.5100,73.9500,Low-Mid,"₹10,000-18,000","₹800-1,500",-,20,"Local Brands",30000,Emerging,55:45,Low,"15,000+",Evening
+pune-mos,Moshi,Pune,TAT-3 (TBD),QSR / Volume,18.6500,73.8500,Low-Mid,"₹8,000-15,000","₹600-1,200",-,15,"Local QSRs",45000,Industrial/Mixed,60:40,Low,"20,000+",Evening
+mumbai-bkc,BKC,Mumbai,TAT-1 (CBD),Business / Premium,19.0607,72.8777,Premium+,"₹350-500/sqft","₹3,000-6,000",Jio World Drive,80,"Nutcracker, O Pedro, Starbucks",75000,Corporate / HNI,60:40,Very High,"90,000+",Lunch/Evening
+mumbai-ban,Bandra West,Mumbai,TAT-1 (CBD),High Street / Nightlife,19.0596,72.8295,Premium,"₹300-450/sqft","₹2,500-5,000",Linking Road,350,"Subko, Bastian, Olive",120000,Trendsetters,50:50,High,"100,000+",Evening
+mumbai-col,Colaba,Mumbai,TAT-1 (CBD),Tourism / Heritage,18.9067,72.8147,Premium,"₹250-400/sqft","₹2,000-4,000",Taj Mahal Hotel,150,"Leopold, Mondegar, Starbucks",50000,Tourists,55:45,High,"80,000+",All Day
+mumbai-lp,Lower Parel,Mumbai,TAT-2 (PBD),Premium / Mall,18.9953,72.8247,Premium,"₹250-400/sqft","₹2,500-5,000",Phoenix Palladium,250,"Zara, Gucci, Ishaara",90000,Mixed,50:50,High,"110,000+",Evening
+mumbai-juhu,Juhu,Mumbai,TAT-1 (CBD),Luxury / Residential,19.1075,72.8263,Premium+,"₹300-500/sqft","₹2,800-5,500",J.W. Marriott,60,"Soho House, Prithvi Cafe",60000,HNI / Celeb,48:52,Very High,"50,000+",Evening
+mumbai-and,Andheri West,Mumbai,TAT-2 (PBD),Nightlife / Media,19.1136,72.8360,Mid-High,"₹180-280/sqft","₹1,500-3,000",Infiniti Mall,300,"Joey's Pizza, 145, Social",180000,Media/Creative,52:48,Mid-High,"120,000+",Evening
+mumbai-pow,Powai,Mumbai,TAT-2 (PBD),Community / Expat,19.1176,72.9060,Mid-High,"₹150-250/sqft","₹1,800-3,500",Galleria,120,"Social, Aromas, Haagen Dazs",85000,Expats / Corp,50:50,High,"60,000+",Evening
+mumbai-mal,Malad West,Mumbai,TAT-2 (PBD),QSR / Family,19.1828,72.8402,Mid,"₹120-200/sqft","₹1,200-2,500","Inorbit Mall, Infiniti",280,"Chili's, Pizza Hut",200000,Families,50:50,Mid,"150,000+",Weekend
+mumbai-vashi,Vashi,Mumbai,TAT-3 (TBD),Growth / Retail,19.0748,73.0019,Low-Mid,"₹100-180/sqft","₹1,000-2,000",Inorbit Vashi,180,"Pop Tates, British Brewing",150000,Families,52:48,Mid,"100,000+",Weekend
+mumbai-thane,Thane West,Mumbai,TAT-2 (PBD),Family / Volume,19.2183,72.9781,Mid,"₹100-180/sqft","₹1,000-2,200",Viviana Mall,250,"SodaBottleOpenerWala, Hitchki",300000,Families,50:50,Mid,"200,000+",Weekend
+bardhaman-nazrul-pally,Nazrul Pally,Bardhaman,TAT-2 (PBD),High Street,23.25374,87.85745,Mid,Mock — pending,Mock — pending,,3,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-borivali-west,Borivali west,Mumbai,TAT-2 (PBD),High Street,19.22918,72.84054,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-dadar-east,Dadar East,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+jaipur-vaishali-nagar,Vaishali Nagar,Jaipur,TAT-2 (PBD),High Street,26.90779,75.74251,Mid,Mock — pending,Mock — pending,,13,,N/A,Mixed,50:50,Mid,N/A,Evening
+bardhaman-highway-116a,Highway 116A,Bardhaman,TAT-2 (PBD),High Street,23.23214,87.86022,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-sion,Sion,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-andheri-east,Andheri East,Mumbai,TAT-2 (PBD),High Street,19.12196,72.87117,Mid,Mock — pending,Mock — pending,,17,,N/A,Mixed,50:50,Mid,N/A,Evening
+bokaro-chas,Chas,Bokaro,TAT-2 (PBD),High Street,23.63033,86.17442,Mid,Mock — pending,Mock — pending,,5,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-cda-cuttack,CDA Cuttack,Cuttack,TAT-2 (PBD),High Street,20.48080,85.82243,Mid,Mock — pending,Mock — pending,,7,,N/A,Mixed,50:50,Mid,N/A,Evening
+bardhaman-curzon-gate,Curzon Gate,Bardhaman,TAT-2 (PBD),High Street,23.24166,87.86876,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+patna-kankarbagh,Kankarbagh,Patna,TAT-2 (PBD),High Street,25.60031,85.14966,Mid,Mock — pending,Mock — pending,,13,,N/A,Mixed,50:50,Mid,N/A,Evening
+jaipur-civil-lines,Civil Lines,Jaipur,TAT-2 (PBD),High Street,26.90271,75.78606,Mid,Mock — pending,Mock — pending,,6,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-kandivali-east,Kandivali East,Mumbai,TAT-2 (PBD),High Street,19.20778,72.86810,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bangalore-banashankari,Banashankari,Bangalore,TAT-2 (PBD),High Street,12.92028,77.55711,Mid,Mock — pending,Mock — pending,,4,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhubhneshwar-patia-square,Patia Square,Bhubhneshwar,TAT-2 (PBD),High Street,20.34400,85.82116,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+ahmedabad-maninagar,Maninagar,Ahmedabad,TAT-2 (PBD),High Street,23.00196,72.60299,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-ghatkopar-west,Ghatkopar west,Mumbai,TAT-2 (PBD),High Street,19.08617,72.90816,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+agra-fatehabad-road,Fatehabad Road,Agra,TAT-2 (PBD),High Street,27.15739,78.05278,Mid,Mock — pending,Mock — pending,,5,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhubhneshwar-patia,Patia,Bhubhneshwar,TAT-2 (PBD),High Street,20.35328,85.82047,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-chitaipur,Chitaipur,Varanasi,TAT-2 (PBD),High Street,25.27450,82.96370,Mid,Mock — pending,Mock — pending,,5,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-cantoment-road,Cantoment Road,Cuttack,TAT-2 (PBD),High Street,20.47573,85.87876,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-bhu-hyderabad-gate-side,BHU Hyderabad Gate side,Varanasi,TAT-2 (PBD),High Street,25.26232,82.97815,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhubhneshwar-nandankanan,Nandankanan,Bhubhneshwar,TAT-2 (PBD),High Street,20.33818,85.81875,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+bardhaman-gt-road-towards-alisha-bus-stand,GT Road Towards Alisha Bus Stand,Bardhaman,TAT-2 (PBD),High Street,23.22237,87.87992,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-mira-bhayandar,Mira Bhayandar,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+pune-shivajinagar,Shivajinagar,Pune,TAT-2 (PBD),High Street,18.52005,73.83986,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-kandivali-west,Kandivali West,Mumbai,TAT-2 (PBD),High Street,19.21298,72.84663,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+pune-parvati-paytha,Parvati Paytha,Pune,TAT-2 (PBD),High Street,18.48933,73.85515,Mid,Mock — pending,Mock — pending,,2,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-mahmoorganj,Mahmoorganj,Varanasi,TAT-2 (PBD),High Street,25.30489,82.98082,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-link-road,Link Road,Cuttack,TAT-2 (PBD),High Street,20.45687,85.88147,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+varanasi-ravindrapuri,Ravindrapuri,Varanasi,TAT-2 (PBD),High Street,25.29787,82.99695,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bokaro-bokaro-steel-city,Bokaro Steel City,Bokaro,TAT-2 (PBD),High Street,23.66752,86.13997,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+bhopal-laghati,Laghati,Bhopal,TAT-2 (PBD),High Street,23.27194,77.36771,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+noida-noida-sec-32,Noida sec 32,Noida,TAT-2 (PBD),High Street,28.57469,77.35034,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening
+mumbai-chembur,Chembur,Mumbai,TAT-2 (PBD),High Street,19.13402,72.87038,Mid,Mock — pending,Mock — pending,,0,,N/A,Mixed,50:50,Mid,N/A,Evening
+cuttack-dolamundai-chauraha,Dolamundai Chauraha,Cuttack,TAT-2 (PBD),High Street,20.46353,85.88010,Mid,Mock — pending,Mock — pending,,1,,N/A,Mixed,50:50,Mid,N/A,Evening

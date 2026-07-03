@@ -5,15 +5,27 @@
   "type": "module",
   "scripts": {
     "dev": "vite --force",
-    "build": "vite build",
+    "build": "npm run prepare-all && vite build",
+    "test": "vitest run",
     "preview": "vite preview",
-    "clean": "rimraf node_modules/.vite dist"
+    "clean": "rimraf node_modules/.vite dist",
+    "prepare-cities": "node scripts/prepare_data.cjs",
+    "generate-data": "node scripts/generate-geo-data.js",
+    "import-properties": "node scripts/import-properties.js",
+    "prepare-all": "npm run prepare-cities && npm run generate-data && npm run import-properties"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.7",
+    "maplibre-gl": "^4.7.1",
+    "papaparse": "^5.4.1"
   },
   "devDependencies": {
     "axios": "^1.16.1",
     "googlethis": "^1.8.0",
     "replace-in-file": "^8.4.0",
     "rimraf": "^6.1.3",
-    "vite": "^6.0.0"
+    "vite": "^6.0.0",
+    "vitest": "^2.1.8",
+    "xlsx": "^0.18.5"
   }
 }

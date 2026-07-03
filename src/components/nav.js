@@ -28,9 +28,14 @@ export function initNav() {
 
   links.querySelectorAll('.nav__link').forEach((link) => {
     link.addEventListener('click', (event) => {
+      const targetId = link.getAttribute('href');
+      if (!targetId?.startsWith('#')) {
+        closeMenu();
+        return;
+      }
+
       event.preventDefault();
 
-      const targetId = link.getAttribute('href');
       const target = targetId ? document.querySelector(targetId) : null;
 
       if (target) {

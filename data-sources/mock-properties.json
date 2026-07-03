@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Jio Drive Corner Unit",
+    "status": "Available",
+    "buildingType": "High Street Retail",
+    "size": 1800,
+    "sizeLabel": "1,800 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Near Jio World Drive, BKC",
+    "sourceTradeArea": "BKC",
+    "tradeArea": "mumbai-bkc",
+    "tradeAreaName": "BKC",
+    "city": "Mumbai",
+    "suitableFor": [
+      "fb",
+      "retail",
+      "fashion",
+      "lifestyle"
+    ],
+    "price": 420,
+    "priceLabel": "INR 420/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "BKC Cafe Pod",
+    "status": "Available",
+    "buildingType": "Mall Pod",
+    "size": 650,
+    "sizeLabel": "650 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Maker Maxity precinct",
+    "sourceTradeArea": "BKC",
+    "tradeArea": "mumbai-bkc",
+    "tradeAreaName": "BKC",
+    "city": "Mumbai",
+    "suitableFor": [
+      "fb",
+      "wellness",
+      "lifestyle"
+    ],
+    "price": 380,
+    "priceLabel": "INR 380/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Linking Road Flagship",
+    "status": "Available",
+    "buildingType": "High Street",
+    "size": 2400,
+    "sizeLabel": "2,400 sq.ft",
+    "floor": "G+1",
+    "locationLink": "",
+    "address": "Linking Road, Bandra West",
+    "sourceTradeArea": "Bandra West",
+    "tradeArea": "mumbai-ban",
+    "tradeAreaName": "Bandra West",
+    "city": "Mumbai",
+    "suitableFor": [
+      "fashion",
+      "retail",
+      "lifestyle"
+    ],
+    "price": 360,
+    "priceLabel": "INR 360/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Bandra Dessert Studio",
+    "status": "Available",
+    "buildingType": "High Street Retail",
+    "size": 900,
+    "sizeLabel": "900 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Off Turner Road",
+    "sourceTradeArea": "Bandra West",
+    "tradeArea": "mumbai-ban",
+    "tradeAreaName": "Bandra West",
+    "city": "Mumbai",
+    "suitableFor": [
+      "fb",
+      "lifestyle"
+    ],
+    "price": 325,
+    "priceLabel": "INR 325/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Lower Parel Lifestyle Box",
+    "status": "Available",
+    "buildingType": "Mall Inline",
+    "size": 3200,
+    "sizeLabel": "3,200 sq.ft",
+    "floor": "1",
+    "locationLink": "",
+    "address": "Phoenix Palladium catchment",
+    "sourceTradeArea": "Lower Parel",
+    "tradeArea": "mumbai-lp",
+    "tradeAreaName": "Lower Parel",
+    "city": "Mumbai",
+    "suitableFor": [
+      "fashion",
+      "retail",
+      "lifestyle",
+      "wellness"
+    ],
+    "price": 300,
+    "priceLabel": "INR 300/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Powai Community Retail",
+    "status": "Available",
+    "buildingType": "Neighborhood Retail",
+    "size": 1450,
+    "sizeLabel": "1,450 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Hiranandani Gardens",
+    "sourceTradeArea": "Powai",
+    "tradeArea": "mumbai-pow",
+    "tradeAreaName": "Powai",
+    "city": "Mumbai",
+    "suitableFor": [
+      "fb",
+      "retail",
+      "wellness"
+    ],
+    "price": 210,
+    "priceLabel": "INR 210/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Dubai Mall Boulevard Unit",
+    "status": "Available",
+    "buildingType": "Premium Retail",
+    "size": 2100,
+    "sizeLabel": "2,100 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Downtown Dubai boulevard",
+    "sourceTradeArea": "Downtown Dubai",
+    "tradeArea": "dubai-dt",
+    "tradeAreaName": "Downtown Dubai",
+    "city": "Dubai",
+    "suitableFor": [
+      "fashion",
+      "retail",
+      "lifestyle"
+    ],
+    "price": 340,
+    "priceLabel": "AED 340/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Downtown Dessert Kiosk",
+    "status": "Available",
+    "buildingType": "Kiosk",
+    "size": 420,
+    "sizeLabel": "420 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Near Dubai Mall approach",
+    "sourceTradeArea": "Downtown Dubai",
+    "tradeArea": "dubai-dt",
+    "tradeAreaName": "Downtown Dubai",
+    "city": "Dubai",
+    "suitableFor": [
+      "fb"
+    ],
+    "price": 290,
+    "priceLabel": "AED 290/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Marina Walk F&B Shell",
+    "status": "Available",
+    "buildingType": "Waterfront Retail",
+    "size": 1750,
+    "sizeLabel": "1,750 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Dubai Marina Walk",
+    "sourceTradeArea": "Dubai Marina",
+    "tradeArea": "dubai-mar",
+    "tradeAreaName": "Dubai Marina",
+    "city": "Dubai",
+    "suitableFor": [
+      "fb",
+      "lifestyle"
+    ],
+    "price": 260,
+    "priceLabel": "AED 260/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Palm Wellness Suite",
+    "status": "Available",
+    "buildingType": "Resort Retail",
+    "size": 1250,
+    "sizeLabel": "1,250 sq.ft",
+    "floor": "1",
+    "locationLink": "",
+    "address": "Palm Jumeirah retail arcade",
+    "sourceTradeArea": "Palm Jumeirah",
+    "tradeArea": "dubai-plm",
+    "tradeAreaName": "Palm Jumeirah",
+    "city": "Dubai",
+    "suitableFor": [
+      "wellness",
+      "lifestyle"
+    ],
+    "price": 420,
+    "priceLabel": "AED 420/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Business Bay Lunch Counter",
+    "status": "Available",
+    "buildingType": "Office Retail",
+    "size": 850,
+    "sizeLabel": "850 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Bay Avenue catchment",
+    "sourceTradeArea": "Business Bay",
+    "tradeArea": "dubai-bb",
+    "tradeAreaName": "Business Bay",
+    "city": "Dubai",
+    "suitableFor": [
+      "fb",
+      "retail"
+    ],
+    "price": 190,
+    "priceLabel": "AED 190/sqft",
+    "note": "Mock listing for intelligence demo"
+  },
+  {
+    "name": "Dubai Hills Family Retail",
+    "status": "Available",
+    "buildingType": "Community Mall",
+    "size": 2600,
+    "sizeLabel": "2,600 sq.ft",
+    "floor": "G",
+    "locationLink": "",
+    "address": "Dubai Hills Mall precinct",
+    "sourceTradeArea": "Dubai Hills",
+    "tradeArea": "dubai-dh",
+    "tradeAreaName": "Dubai Hills",
+    "city": "Dubai",
+    "suitableFor": [
+      "retail",
+      "fashion",
+      "wellness",
+      "lifestyle"
+    ],
+    "price": 230,
+    "priceLabel": "AED 230/sqft",
+    "note": "Mock listing for intelligence demo"
+  }
+]

@@ -1,0 +1,9 @@
+id,name,city,tat_tier,corridor_type,lat,lng,rent_band,avg_rent_month,est_spend_visit,anchors,live_units,brand_presence,population,age_profiling,gender_mix,rental_band_proxy,total_footfall,daypart_peak
+dubai-dt,Downtown Dubai,Dubai,TAT-1 (CBD),Nightlife / Tourism,25.1972,55.2744,Premium+,AED 250-400/sqft,AED 500-1500,Dubai Mall,350,"Louis Vuitton, Gucci, Time Out Market",55000,Tourists & Expats,50:50,High,"100,000+",Late Night
+dubai-mar,Dubai Marina,Dubai,TAT-1 (CBD),Nightlife / High-Energy,25.0805,55.1403,Premium,AED 200-350/sqft,AED 300-800,Marina Mall,200,"Pier 7, Buddha Bar, Five Guys",85000,Young Expats,52:48,High,"75,000+",Evening
+dubai-plm,Palm Jumeirah,Dubai,TAT-1 (CBD),Luxury / Resort,25.1124,55.1390,Premium+,AED 300-500/sqft,AED 800-2000,Nakheel Mall,120,"Nobu, Atlantis, Aura Skypool",45000,HNIs & Tourists,48:52,Very High,"40,000+",Evening
+dubai-bb,Business Bay,Dubai,TAT-2 (PBD),Business / Nightlife,25.1837,55.2666,Mid-High,AED 150-250/sqft,AED 200-500,Bay Avenue,150,"Zuma, LPM (nearby), Local Cafes",70000,Corporate,60:40,Mid-High,"65,000+",Lunch/Evening
+dubai-jlt,JLT,Dubai,TAT-2 (PBD),Community / F&B,25.0765,55.1429,Mid,AED 100-180/sqft,AED 100-300,Clusters,300,"Mythos, Nola, Pickl",95000,Young Professionals,55:45,Mid,"50,000+",Lunch/Evening
+dubai-bar,Al Barsha,Dubai,TAT-2 (PBD),Family / Retail,25.1181,55.2006,Mid-High,AED 120-200/sqft,AED 200-600,Mall of the Emirates,250,"Cheesecake Factory, Shake Shack",110000,Families,50:50,Mid-High,"85,000+",All Day
+dubai-dei,Deira,Dubai,TAT-2 (PBD),Volume / Wholesale,25.2630,55.3093,Low-Mid,AED 60-120/sqft,AED 50-150,City Centre Deira,400,"Local Markets, Goldsouq",150000,Mixed,65:35,Low-Mid,"120,000+",Afternoon
+dubai-dh,Dubai Hills,Dubai,TAT-3 (Growth),Family / Premium,25.1119,55.2611,Premium,AED 180-280/sqft,AED 300-700,Dubai Hills Mall,180,"Roxy Cinemas, Storm Coaster",40000,Young Families,48:52,High,"35,000+",Weekend
