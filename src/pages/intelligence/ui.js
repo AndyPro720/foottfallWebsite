@@ -155,23 +155,44 @@ export class UIController {
       const divider = document.createElement('span');
       divider.className = 'intel-switcher-divider';
 
-      const cityBtns = this.citiesInCountry(target).map((city) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'intel-city-btn';
-        b.dataset.city = city;
-        b.textContent = city;
-        b.addEventListener('click', () => {
+      // City selector as a pop-up menu (mirrors the country selector) so the
+      // bar stays compact no matter how many cities exist.
+      const cityWrap = document.createElement('div');
+      cityWrap.className = 'intel-country-select intel-city-select';
+
+      const cityMenu = document.createElement('div');
+      cityMenu.className = 'intel-country-menu';
+      cityMenu.hidden = true;
+      this.citiesInCountry(target).forEach((city) => {
+        const opt = document.createElement('button');
+        opt.type = 'button';
+        opt.className = 'intel-country-option';
+        opt.dataset.city = city;
+        opt.textContent = city;
+        opt.addEventListener('click', () => {
+          cityMenu.hidden = true;
           this.navigateOrPrompt(() => { this.sidebar?.hideAll?.(); this.map?.loadCity?.(city); }, city);
         });
-        return b;
+        cityMenu.append(opt);
       });
 
-      this.cityButtonsContainer.replaceChildren(wrap, divider, ...cityBtns);
+      const cityPill = document.createElement('button');
+      cityPill.type = 'button';
+      cityPill.className = 'intel-country-pill intel-city-pill';
+      cityPill.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="intel-city-pill__label">Select city</span>`;
+      cityPill.addEventListener('click', (e) => { e.stopPropagation(); cityMenu.hidden = !cityMenu.hidden; });
+      document.addEventListener('click', () => { cityMenu.hidden = true; });
+
+      cityWrap.append(cityMenu, cityPill);
+      this._cityPillLabel = cityPill.querySelector('.intel-city-pill__label');
+      this._cityMenu = cityMenu;
+
+      this.cityButtonsContainer.replaceChildren(wrap, divider, cityWrap);
     }
 
-    this.cityButtonsContainer.querySelectorAll('.intel-city-btn').forEach((b) => {
-      b.classList.toggle('is-active', b.dataset.city === activeCity);
+    if (this._cityPillLabel) this._cityPillLabel.textContent = activeCity || 'Select city';
+    this._cityMenu?.querySelectorAll('.intel-country-option').forEach((o) => {
+      o.classList.toggle('is-active', o.dataset.city === activeCity);
     });
   }
 

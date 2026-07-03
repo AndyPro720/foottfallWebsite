@@ -390,6 +390,14 @@ button { cursor: pointer; border: none; background: transparent; }
 }
 .intel-country-pill:hover { background: #003028 !important; }
 .intel-country-pill svg { opacity: 0.9; }
+/* City selector: a lighter dropdown pill to distinguish from the green country pill */
+.intel-city-pill {
+  background: var(--intel-white) !important;
+  color: var(--intel-green) !important;
+  box-shadow: 0 2px 8px rgba(0, 67, 55, 0.12) !important;
+}
+.intel-city-pill:hover { background: #eef4f0 !important; }
+.intel-country-menu { max-height: 300px; overflow-y: auto; }
 .intel-switcher-divider {
   width: 1px; align-self: stretch; margin: 6px 2px;
   background: var(--intel-line);
@@ -1280,6 +1288,12 @@ body[data-stats-open="true"] .intel-legend { opacity: 0; pointer-events: none; }
   border-radius: var(--intel-radius);
   background: linear-gradient(150deg, #0A5446, var(--intel-green));
   color: rgba(255,255,255,0.5);
+  overflow: hidden;
+}
+.intel-detail-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .intel-detail-photo__lock {
   position: absolute; bottom: 8px; right: 10px;

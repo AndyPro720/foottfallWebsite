@@ -40,12 +40,16 @@ export function classifyArea(props = {}) {
 }
 
 // Deterministic facility availability so each property reads consistently.
-const FACILITY_KEYS = ['Parking Space', 'Outside Space', 'Service Entry', 'Lift Access', 'BOH Space', 'Fire Exit'];
+const FACILITY_FIELDS = [
+  ['Parking Space', 'parking'],
+  ['Outside Space', 'outsideSpace'],
+  ['Service Entry', 'serviceEntry'],
+  ['Lift Access', 'liftAccess'],
+  ['BOH Space', 'bohSpace'],
+  ['Fire Exit', 'fireExit']
+];
 function facilitiesFor(property) {
-  const str = String(property.name || '') + String(property.size || '');
-  let h = 0;
-  for (let i = 0; i < str.length; i += 1) h = (h * 31 + str.charCodeAt(i)) & 0xffff;
-  return FACILITY_KEYS.map((label, i) => ({ label, yes: ((h >> i) & 1) === 1 }));
+  return FACILITY_FIELDS.map(([label, key]) => ({ label, yes: property[key] === true }));
 }
 
 function text(value, fallback = '--') {
@@ -428,7 +432,7 @@ export class SidebarController {
     // In the tailored (match) funnel, only surface the user's matched properties for this area.
     const tailored = this.tailoredMode && this.tailoredByArea;
     const areaProperties = overrideProperties
-      || (tailored ? (this.tailoredByArea[id] || []) : dataService.getPublicPropertiesForTradeArea(id));
+      || (tailored ? (this.tailoredByArea[id] || []) : dataService.getPropertiesForTradeArea(id));
     const stats = data.stats || {};
     const demographics = data.demographics || {};
     const commercial = data.commercial || {};
@@ -727,7 +731,9 @@ export class SidebarController {
         Back
       </button>
       <div class="intel-detail-photo">
-        <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M4 9l1.2-4.2A1 1 0 0 1 6.2 4h11.6a1 1 0 0 1 1 .8L20 9M5 9h14v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9zm0 0h14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        ${property.mainImage
+          ? `<img src="${escapeHtml(property.mainImage)}" alt="${escapeHtml(property.name || 'Property')}" loading="lazy" onerror="this.remove()" />`
+          : `<svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M4 9l1.2-4.2A1 1 0 0 1 6.2 4h11.6a1 1 0 0 1 1 .8L20 9M5 9h14v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9zm0 0h14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>`}
       </div>
       <div class="intel-detail-head">
         <h3>${escapeHtml(property.name || 'Property')}</h3>
